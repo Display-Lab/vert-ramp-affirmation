@@ -1,0 +1,37 @@
+{
+  "@graph": [
+    {
+      "@id": "http://example.com/behaviorX",
+      "@type": "fio:performance_behavior",
+      "fio:has_dominant_performance_threshold": {
+        "fio:is_upper_perf_threshold_bound": null,
+        "fio:threshold_value": 7
+      }
+    },
+    {
+      "@id": "http://example.com/score",
+      "@type": "fio:performance_measure",
+      "fio:input_id": "score",
+      "fio:measure_of": {"@id": "http://example.com/behaviorX"}
+    },
+    {
+      "@id": "http://example.com/performer_a",
+      "@type": "fio:performer",
+      "fio:input_id": "a",
+      "fio:measured_by": [ {"@id": "http://example.com/score"} ]
+      "fio:has_dominant_performance_behavior_capability_for": {"@id": "http://example.com/behaviorX"},
+      "fio:has_decreasing_performance_for": {"@id": "http://example.com/behaviorX"}
+    },
+    {
+      "@id": "http://example.com/performer_b",
+      "@type": "fio:performer",
+      "fio:input_id": "b",
+      "fio:measured_by": [ {"@id": "http://example.com/score"} ]
+      "fio:has_non-dominant_performance_behavior_capability_for": {"@id": "http://example.com/behaviorX"},
+      "fio:has_increasing_performance_for": {"@id": "http://example.com/behaviorX"}
+    }
+  ],
+  "@context": {
+    "fio": "http://purl.obolibrary.org/fio#"
+  }
+}
