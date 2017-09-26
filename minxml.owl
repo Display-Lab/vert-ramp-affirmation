@@ -1,0 +1,411 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.com/fio#"
+     xml:base="http://example.com/fio"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:fio="http://example.com/fio#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#">
+    <owl:Ontology rdf:about="http://example.com/fio">
+        <owl:versionIRI rdf:resource="http://example.com/fio/1.0.0"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com/fio#hasBehavior -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/fio#hasBehavior"/>
+    
+
+
+    <!-- http://example.com/fio#hasColor -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/fio#hasColor">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/fio#hasDecrPerfOf -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/fio#hasDecrPerfOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/fio#hasDomCapFor -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/fio#hasDomCapFor"/>
+    
+
+
+    <!-- http://example.com/fio#hasDomThreshold -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/fio#hasDomThreshold"/>
+    
+
+
+    <!-- http://example.com/fio#hasIncrPerfOf -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/fio#hasIncrPerfOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/fio#hasNonDomCapFor -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/fio#hasNonDomCapFor"/>
+    
+
+
+    <!-- http://example.com/fio#measureOf -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/fio#measureOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://example.com/fio#measuredBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/fio#measuredBy -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/fio#measuredBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/fio#supportsBCT -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/fio#supportsBCT"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com/fio#inputId -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com/fio#inputId">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://example.com/fio#lowerBound -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com/fio#lowerBound"/>
+    
+
+
+    <!-- http://example.com/fio#upperBound -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com/fio#upperBound">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com/fio#AcceptableCandidate -->
+
+    <owl:Class rdf:about="http://example.com/fio#AcceptableCandidate">
+        <rdfs:subClassOf rdf:resource="http://example.com/fio#Candidate"/>
+        <rdfs:label>AcceptableCandidate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/fio#BCT -->
+
+    <owl:Class rdf:about="http://example.com/fio#BCT"/>
+    
+
+
+    <!-- http://example.com/fio#Behavior -->
+
+    <owl:Class rdf:about="http://example.com/fio#Behavior"/>
+    
+
+
+    <!-- http://example.com/fio#Candidate -->
+
+    <owl:Class rdf:about="http://example.com/fio#Candidate">
+        <rdfs:label>Candidate</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/fio#Measure -->
+
+    <owl:Class rdf:about="http://example.com/fio#Measure"/>
+    
+
+
+    <!-- http://example.com/fio#PeerCompare -->
+
+    <owl:Class rdf:about="http://example.com/fio#PeerCompare">
+        <rdfs:subClassOf rdf:resource="http://example.com/fio#BCT"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/fio#PerfThreshold -->
+
+    <owl:Class rdf:about="http://example.com/fio#PerfThreshold"/>
+    
+
+
+    <!-- http://example.com/fio#Performer -->
+
+    <owl:Class rdf:about="http://example.com/fio#Performer"/>
+    
+
+
+    <!-- http://example.com/fio#ShowImprove -->
+
+    <owl:Class rdf:about="http://example.com/fio#ShowImprove">
+        <rdfs:subClassOf rdf:resource="http://example.com/fio#BCT"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com/fio#behaviorX -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/fio#behaviorX">
+        <rdf:type rdf:resource="http://example.com/fio#Behavior"/>
+        <hasDomThreshold rdf:resource="http://example.com/fio#goldStandard"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/fio#candiOne -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/fio#candiOne">
+        <rdf:type rdf:resource="http://example.com/fio#Candidate"/>
+        <hasBehavior rdf:resource="http://example.com/fio#behaviorX"/>
+        <hasDomCapFor rdf:resource="http://example.com/fio#behaviorX"/>
+        <supportsBCT rdf:resource="http://example.com/fio#showPeers"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/fio#candiTwo -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/fio#candiTwo">
+        <rdf:type rdf:resource="http://example.com/fio#Candidate"/>
+        <hasBehavior rdf:resource="http://example.com/fio#behaviorX"/>
+        <hasNonDomCapFor rdf:resource="http://example.com/fio#behaviorX"/>
+        <supportsBCT rdf:resource="http://example.com/fio#showPeers"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/fio#goldStandard -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/fio#goldStandard">
+        <rdf:type rdf:resource="http://example.com/fio#PerfThreshold"/>
+        <lowerBound rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</lowerBound>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/fio#performerA -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/fio#performerA">
+        <rdf:type rdf:resource="http://example.com/fio#Performer"/>
+        <hasBehavior rdf:resource="http://example.com/fio#behaviorX"/>
+        <hasDecrPerfOf rdf:resource="http://example.com/fio#behaviorX"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/fio#performerB -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/fio#performerB">
+        <rdf:type rdf:resource="http://example.com/fio#Performer"/>
+        <hasBehavior rdf:resource="http://example.com/fio#behaviorX"/>
+        <hasIncrPerfOf rdf:resource="http://example.com/fio#behaviorX"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/fio#score -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/fio#score">
+        <rdf:type rdf:resource="http://example.com/fio#Measure"/>
+        <measureOf rdf:resource="http://example.com/fio#behaviorX"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/fio#showPeers -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/fio#showPeers">
+        <rdf:type rdf:resource="http://example.com/fio#PeerCompare"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/fio#showTrend -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/fio#showTrend">
+        <rdf:type rdf:resource="http://example.com/fio#ShowImprove"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://example.com/fio#c">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://example.com/fio#b">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DomPeer</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://example.com/fio#Candidate"/>
+                        <swrl:argument1 rdf:resource="http://example.com/fio#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://example.com/fio#hasBehavior"/>
+                                <swrl:argument1 rdf:resource="http://example.com/fio#c"/>
+                                <swrl:argument2 rdf:resource="http://example.com/fio#b"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://example.com/fio#hasDomCapFor"/>
+                                        <swrl:argument1 rdf:resource="http://example.com/fio#c"/>
+                                        <swrl:argument2 rdf:resource="http://example.com/fio#b"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://example.com/fio#supportsBCT"/>
+                                                <swrl:argument1 rdf:resource="http://example.com/fio#c"/>
+                                                <swrl:argument2 rdf:resource="http://example.com/fio#showPeers"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://example.com/fio#AcceptableCandidate"/>
+                        <swrl:argument1 rdf:resource="http://example.com/fio#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
