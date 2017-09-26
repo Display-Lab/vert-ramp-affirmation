@@ -1,3 +1,4 @@
+PREFIX fio:   <http://example.com/fio#>
 SELECT ?subject
 WHERE {
  ?subject rdf:type fio:AcceptableCandidate
