@@ -33,18 +33,30 @@ From the linked data tripples that have been given, it will make inferences and 
     ```
 
 ## Background
+This work is a result of the persuit of building a feedback intervention generating system.
+The project here attempts to construct a skeleton of the pipeline that will consider the performance data,
+situation information, intervention situations, and intervention templates in order to produce appropriate performance feedback.
+The minimal list of components that need to be stubbed or realized in order to construct the pipeline are listed in the section of the same name.
 
 ## Components
 
-- Data Set + Annotation
-- Situation Annotation
-- Data Analyzer
+- Performance Data
+- Situation Information
+- Performance Data Analyzer
 - Intervention Templates 
 - Intervention-Situation-Interaction (ISI)
 - Candidate Generator
 - Reasoner (Stardog)
 
-### Example Data Description
+| Input                                              | Machinery             | Product                          |
+|----------------------------------------------------|-----------------------|----------------------------------|
+| Perf. Data, Situation Information                  | Perf. Analyzer        | Situation Plus,  template config |
+| Situation Plus, Intervention Templates             | Candidate Generator   | Intervention Candidates          |
+| Intervention Candidates, ISI List                  | Reasoner              | Acceptable Candidates            |
+| Perf. Data, Acceptable Candidates, template config | Perf. Summary Builder | Performance Summaries            |
+
+
+## Example Data Description
 The example data consists of five performers (a,b,c,d,e).
 The first two, a & b, are used as the recipients of feedback.
 Recipient 'a' has performance above the mastery threshold specified in the situation, and has decreasing recent performance.
