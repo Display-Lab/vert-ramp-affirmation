@@ -77,3 +77,11 @@ From the linked data tripples that have been given, it will make inferences and 
     candidate_one acceptable_candidate
     ```
 1. The figure geenrator takes the candidates, and passes the relevant data along to the matching template implementations.
+
+## Use
+
+1. Pass Situation, Performance Data, and Data Analyzer to Bit Stomach 
+2. Save & Examine resulting Situation Plus.
+
+
+
