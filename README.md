@@ -1,16 +1,61 @@
 # Vert Ramp Affirmation
 
 ## Description
-Code and stubs to provide minimal or mock implementations of the components of the intervention pipeline.
-Demonstration of tailoring feedback for two recipients.
+This project serves as the overview of the parts of the feedback summary pipeline.
+It contains stubs and mock ups to illustrate components of the intervention pipeline.
+Specifically, the examples here demonstrate tailoring feedback for two recipients.
 
-## Use
-1. Run data analyzer
-1. Run candidate generator
-1. Run reasoner
-1. Generate interventions (performance summaries)
+## Outline
+The steps (and associated projects) to the intervention generation pipeline:
+1. Run data analyzer (bit-stomach)
+1. Run candidate generator (candidate-smasher)
+1. Run reasoner (think-pudding)
+1. Generate performance summaries (relevant-fermenter)
 
-### Explanation
+## Background
+This work is a result of the persuit of building a feedback intervention generating system.
+The project here attempts to construct a skeleton of the pipeline that will consider the performance data,
+situation information, intervention situations, and intervention templates in order to produce appropriate performance feedback.
+
+## The Pipeline
+### Data Analyzer
+- Inputs:
+    - Situation
+    - Performance Data
+    - Performance Data Analysis
+- Outputs:
+    - Situation Plus
+
+### Candidate Generator
+- Inputs:
+    - Situation Plus
+    - Templates
+- Outputs:
+    - Candidates
+
+### Reasoning Runner
+- Inputs:
+    - Candidates
+    - ISR
+- Outputs:
+    - Annotated Candidates
+
+### Figure Generator
+- Inputs:
+    - Annotated Candidates
+    - Performance Data
+    - Templates Implementations
+- Outputs:
+    - Performance Summary Figures
+
+
+## Example Data Description
+The example data consists of five performers (a,b,c,d,e).
+The first two, a & b, are used as the recipients of feedback.
+Recipient 'a' has performance above the mastery threshold specified in the situation, and has decreasing recent performance.
+Recipient 'b' has performance below the mastery level, and has increasing performance.
+
+## Machinery Explanation
 
 1. Data analyzer reads data & data annotation.  
 It makes inferences about each performer. 
@@ -31,34 +76,4 @@ From the linked data tripples that have been given, it will make inferences and 
     ```
     candidate_one acceptable_candidate
     ```
-
-## Background
-This work is a result of the persuit of building a feedback intervention generating system.
-The project here attempts to construct a skeleton of the pipeline that will consider the performance data,
-situation information, intervention situations, and intervention templates in order to produce appropriate performance feedback.
-The minimal list of components that need to be stubbed or realized in order to construct the pipeline are listed in the section of the same name.
-
-## Components
-
-- Performance Data
-- Situation Information
-- Performance Data Analyzer
-- Intervention Templates 
-- Intervention-Situation-Interaction (ISI)
-- Candidate Generator
-- Reasoner (Stardog)
-
-| Input                                              | Machinery             | Product                          |
-|----------------------------------------------------|-----------------------|----------------------------------|
-| Perf. Data, Situation Information                  | Perf. Analyzer        | Situation Plus,  template config |
-| Situation Plus, Intervention Templates             | Candidate Generator   | Intervention Candidates          |
-| Intervention Candidates, ISI List                  | Reasoner              | Acceptable Candidates            |
-| Perf. Data, Acceptable Candidates, template config | Perf. Summary Builder | Performance Summaries            |
-
-
-## Example Data Description
-The example data consists of five performers (a,b,c,d,e).
-The first two, a & b, are used as the recipients of feedback.
-Recipient 'a' has performance above the mastery threshold specified in the situation, and has decreasing recent performance.
-Recipient 'b' has performance below the mastery level, and has increasing performance.
-
+1. The figure geenrator takes the candidates, and passes the relevant data along to the matching template implementations.
