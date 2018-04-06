@@ -1,0 +1,104 @@
+{
+  "@context": {
+	  "schema": {"@vocab": "http://schema.org/"},
+    "fio": {
+      "performer":      "http://purl.obolibrary.org/obo/fio#FIO_0000001",
+      "spek":           "http://purl.obolibrary.org/obo/fio#SPEK",
+      "has_performer":  "http://purl.obolibrary.org/obo/fio#HasPerformer",
+      "uses_template":  "http://purl.obolibrary.org/obo/fio#UsesTemplate",
+      "uses_ISR":       "http://purl.obolibrary.org/obo/fio#UsesISR",
+      "rid_template":   "http://purl.obolibrary.org/obo/fio#RIDTemplate",
+      "spek":           "http://purl.obolibrary.org/obo/fio#Spek",
+      "ISR":            "http://purl.obolibrary.org/obo/fio#ISR",
+      "normative_comparator":  "http://purl.obolibrary.org/obo/fio#NormativeComparator",
+      "prevention_framing":    "http://purl.obolibrary.org/obo/fio#PreventionFraming",
+      "promotion_framing":     "http://purl.obolibrary.org/obo/fio#PromotionFraming",
+      "performer_cardinality": "http://purl.obolibrary.org/obo/fio#PerformerCardinality",
+      "time_cardinality":      "http://purl.obolibrary.org/obo/fio#TimeCardinality",
+      "capability_barrier":    "http://purl.obolibrary.org/obo/fio#CapbilityBarrier",
+      "prevention_focus":      "http://purl.obolibrary.org/obo/fio#PreventionFocus",
+      "promotion_focus":       "http://purl.obolibrary.org/obo/fio#PromotionFocus",
+      "negative_signal":       "http://purl.obolibrary.org/obo/fio#NegativeSignal", 
+      "positive_signal":       "http://purl.obolibrary.org/obo/fio#PositiveSignal",
+      "perf_gap":              "http://purl.obolibrary.org/obo/fio#PerformanceGap",
+      "perf_trend_pos":        "http://purl.obolibrary.org/obo/fio#PerformanceTrendPositive",
+      "perf_trend_neg":        "http://purl.obolibrary.org/obo/fio#PerformanceTrendNegative",
+      "related_location":      "https://purl.obolibrary.org/need/definiton#RELATED_LOCATION"
+    },
+    "has_part": "http://purl.obolibrary.org/obo/bfo#BFO_0000051",
+    "has_disposition": "http://purl.obolibrary.org/obo/RO_0000091",
+    "client_spek": "https://inference.es/app/onto#IPLARC_SPEK"
+  },
+  "@id": "https://inference.es/app/onto#IPLARC_SPEK",
+  "@type": "http://purl.obolibrary.org/obo/fio#SPEK",
+  "fio:related_location": {
+      "@type": "Organization",
+      "schema:address": {
+        "@type": "PostalAddress",
+        "schema:addressCountry": "United States",
+        "schema:addressLocality": "Ann Arbor",
+        "schema:addressRegion": "Michigan",
+        "schema:postalCode": "48109",
+        "schema:streetAddress": "903 South Univeristy",
+        "schema:name": "IPLARC-Clinic"
+      }
+    },
+  "fio:has_performer": [
+    {
+      "@id": "https://inference.es/app/onto#Alice",
+      "@type": "http://purl.obolibrary.org/obo/fio#FIO_0000001"
+    },
+    {
+      "@id": "https://inference.es/app/onto#Carol",
+      "@type": "http://purl.obolibrary.org/obo/fio#FIO_0000001",
+      "has_disposition": "http://purl.obolibrary.org/obo/fio#CapabilityBarrier"
+    },
+    {
+      "@id": "https://inference.es/app/onto#Dan",
+      "@type": "http://purl.obolibrary.org/obo/fio#FIO_0000001",
+      "has_disposition": [
+        "http://purl.obolibrary.org/obo/fio#PromotionFocus",
+        "http://purl.obolibrary.org/obo/fio#CapbilityBarrier"]
+    },
+    {
+      "@id": "https://inference.es/app/onto#Elaine",
+      "@type": "http://purl.obolibrary.org/obo/fio#FIO_0000001",
+      "has_disposition": [
+        "http://purl.obolibrary.org/obo/fio#PreventionFocus",
+        "http://purl.obolibrary.org/obo/fio#CapbilityBarrier"]
+    }],
+  "fio:uses_ISR": [
+    {
+      "@id": "https://inference.es/app/onto#ISRnamedDuq",
+      "@type": "http://purl.obolibrary.org/obo/fio#ISR"
+    },
+    {
+      "@id": "https://inference.es/app/onto#ISRnamedBar",
+      "@type": "http://purl.obolibrary.org/obo/fio#ISR"
+    },
+    {
+      "@id": "https://inference.es/app/onto#ISRnamedFoo",
+      "@type": "http://purl.obolibrary.org/obo/fio#ISR"
+    }
+  ],
+  "fio:uses_template": [
+    {
+      "@id": "https://inference.es/app/onto#templateNamedBaz",
+      "@type": "http://purl.obolibrary.org/obo/fio#RIDTemplate",
+      "has_disposition": "http://purl.obolibrary.org/obo/fio#NormativeComparator"
+    },
+    {
+      "@id": "https://inference.es/app/onto#templateNamedMab",
+      "@type": "http://purl.obolibrary.org/obo/fio#RIDTemplate",
+      "has_disposition": "http://purl.obolibrary.org/obo/fio#PromotionFraming"
+    },
+    {
+      "@id": "https://inference.es/app/onto#templateNamedMuq",
+      "@type": "http://purl.obolibrary.org/obo/fio#RIDTemplate",
+      "has_disposition": "http://purl.obolibrary.org/obo/fio#PreventionFraming",
+      "fio:time_cardinality": 3,
+      "fio:performer_cardinality": 3
+    }
+  ]
+}
+

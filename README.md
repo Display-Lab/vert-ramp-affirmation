@@ -20,11 +20,11 @@ situation information, intervention situations, and intervention templates in or
 ## The Pipeline
 ### Data Analyzer
 - Inputs:
-    - Situation
+    - Spek
     - Performance Data
     - Performance Data Analysis
 - Outputs:
-    - Situation Plus
+    - Spek plus additional annotations
 
 ### Candidate Generator
 - Inputs:
@@ -36,7 +36,7 @@ situation information, intervention situations, and intervention templates in or
 ### Reasoning Runner
 - Inputs:
     - Candidates
-    - ISR
+    - ISRs
 - Outputs:
     - Annotated Candidates
 
@@ -44,7 +44,7 @@ situation information, intervention situations, and intervention templates in or
 - Inputs:
     - Annotated Candidates
     - Performance Data
-    - Templates Implementations
+    - Template Implementations
 - Outputs:
     - Performance Summary Figures
 
