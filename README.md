@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1300847.svg)](https://doi.org/10.5281/zenodo.1300847)
+
 # Vert Ramp Affirmation
 
 ## Background
