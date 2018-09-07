@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   version="1.0"
+   id="svg2"
+   height="159.74019"
+   width="696.43311">
+  <defs
+     id="defs4">
+    <marker
+       style="overflow:visible"
+       id="marker2093"
+       refX="0"
+       refY="0"
+       orient="auto">
+      <path
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         id="path2091" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow1Lend"
+       refX="0"
+       refY="0"
+       orient="auto">
+      <path
+         transform="matrix(-0.8,0,0,-0.8,-10,0)"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.00000003pt;stroke-opacity:1"
+         d="M 0,0 5,-5 -12.5,0 5,5 Z"
+         id="path1450" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow2Lend"
+       refX="0"
+       refY="0"
+       orient="auto">
+      <path
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.625;stroke-linejoin:round;stroke-opacity:1"
+         id="path1468" />
+    </marker>
+  </defs>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     style="display:inline"
+     transform="translate(-97.115776,-227.44906)"
+     id="layer4">
+    <rect
+       y="280.86246"
+       x="97.615776"
+       height="45.354332"
+       width="695.43311"
+       id="rect2196"
+       style="opacity:1;vector-effect:none;fill:#e0e1f3;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.39999998;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2.0999999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill" />
+    <path
+       transform="matrix(1,0,0,1.7320508,158.08822,398.69649)"
+       d="m 83.149604,-54.93885 -11.338583,6.546334 -11.338582,6.546333 0,-13.092668 0,-13.092666 11.338583,6.546333 z"
+       id="path2155-2"
+       style="display:inline;opacity:1;vector-effect:none;fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.06376994;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2.0999999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill" />
+    <path
+       transform="matrix(1,0,0,1.7320508,301.71027,398.69649)"
+       d="m 83.149604,-54.93885 -11.338583,6.546334 -11.338582,6.546333 0,-13.092668 0,-13.092666 11.338583,6.546333 z"
+       id="path2155-1"
+       style="display:inline;opacity:1;vector-effect:none;fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.06376994;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2.0999999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill" />
+    <path
+       transform="matrix(1,0,0,1.7320508,445.33231,398.69649)"
+       d="m 83.149604,-54.93885 -11.338583,6.546334 -11.338582,6.546333 0,-13.092668 0,-13.092666 11.338583,6.546333 z"
+       id="path2155-7"
+       style="display:inline;opacity:1;vector-effect:none;fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.06376994;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2.0999999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill" />
+    <path
+       transform="matrix(1,0,0,1.7320508,588.95436,398.69649)"
+       d="m 83.149604,-54.93885 -11.338583,6.546334 -11.338582,6.546333 0,-13.092668 0,-13.092666 11.338583,6.546333 z"
+       id="path2155-5"
+       style="display:inline;opacity:1;vector-effect:none;fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1.06376994;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:2.0999999;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill" />
+  </g>
+  <g
+     style="display:inline"
+     transform="translate(-67.531494,-14.618087)"
+     id="layer1">
+    <text
+       id="text1490"
+       y="173.85826"
+       x="68.031494"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="188.01451"
+         x="68.031494"
+         id="tspan1488" /></text>
+    <text
+       transform="translate(-29.584282,-212.83097)"
+       id="text1640"
+       y="212.83095"
+       x="158.08823"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;display:inline;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="226.9872"
+         x="158.08823"
+         id="tspan1638" /></text>
+    <rect
+       y="15.118114"
+       x="173.85828"
+       height="158.74019"
+       width="15.118111"
+       id="rect925-6"
+       style="opacity:1;vector-effect:none;fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill" />
+    <rect
+       y="15.118109"
+       x="68.031494"
+       height="64.251945"
+       width="105.82677"
+       id="rect885-8"
+       style="opacity:1;vector-effect:none;fill:#b4b9cb;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill" />
+    <rect
+       y="101.70367"
+       x="68.031509"
+       height="72.154602"
+       width="105.82677"
+       id="rect885-3-9-5"
+       style="opacity:1;vector-effect:none;fill:#d2e5cc;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill" />
+    <text
+       transform="rotate(-90)"
+       id="text919-2"
+       y="183.50868"
+       x="-159.27617"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="183.50868"
+         x="-159.27617"
+         id="tspan917-1">Outputs</tspan></text>
+    <text
+       transform="rotate(-90)"
+       id="text923-9"
+       y="183.84746"
+       x="-61.170994"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="183.84746"
+         x="-61.170994"
+         id="tspan921-9">Inputs</tspan></text>
+    <text
+       id="text1644"
+       y="8.6791897"
+       x="74.517899"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="18.116692"
+         x="74.517899"
+         id="tspan1642" /><tspan
+         id="tspan1646"
+         y="31.450026"
+         x="74.517899">performance data</tspan><tspan
+         id="tspan995"
+         y="44.78336"
+         x="74.517899" /><tspan
+         id="tspan1650"
+         y="58.116692"
+         x="74.517899" /></text>
+    <text
+       id="text1708"
+       y="135.77667"
+       x="75.771156"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="135.77667"
+         x="75.771156"
+         id="tspan1706">performers</tspan><tspan
+         id="tspan1036"
+         y="149.11"
+         x="75.771156">  + attributes</tspan></text>
+    <rect
+       ry="2.3664"
+       rx="2.3664"
+       y="68.031479"
+       x="68.031494"
+       height="45.354332"
+       width="120.94489"
+       id="rect1524"
+       style="opacity:1;vector-effect:none;fill:#fffffa;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill" />
+    <text
+       id="text1500"
+       y="85.182281"
+       x="128.40628"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr;text-anchor:middle;"
+         y="85.182281"
+         x="128.40628"
+         id="tspan1498">Analyze</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr;text-anchor:middle;"
+         id="tspan1040"
+         y="105.18228"
+         x="128.40628">Performance</tspan></text>
+    <rect
+       y="15.118114"
+       x="317.48032"
+       height="158.74019"
+       width="15.118111"
+       id="rect925-0"
+       style="opacity:1;vector-effect:none;fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill" />
+    <rect
+       y="15.118109"
+       x="211.65353"
+       height="64.251945"
+       width="105.82677"
+       id="rect885-6"
+       style="opacity:1;vector-effect:none;fill:#b4b9cb;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill" />
+    <rect
+       y="101.70367"
+       x="211.65355"
+       height="72.154602"
+       width="105.82677"
+       id="rect885-3-9-4"
+       style="opacity:1;vector-effect:none;fill:#d2e5cc;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill" />
+    <text
+       transform="rotate(-90)"
+       id="text919-9"
+       y="327.13071"
+       x="-159.27617"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="327.13071"
+         x="-159.27617"
+         id="tspan917-9">Outputs</tspan></text>
+    <text
+       transform="rotate(-90)"
+       id="text923-0"
+       y="327.46951"
+       x="-61.170986"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="327.46951"
+         x="-61.170986"
+         id="tspan921-8">Inputs</tspan></text>
+    <text
+       id="text1654"
+       y="9.2123518"
+       x="221.01918"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="18.649853"
+         x="221.01918"
+         id="tspan1652" /><tspan
+         id="tspan1052"
+         y="31.983187"
+         x="221.01918">templates</tspan><tspan
+         id="tspan999"
+         y="45.316521"
+         x="221.01918" /><tspan
+         id="tspan1001"
+         y="58.649853"
+         x="221.01918">performers</tspan></text>
+    <text
+       id="text1704"
+       y="135.77667"
+       x="219.14578"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="135.77667"
+         x="219.14578"
+         id="tspan1702">feedback</tspan><tspan
+         id="tspan1038"
+         y="149.11"
+         x="219.14578">  candidates</tspan></text>
+    <rect
+       ry="2.3664"
+       rx="2.3664"
+       y="68.031479"
+       x="211.65355"
+       height="45.354332"
+       width="120.94489"
+       id="rect1524-7"
+       style="opacity:1;vector-effect:none;fill:#fffffa;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill" />
+    <text
+       id="text1504"
+       y="85.076813"
+       x="272.10257"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"
+         id="tspan1506"
+         y="85.076813"
+         x="272.10257">Generate</tspan><tspan
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle"
+         id="tspan1044"
+         y="105.07681"
+         x="272.10257">Candidates</tspan></text>
+    <rect
+       y="15.118087"
+       x="461.10236"
+       height="158.74019"
+       width="15.118111"
+       id="rect925-3"
+       style="opacity:1;vector-effect:none;fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill" />
+    <rect
+       y="15.118087"
+       x="355.27557"
+       height="64.251945"
+       width="105.82677"
+       id="rect885-1"
+       style="opacity:1;vector-effect:none;fill:#b4b9cb;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill" />
+    <rect
+       y="101.70364"
+       x="355.2756"
+       height="72.154602"
+       width="105.82677"
+       id="rect885-3-9-48"
+       style="opacity:1;vector-effect:none;fill:#d2e5cc;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill" />
+    <text
+       transform="rotate(-90)"
+       id="text919-96"
+       y="470.75278"
+       x="-159.27614"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="470.75278"
+         x="-159.27614"
+         id="tspan917-7">Outputs</tspan></text>
+    <text
+       transform="rotate(-90)"
+       id="text923-7"
+       y="471.09155"
+       x="-61.170956"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="471.09155"
+         x="-61.170956"
+         id="tspan921-3">Inputs</tspan></text>
+    <text
+       id="text1660"
+       y="31.983187"
+       x="365.24728"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         id="tspan1056"
+         y="31.983187"
+         x="365.24728">feedback </tspan><tspan
+         id="tspan1012"
+         y="45.316521"
+         x="365.24728">  candidates</tspan></text>
+    <text
+       id="text1696"
+       y="135.77667"
+       x="361.26944"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         id="tspan1698"
+         y="135.77667"
+         x="361.26944">feedback </tspan><tspan
+         id="tspan1026"
+         y="149.11"
+         x="361.26944">  candidates</tspan><tspan
+         id="tspan1028"
+         y="162.44334"
+         x="361.26944">  + acceptability</tspan></text>
+    <rect
+       ry="2.3664"
+       rx="2.3664"
+       y="68.031479"
+       x="355.2756"
+       height="45.354332"
+       width="120.94489"
+       id="rect1524-9"
+       style="opacity:1;vector-effect:none;fill:#fffffa;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill" />
+    <text
+       id="text1510"
+       y="85.122711"
+       x="416.49805"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="85.122711"
+         x="416.49805"
+         id="tspan1508">Evaluate</tspan><tspan
+         id="tspan1046"
+         y="105.12271"
+         x="416.49805">Pathways</tspan></text>
+    <rect
+       y="15.118087"
+       x="604.72443"
+       height="158.74019"
+       width="15.118111"
+       id="rect925-1"
+       style="opacity:1;vector-effect:none;fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill" />
+    <rect
+       y="15.118087"
+       x="498.89761"
+       height="64.251945"
+       width="105.82677"
+       id="rect885-2"
+       style="opacity:1;vector-effect:none;fill:#b4b9cb;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill" />
+    <rect
+       y="101.70364"
+       x="498.89764"
+       height="72.154602"
+       width="105.82677"
+       id="rect885-3-9-2"
+       style="opacity:1;vector-effect:none;fill:#d2e5cc;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill" />
+    <text
+       transform="rotate(-90)"
+       id="text919-1"
+       y="614.37482"
+       x="-159.27614"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="614.37482"
+         x="-159.27614"
+         id="tspan917-5">Outputs</tspan></text>
+    <text
+       transform="rotate(-90)"
+       id="text923-09"
+       y="614.71362"
+       x="-61.170948"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="614.71362"
+         x="-61.170948"
+         id="tspan921-0">Inputs</tspan></text>
+    <text
+       id="text1666"
+       y="31.983187"
+       x="507.33743"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         id="tspan1018"
+         y="31.983187"
+         x="507.33743">feedback</tspan><tspan
+         id="tspan1024"
+         y="45.316521"
+         x="507.33743">  candidates</tspan></text>
+    <text
+       id="text1692"
+       y="135.77667"
+       x="506.70959"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="135.77667"
+         x="506.70959"
+         id="tspan1690">feedback</tspan><tspan
+         id="tspan1030"
+         y="149.11"
+         x="506.70959">  candidates</tspan><tspan
+         id="tspan1032"
+         y="162.44334"
+         x="506.70959">  + scores</tspan></text>
+    <rect
+       ry="2.3664"
+       rx="2.3664"
+       y="68.031479"
+       x="498.89764"
+       height="45.354332"
+       width="120.94489"
+       id="rect1524-3"
+       style="opacity:1;vector-effect:none;fill:#fffffa;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill" />
+    <text
+       id="text1514"
+       y="85.122711"
+       x="558.59277"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         id="tspan1048"
+         y="85.122711"
+         x="558.59277">Rank</tspan><tspan
+         id="tspan1353"
+         y="105.12271"
+         x="558.59277">Candidates</tspan></text>
+    <rect
+       y="15.118114"
+       x="748.3465"
+       height="158.74019"
+       width="15.118111"
+       id="rect925-01"
+       style="opacity:1;vector-effect:none;fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill" />
+    <rect
+       y="15.118109"
+       x="642.51971"
+       height="64.251945"
+       width="105.82677"
+       id="rect885-3"
+       style="opacity:1;vector-effect:none;fill:#b4b9cb;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill" />
+    <rect
+       y="101.70367"
+       x="642.51971"
+       height="72.154602"
+       width="105.82677"
+       id="rect885-3-9-7"
+       style="opacity:1;vector-effect:none;fill:#d2e5cc;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill" />
+    <text
+       transform="rotate(-90)"
+       id="text919-4"
+       y="757.99695"
+       x="-159.27617"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="757.99695"
+         x="-159.27617"
+         id="tspan917-11">Outputs</tspan></text>
+    <text
+       transform="rotate(-90)"
+       id="text923-3"
+       y="758.33569"
+       x="-61.170979"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:Roboto;-inkscape-font-specification:Roboto;font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="758.33569"
+         x="-61.170979"
+         id="tspan921-03">Inputs</tspan></text>
+    <text
+       id="text1672"
+       y="8.1460285"
+       x="650.78558"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="17.583529"
+         x="650.78558"
+         id="tspan1670" /><tspan
+         id="tspan1674"
+         y="30.916862"
+         x="650.78558">performance data</tspan><tspan
+         id="tspan1676"
+         y="44.250198"
+         x="650.78558"></tspan><tspan
+         id="tspan1034"
+         y="57.58353"
+         x="650.78558">templates </tspan><tspan
+         id="tspan1682"
+         y="70.916862"
+         x="650.78558" /></text>
+    <text
+       id="text1686"
+       y="135.77667"
+       x="650.33167"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:10.66666698px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="135.77667"
+         x="650.33167"
+         id="tspan1684">performance</tspan><tspan
+         id="tspan1688"
+         y="149.11"
+         x="650.33167">  feedback figures</tspan></text>
+    <rect
+       ry="2.3664"
+       rx="2.3664"
+       y="68.031479"
+       x="642.51971"
+       height="45.354332"
+       width="120.94489"
+       id="rect1524-88"
+       style="opacity:1;vector-effect:none;fill:#fffffa;fill-opacity:1;fill-rule:nonzero;stroke:#000000;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;paint-order:markers stroke fill" />
+    <text
+       id="text1518"
+       y="84.982086"
+       x="702.40234"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         y="84.982086"
+         x="702.40234"
+         id="tspan1516">Generate</tspan><tspan
+         id="tspan1050"
+         y="104.98209"
+         x="702.40234">Figures</tspan></text>
+  </g>
+</svg>
