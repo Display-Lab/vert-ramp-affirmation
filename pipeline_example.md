@@ -41,28 +41,36 @@ Performers section of spek:
 
 ### Output: Add Performcer Dispositions to Spek
 The performers get annotated using performance data.
-http://purl.obolibrary.org/obo/RO_0000091 is "has disposition"
+http://purl.obolibrary.org/obo/RO\_0000091 is "has disposition"
 
 Performers section of spek:
 ```json
   "slowmo:has_performer": [
       {
-          "@id": "http://example.com/app#Alice",
-          "@type": "http://example.com/slowmo#ascribee",
-          "http://purl.obolibrary.org/obo/RO_0000091": [
-              { "@value": "mastery_unknown" },
-              { "@value": "negative_gap" },
-              { "@value": "negative_trend" },
-              { "@value": "small_gap" }
-          ]
+        "@id": "http://example.com/app#Alice",
+        "@type": "http://example.com/slowmo#ascribee",
+```
+```json
+        "http://purl.obolibrary.org/obo/RO_0000091": [
+            { "@value": "mastery_unknown" },
+            { "@value": "negative_gap" },
+            { "@value": "negative_trend" },
+            { "@value": "small_gap" }
+        ]
+```
+```json
       },
       {
           "@id": "http://example.com/app#Bob",
           "@type": "http://example.com/slowmo#ascribee",
+```
+```json
           "http://purl.obolibrary.org/obo/RO_0000091": [
               { "@value": "mastery_present" },
               { "@value": "positive_trend" }
           ]
+```
+```json
       },
       {
           "@id": "http://example.com/app#Carol",
@@ -198,7 +206,11 @@ Candidates that match the prerequisites of a causal pathway get "acceptable\_by"
     "@type": "http://example.com/cpo#cpo_0000053",
     "AncestorPerformer": "http://example.com/app#Bob",
     "AncestorTemplate": "https://inferences.es/app/onto#ShowTrendTemplate",
+```
+```json
     "acceptable_by": "http://example.com/app#onward_upward",
+```
+```json
     "uses_intervention_property": "show_trend",
     "RO_0000091": [
       "mastery_present",
@@ -211,7 +223,11 @@ Candidates that match the prerequisites of a causal pathway get "acceptable\_by"
     "@type": "http://example.com/cpo#cpo_0000053",
     "AncestorPerformer": "http://example.com/app#Alice",
     "AncestorTemplate": "https://example.com/app/onto#ShowGapTemplate",
+```
+```json
     "acceptable_by": "http://example.com/app#eliminate_neg_gap",
+```
+```json
     "uses_intervention_property": [
       "normative_comparator",
       "peer_comparison"

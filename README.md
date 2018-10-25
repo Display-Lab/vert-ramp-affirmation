@@ -36,6 +36,9 @@ The major steps of the intervention generation pipeline:
 - Spek: top level data container for templates, causal pathways, ascribees, and candidates.
 
 ## The Pipeline
+
+For a more detailed explanation and example, see: [pipeline example](pipeline_example.md)
+
 ### Data Analyzer ([Bit Stomach](https://github.com/Display-Lab/bit-stomach))
 - Inputs:
     - Spek
@@ -72,3 +75,5 @@ The major steps of the intervention generation pipeline:
     - Template implementations
 - Outputs:
     - Performance summary figures
+
+
