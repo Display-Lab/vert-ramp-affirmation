@@ -1,53 +1,229 @@
-# Example One
+# Pipeline Walkthrough
 
-## Description
+1. User Centered Design
+1. Data Aquisition & Munging
+1. BitStomach
+1. CandidateSmasher
+1. Think Pudding
+1. Esteemer
+1. Pictoralist
 
-## Components
-### ISR
+## User Centered Design
+The entire human facing half of the production pipeline.
+Talking to people for contextual inquiry.
+Not applicable in this fully synthetic example.
 
-### Template
+## Data Aquisition & Munging
+Recieve or pull data from client.
+Preprocessing data to get into expected formats (csv, json).
+Eschewed in this fully synthetic example.
 
-### Peformers
+## BitStomach
 
-### Use Case Statement
+### Input
+- Spek describes the performers
+- Performance data has values for the behavior measure
+- Annotations encode how the performance data will be processed
 
-### Performance Data
+Performers section of spek:
+```json
+  "slowmo:has_performer": [
+    {
+      "@id": "http://example.com/app#Alice",
+      "@type": "http://example.com/slowmo#ascribee"
+    },
+    {
+      "@id": "http://example.com/app#Bob",
+      "@type": "http://example.com/slowmo#ascribee"
+    }],
 
-IN_PROGRESS
+```
 
-## Example Data Description
-The example data consists of five performers (a,b,c,d,e).
-The first two, a & b, are used as the recipients of feedback.
-Recipient 'a' has performance above the mastery threshold specified in the situation, and has decreasing recent performance.
-Recipient 'b' has performance below the mastery level, and has increasing performance.
+### Output: Add Performcer Dispositions to Spek
+The performers get annotated using performance data.
+http://purl.obolibrary.org/obo/RO_0000091 is "has disposition"
 
-## Machinery Explanation
+Performers section of spek:
+```json
+  "slowmo:has_performer": [
+      {
+          "@id": "http://example.com/app#Alice",
+          "@type": "http://example.com/slowmo#ascribee",
+          "http://purl.obolibrary.org/obo/RO_0000091": [
+              { "@value": "mastery_unknown" },
+              { "@value": "negative_gap" },
+              { "@value": "negative_trend" },
+              { "@value": "small_gap" }
+          ]
+      },
+      {
+          "@id": "http://example.com/app#Bob",
+          "@type": "http://example.com/slowmo#ascribee",
+          "http://purl.obolibrary.org/obo/RO_0000091": [
+              { "@value": "mastery_present" },
+              { "@value": "positive_trend" }
+          ]
+      },
+      {
+          "@id": "http://example.com/app#Carol",
+          "@type": "http://example.com/slowmo#ascribee",
+          "http://purl.obolibrary.org/obo/RO_0000091": [
+              { "@value": "mastery_present" }
+          ]
+      }
+  ],
+```
 
-1. Data analyzer reads data & data annotation.  
-It makes inferences about each performer. 
-The result of these inferences are added to the situation.
-    ```
-    performer_a has_mastery
-    performer_a has_decreasing_performance
-    performer_b has_increasing_performance
+Notice that a performcer, Carol, has been added to the performers in the spek.
+Carol was in the performance data, but not in the input spek.
 
-    performer_c has_mastery
-    ...
-    ```
-1. The candidate generator takes the situation and the performer specified as the recipient.
-It creates intermediate constructs called candidate interventions by combining the situation with each intervention template.
-1. The reasoner is loaded with the candidates and the intervention-situation-interaction.
-The question posed to reasoner is essentially, "Which candidate interventions are acceptable interventions?"
-From the linked data tripples that have been given, it will make inferences and return a result answering the question.
-    ```
-    candidate_one acceptable_candidate
-    ```
-1. The figure geenrator takes the candidates, and passes the relevant data along to the matching template implementations.
 
-## Use
+## Candidate Smasher
 
-1. Pass Situation, Performance Data, and Data Analyzer to Bit Stomach 
-2. Save & Examine resulting Situation Plus.
+### Input
+- Spek
+- External Template Metadata (optional)
 
+The uri of "uses template" is "http://example.com/slowmo#slowmo\_0000003"
+Metadata about templates can be declared inline in the spek, or just the id of the template.
+Additional metadata about templates can be supplied as an external metadata file.
+The results of the inline and external metadata are merged.
+
+Templates section of spek:
+```json
+    "http://example.com/slowmo#slowmo_0000003": [
+        {
+            "@id": "https://example.com/app/onto#ShowGapTemplate"
+        },
+        {
+            "@id": "https://inferences.es/app/onto#ShowTrendTemplate"
+        }
+    ]
+```
+
+External Template Metadata:
+```json
+    {
+      "@id": "https://example.com/app/onto#ShowGapTemplate",
+      "@type": "http://purl.obolibrary.org/obo/psdo#psdo_0000002",
+      "name": "gap figure",
+      "uses_intervention_property":[ 
+        "normative_comparator",
+        "peer_comparison"
+      ]
+    },
+    {
+      "@id": "https://inferences.es/app/onto#ShowTrendTemplate",
+      "@type": "http://purl.obolibrary.org/obo/psdo#psdo_0000002",
+      "name": "trend figure",
+      "uses_intervention_property":[ "show_trend"]
+    }
+```
+
+### Output: Add Candidates to Spek
+
+Two of the candidates added to spek:
+```json
+  {
+      "@id": "http://example.com/app/1f11539501aab7ee57ac755947c5d916",
+      "@type": "http://example.com/cpo#cpo_0000053",
+      "http://example.com/slowmo#AncestorPerformer": "http://example.com/app#Alice",
+      "http://example.com/slowmo#AncestorTemplate": "https://inferences.es/app/onto#ShowTrendTemplate",
+      "http://example.com/slowmo#uses_intervention_property": { "@value": "show_trend" },
+      "http://purl.obolibrary.org/obo/RO_0000091": [
+          { "@value": "mastery_unknown" },
+          { "@value": "negative_gap" },
+          { "@value": "negative_trend" },
+          { "@value": "small_gap" }
+      ],
+      "http://schema.org/name": { "@value": "trend figure" }
+  },
+  {
+      "@id": "http://example.com/app/925ec1812aeea4f491165499bc74e7d0",
+      "@type": "http://example.com/cpo#cpo_0000053",
+      "http://example.com/slowmo#AncestorPerformer": "http://example.com/app#Bob",
+      "http://example.com/slowmo#AncestorTemplate": "https://example.com/app/onto#ShowGapTemplate",
+      "http://example.com/slowmo#uses_intervention_property": [
+          { "@value": "normative_comparator" },
+          { "@value": "peer_comparison" }
+      ],
+      "http://purl.obolibrary.org/obo/RO_0000091": [
+          { "@value": "mastery_present" },
+          { "@value": "positive_trend" }
+      ],
+      "http://schema.org/name": { "@value": "gap figure" }
+  },
+```
+
+## Think Pudding
+
+This application expects the tripple store Fuseki to be running and accessible.
+
+### Input
+- Spek
+- Causal Pathway Metadata
+
+Causal pathway metadata:
+```json
+    {
+      "@id": "http://example.com/app#onward_upward",
+      "@type": "cpo:causal_pathway",
+      "name": "Onward Upward",
+
+      "cpo:has_prerequisite":[
+        "positive_trend",
+        "show_trend"
+      ],
+
+      "cpo:has_moderator":[
+        { "slowmo:candidate_attribute": "slowmo:trend_slope_moderate",
+          "slowmo:weight": {"@value": 10 }},
+        { "slowmo:candidate_attribute": "slowmo:trend_slope_steep",
+          "slowmo:weight": {"@value": 100 }}
+      ],
+
+      "cpo:mechanism": "motivation",
+      "cpo:proximal_outcome": "performance improves",
+      "slowmo:source_reference": "Kluger and DeNisi 1996"
+    },
+
+```
+
+### Output: Candidate acceptability added.
+Candidates that match the prerequisites of a causal pathway get "acceptable\_by" predicate added.
+
+```json
+  {
+    "@id": "http://example.com/app/c8cae3bc7a8d6635825e35f9ea59d5e1",
+    "@type": "http://example.com/cpo#cpo_0000053",
+    "AncestorPerformer": "http://example.com/app#Bob",
+    "AncestorTemplate": "https://inferences.es/app/onto#ShowTrendTemplate",
+    "acceptable_by": "http://example.com/app#onward_upward",
+    "uses_intervention_property": "show_trend",
+    "RO_0000091": [
+      "mastery_present",
+      "positive_trend"
+    ],
+    "name": "trend figure"
+  },
+  {
+    "@id": "http://example.com/app/e3dfa93a31d886318aafd587d90f1e6a",
+    "@type": "http://example.com/cpo#cpo_0000053",
+    "AncestorPerformer": "http://example.com/app#Alice",
+    "AncestorTemplate": "https://example.com/app/onto#ShowGapTemplate",
+    "acceptable_by": "http://example.com/app#eliminate_neg_gap",
+    "uses_intervention_property": [
+      "normative_comparator",
+      "peer_comparison"
+    ],
+    "RO_0000091": [
+      "small_gap",
+      "negative_trend",
+      "negative_gap",
+      "mastery_unknown"
+    ],
+    "name": "gap figure"
+  }
+```
 
 
