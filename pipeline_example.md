@@ -41,9 +41,10 @@ Performers section of spek:
 
 ### Output: Add Performcer Dispositions to Spek
 The performers get annotated using performance data.
-http://purl.obolibrary.org/obo/RO\_0000091 is "has disposition"
+http://purl.obolibrary.org/obo/RO\_0000091 is "has disposition" 
+Below is the performers section of the spek.
 
-Performers section of spek:
+Added dispositions such as negative\_gap to Alice:
 ```json
   "slowmo:has_performer": [
       {
@@ -58,6 +59,7 @@ Performers section of spek:
             { "@value": "small_gap" }
         ]
 ```
+Added dispositions to performer, Bob:
 ```json
       },
       {
@@ -70,6 +72,9 @@ Performers section of spek:
               { "@value": "positive_trend" }
           ]
 ```
+
+A performcer, Carol, has been added to the performers in the spek.
+Carol was in the performance data, but not in the input spek.
 ```json
       },
       {
@@ -82,8 +87,6 @@ Performers section of spek:
   ],
 ```
 
-Notice that a performcer, Carol, has been added to the performers in the spek.
-Carol was in the performance data, but not in the input spek.
 
 
 ## Candidate Smasher
@@ -130,6 +133,11 @@ External Template Metadata:
 
 ### Output: Add Candidates to Spek
 
+The candidates are essentially concatenations of a performer and template.
+Each has the dispositions (http://purl.obolibrary.org/obo/RO_0000091) of the performer, 
+and the intervention properties of the template.
+The performer and template progenitors are recorded as AncestorPerformer and AncestorTemplate.
+
 Two of the candidates added to spek:
 ```json
   {
@@ -171,7 +179,7 @@ This application expects the tripple store Fuseki to be running and accessible.
 - Spek
 - Causal Pathway Metadata
 
-Causal pathway metadata:
+Example of metadata for a causal pathway:
 ```json
     {
       "@id": "http://example.com/app#onward_upward",
@@ -200,17 +208,18 @@ Causal pathway metadata:
 ### Output: Candidate acceptability added.
 Candidates that match the prerequisites of a causal pathway get "acceptable\_by" predicate added.
 
+This candidate is accetable by the causal pathway named "onward upward".
+It satisfied all of the prerequisites of the causal pathway.
+Specifically, it has the positive\_trend disposition and the show\_trend intervention property.
 ```json
   {
     "@id": "http://example.com/app/c8cae3bc7a8d6635825e35f9ea59d5e1",
     "@type": "http://example.com/cpo#cpo_0000053",
     "AncestorPerformer": "http://example.com/app#Bob",
     "AncestorTemplate": "https://inferences.es/app/onto#ShowTrendTemplate",
-```
-```json
+
     "acceptable_by": "http://example.com/app#onward_upward",
-```
-```json
+
     "uses_intervention_property": "show_trend",
     "RO_0000091": [
       "mastery_present",
@@ -218,16 +227,19 @@ Candidates that match the prerequisites of a causal pathway get "acceptable\_by"
     ],
     "name": "trend figure"
   },
+```
+
+This candidate is acceptable by the causal pathway, "eliminate negative gap".
+The prerequisites for that pathway are negative\_gap and "normative\_comparator".
+```json
   {
     "@id": "http://example.com/app/e3dfa93a31d886318aafd587d90f1e6a",
     "@type": "http://example.com/cpo#cpo_0000053",
     "AncestorPerformer": "http://example.com/app#Alice",
     "AncestorTemplate": "https://example.com/app/onto#ShowGapTemplate",
-```
-```json
+
     "acceptable_by": "http://example.com/app#eliminate_neg_gap",
-```
-```json
+
     "uses_intervention_property": [
       "normative_comparator",
       "peer_comparison"
