@@ -1,0 +1,56 @@
+----------------------- REVIEW 1 ---------------------
+Overall evaluation: 1 (weak accept)
+
+This is a Late-Breaking Research submission, in-progress research.
+The work has a realistic application potential in clinical care and some of the underlying work related to KRS.
+Since this is a two-page submission and there are no publications by authors cited in the references list, there are some points need further clarification:
+1)      The CPO and PSDO ontologies, are they available through bioportal?
+2)      What is the future plan for the pipeline? Will it be shared openly or shared under certain conditions? Or will it be utilized by specific healthcare systems or in a proprietary manner?
+3)      The performance feedback tailoring system, will it be a standalone system? Or will it be part of an EHR system?
+4)      Within the tailoring system, all the modules, are there any order among the module? Or each module is independent to any other models?
+5)      Some of the content in the modules need further annotation, for example, scores under “Rank Candidates” module, how will the score be calculated?
+6)      How the “level of influence” be decided/calculated?
+7)      How the system will be evaluated?
+8)      More description about the sources, criteria, references, and reasons for each module is necessary.
+
+1. They are not available via bioportal as they have yet to be validated in practice or by review.
+
+2. The software is open source under an apache license.
+
+3. The pipeline and the components are not dependent on an EHR.
+
+4. The tailoring system is a set of independent applications.
+The input and output of the applications lend a natural ordering.
+
+5. Scoring systems have yet to be evaluated and tested.
+
+6. Level of influence will be determined from experiment observations.
+
+7. System will be evaluated in subsequent laboratory experiments.
+
+8. Abstract format is insufficient to support additional description.
+
+
+
+----------------------- REVIEW 2 ---------------------
+Overall evaluation: -1 (weak reject)
+
+This submission would need to be carefully rewritten in order for the reader to understand what, if anything, is actually being reported. 
+
+The background section introduces clinical quality dashboards but never really says what kind of information they display (“performance communication”), or when or how they are used. What is “visual processing for a domain problem”? What are “causal pathways”? Whatever they are, we are told that displays can and should be optimized via them to influence clinical practice.
+
+A pipeline is presented, each stage of which has inputs and outputs that are much too vaguely characterized. Example: ”Annotation functions, written to implement the setting-specific interpretations of attributes, infer attributes of performers from the data.” What is a performer? The sentence preceding that one suggests it is the same thing as a “feedback recipient”. Is it possibly a person using an information system? What are the inputs to these annotation functions? What is a “moderator”, as mentioned in “In the next step, ‘Rank Candidates’, moderators are used to describe the level of influence of each pathway and to rank candidates by their estimated influence on clinical practice. Moderators are specified during the contextual inquiry for a clinical setting. ” What kind of thing is “the functional code of figure templates” (p2)? Etc.
+
+Whether this is all jargon from the clinical performance domain, or the authors are struggling to describe in their own words what has been produced, the result is a failure to communicate.
+
+
+1. Suggestion is not specific enough to be actionable.  The existence and brief overview of a feedback tailoring system implementation is being reported.
+
+2. Reviewer/audience may not be familiar with clinical quality dashboards.
+Substitute recipient in for performer to simplify.
+Input to annotations functions is the recipient performance data.
+Define moderator.
+Simplify treatment of templates.  Specifically, ignore that they're code.
+
+3. Reviewer/audience may not be familiar with clinical performance feedback.
+

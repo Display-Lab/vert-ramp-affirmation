@@ -1,9 +1,11 @@
 catalog-v001.xml
 
-# Ignore abstract template and build artifacts
-doc/abstract/*.pdf
-doc/abstract/build/*
-doc/abstract/figures/*
-doc/amia_abstract/
-doc/amia_template/
+# Abstract template and build artifacts
+doc/**/*.pdf
+doc/**/build/*
+doc/**/figures/*
+
+# Fuseki related
+fuseki.out
+run/
 
