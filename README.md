@@ -24,8 +24,8 @@ The major steps of the intervention generation pipeline:
 1. Data analsis for performance features
 1. Performance feedback candidate generation
 1. Reasoning about appropriateness of candidates 
-1. Scoring and selection of candidates 
-1. Generate performance summaries using appropriate candidates
+1. Scoring and promotion of candidates for figure generation
+1. Generate performance summary figures using promoted candidates
 
 ## Definitions
 - Display Template: Code to generate plot or figure.
@@ -61,7 +61,7 @@ For a more detailed explanation and example, see: [pipeline example](pipeline_ex
 - Outputs:
     - Spek with additional candidate annotations
 
-### Candidate Scoring (Esteemer)
+### Candidate Scoring ([Esteemer](https://github.com/Display-Lab/esteemer))
 - Inputs:
     - Spek
     - Causal pathways
