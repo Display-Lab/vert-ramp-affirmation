@@ -104,10 +104,10 @@ Templates section of spek:
 ```json
     "http://example.com/slowmo#slowmo_0000003": [
         {
-            "@id": "https://example.com/app/onto#ShowGapTemplate"
+            "@id": "https://example.com/app#ShowGapTemplate"
         },
         {
-            "@id": "https://inferences.es/app/onto#ShowTrendTemplate"
+            "@id": "https://example.com/app#ShowTrendTemplate"
         }
     ]
 ```
@@ -115,7 +115,7 @@ Templates section of spek:
 External Template Metadata:
 ```json
     {
-      "@id": "https://example.com/app/onto#ShowGapTemplate",
+      "@id": "https://example.com/app#ShowGapTemplate",
       "@type": "http://purl.obolibrary.org/obo/psdo#psdo_0000002",
       "name": "gap figure",
       "uses_intervention_property":[ 
@@ -124,7 +124,7 @@ External Template Metadata:
       ]
     },
     {
-      "@id": "https://inferences.es/app/onto#ShowTrendTemplate",
+      "@id": "https://example.com/app#ShowTrendTemplate",
       "@type": "http://purl.obolibrary.org/obo/psdo#psdo_0000002",
       "name": "trend figure",
       "uses_intervention_property":[ "show_trend"]
@@ -144,7 +144,7 @@ Two of the candidates added to spek:
       "@id": "http://example.com/app/1f11539501aab7ee57ac755947c5d916",
       "@type": "http://example.com/cpo#cpo_0000053",
       "http://example.com/slowmo#AncestorPerformer": "http://example.com/app#Alice",
-      "http://example.com/slowmo#AncestorTemplate": "https://inferences.es/app/onto#ShowTrendTemplate",
+      "http://example.com/slowmo#AncestorTemplate": "https://example.com/app#ShowTrendTemplate",
       "http://example.com/slowmo#uses_intervention_property": { "@value": "show_trend" },
       "http://purl.obolibrary.org/obo/RO_0000091": [
           { "@value": "mastery_unknown" },
@@ -158,7 +158,7 @@ Two of the candidates added to spek:
       "@id": "http://example.com/app/925ec1812aeea4f491165499bc74e7d0",
       "@type": "http://example.com/cpo#cpo_0000053",
       "http://example.com/slowmo#AncestorPerformer": "http://example.com/app#Bob",
-      "http://example.com/slowmo#AncestorTemplate": "https://example.com/app/onto#ShowGapTemplate",
+      "http://example.com/slowmo#AncestorTemplate": "https://example.com/app#ShowGapTemplate",
       "http://example.com/slowmo#uses_intervention_property": [
           { "@value": "normative_comparator" },
           { "@value": "peer_comparison" }
@@ -216,7 +216,7 @@ Specifically, it has the positive\_trend disposition and the show\_trend interve
     "@id": "http://example.com/app/c8cae3bc7a8d6635825e35f9ea59d5e1",
     "@type": "http://example.com/cpo#cpo_0000053",
     "AncestorPerformer": "http://example.com/app#Bob",
-    "AncestorTemplate": "https://inferences.es/app/onto#ShowTrendTemplate",
+    "AncestorTemplate": "https://example.com/app#ShowTrendTemplate",
 
     "acceptable_by": "http://example.com/app#onward_upward",
 
@@ -236,7 +236,7 @@ The prerequisites for that pathway are negative\_gap and "normative\_comparator"
     "@id": "http://example.com/app/e3dfa93a31d886318aafd587d90f1e6a",
     "@type": "http://example.com/cpo#cpo_0000053",
     "AncestorPerformer": "http://example.com/app#Alice",
-    "AncestorTemplate": "https://example.com/app/onto#ShowGapTemplate",
+    "AncestorTemplate": "https://example.com/app#ShowGapTemplate",
 
     "acceptable_by": "http://example.com/app#eliminate_neg_gap",
 
