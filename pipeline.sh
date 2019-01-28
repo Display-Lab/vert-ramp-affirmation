@@ -62,7 +62,7 @@ ${BS}/bin/bitstomach.sh -a $IDIR/annotations.r -s $IDIR/spek.json -d $IDIR/perfo
   ${CS}/bin/cansmash --md-source=${CS}/spec/fixtures/templates-cp.json |\
   tee /tmp/cs.json |\
   ${TP}/bin/tp.sh -p ${TP}/example/causal_pathways_list.json |\
-  tee /tmp/tp.out |\
+  tee /tmp/tp.json |\
   ${ES}/bin/esteemer.sh |\
-  tee /tmp/es.out
+  tee /tmp/es.json
 
