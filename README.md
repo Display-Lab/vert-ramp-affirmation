@@ -77,3 +77,8 @@ For a more detailed explanation and example, see: [pipeline example](pipeline_ex
     - Performance summary figures
 
 
+## Installing Dependencies on OSX
+[OSX installation instructions](./OSX_Install.md)
+
+
+
