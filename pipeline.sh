@@ -44,24 +44,16 @@ fi
 
 # Run Pipeline
 
-## Bitstomach
-BS=~/workspace/bitstomach
-## Candidate Smasher
-CS=~/workspace/candidate-smasher
-## Think Pudding
-TP=~/workspace/think-pudding
-## Esteemer
-ES=~/workspace/esteemer
-
+# All CLI's are required to be on PATH
 
 echo -e "\nPIPELINE:\n" >> /dev/stderr
 
-${BS}/bin/bitstomach.sh -a example/annotations.r -s example/spek.json -d example/performer-data.csv |\
+bitstomach.sh -a example/annotations.r -s example/spek.json -d example/performer-data.csv |\
   tee /tmp/bs.json |\
-  ${CS}/bin/cansmash --md-source=example/templates-cp.json |\
+  cansmash --md-source=example/templates-cp.json |\
   tee /tmp/cs.json |\
-  ${TP}/bin/tp.sh -p example/causal_pathways_list.json |\
+  thinkpudding.sh -p example/causal_pathways_list.json |\
   tee /tmp/tp.json |\
-  ${ES}/bin/esteemer.sh |\
+  esteemer.sh |\
   tee /tmp/es.json
 
