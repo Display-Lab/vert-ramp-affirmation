@@ -16,7 +16,7 @@ command -v jq 1> /dev/null 2>&1 || \
 
 
 # Check and Start FUSEKI running.
-FUSEKI_DIR=/opt/fuseki/apache-jena-fuseki-3.8.0
+FUSEKI_DIR=/opt/fuseki/apache-jena-fuseki-3.10.0
 
 ping_fuseki(){ curl -s -o /dev/null -w "%{http_code}" localhost:3030/$/ping; }
 
@@ -24,7 +24,7 @@ if [[ $(ping_fuseki) -ne 200 ]]; then
   echo >&2 "Fuseki not running locally. Attempting to start it."; 
 
   # Try to start custom fuseki locally
-  ${FUSEKI_DIR}/fuseki-server --mem --update /ds 1> fuseki.out 2>&1 &!
+  ${FUSEKI_DIR}/fuseki-server --mem --update /ds 1> fuseki.out 2>&1 &
 
   # Wait for it to start.
   COUNTER=0
