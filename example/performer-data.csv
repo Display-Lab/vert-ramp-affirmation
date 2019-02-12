@@ -1,0 +1,13 @@
+performer,timepoint,performance
+Alice,0,10
+Alice,1,11
+Alice,2,10
+Alice,3,9
+Bob,0,11
+Bob,1,12
+Bob,2,13
+Bob,3,14
+Carol, 0, 12
+Carol, 1, 13
+Carol, 2, 12
+Carol, 3, 13

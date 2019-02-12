@@ -53,15 +53,14 @@ TP=~/workspace/think-pudding
 ## Esteemer
 ES=~/workspace/esteemer
 
-IDIR=${BS}/inst/example/causal_pathways
 
 echo -e "\nPIPELINE:\n" >> /dev/stderr
 
-${BS}/bin/bitstomach.sh -a $IDIR/annotations.r -s $IDIR/spek.json -d $IDIR/performer-data.csv |\
+${BS}/bin/bitstomach.sh -a example/annotations.r -s example/spek.json -d example/performer-data.csv |\
   tee /tmp/bs.json |\
-  ${CS}/bin/cansmash --md-source=${CS}/spec/fixtures/templates-cp.json |\
+  ${CS}/bin/cansmash --md-source=example/templates-cp.json |\
   tee /tmp/cs.json |\
-  ${TP}/bin/tp.sh -p ${TP}/example/causal_pathways_list.json |\
+  ${TP}/bin/tp.sh -p example/causal_pathways_list.json |\
   tee /tmp/tp.json |\
   ${ES}/bin/esteemer.sh |\
   tee /tmp/es.json

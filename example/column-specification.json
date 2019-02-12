@@ -1,0 +1,60 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/csvw", 
+    {
+      "@language": "en"
+    }
+  ],
+  "dc:publisher": {
+    "schema:name": "Example Client", 
+    "schema:url": {
+      "@id": "http://example.com/app#example-client"
+    }
+  }, 
+  "dc:title": "Mock Performance Data", 
+  "dcat:keyword": [
+    "demo", 
+    "performance"
+  ],  
+  "dialect": {
+    "commentPrefix": "", 
+    "delimiter": ",", 
+    "doubleQuote": true, 
+    "encoding": "utf-8", 
+    "header": true, 
+    "headerRowCount": "1", 
+    "lineTerminators": [
+      "\\n"
+    ], 
+    "quoteChar": "\"", 
+    "skipBlankRows": true, 
+    "skipColumns": 0, 
+    "skipInitialSpace": false, 
+    "skipRows": "", 
+    "trim": false
+  }, 
+  "tableSchema": {
+    "columns": [
+      {
+        "datatype": "string", 
+        "dc:description": "Performer unique ID", 
+        "name": "id", 
+        "titles": "Identifier"
+      }, 
+      {
+        "datatype": "integer", 
+        "dc:description": "Time at which performance was measured.", 
+        "name": "timepoint", 
+        "titles": "Time"
+      }, 
+      {
+        "datatype": "integer", 
+        "dc:description": "Demonstration performance value", 
+        "name": "performance", 
+        "titles": "Performance"
+      }
+    ], 
+    "primaryKey": []
+  }, 
+  "url": "http://example.com/client/foo/data/000002"
+}

@@ -1,0 +1,119 @@
+{
+  "@context": {
+    "@vocab": "http://schema.org/",
+    "slowmo": "http://example.com/slowmo#",
+    "csvw":   "http://www.w3.org/ns/csvw#", 
+    "dc":     "http://purl.org/dc/terms/",
+    "slowmo:performer":        "http://example.com/slowmo#ascribee",
+    "slowmo:measure":          "http://example.com/slowmo#measure",
+    "slowmo:guideline":        "http://example.com/slowmo#guideline",
+    "slowmo:has_performer":    "http://example.com/slowmo#slowmo_0000001",
+    "slowmo:uses_template":    "http://example.com/slowmo#slowmo_0000003",
+    "slowmo:uses_ISR":         "http://example.com/slowmo#slowmo_0000002",
+    "slowmo:rid_template":     "http://example.com/slowmo#template",
+    "slowmo:spek":                  "http://example.com/slowmo#slowmo_0000140",
+    "cpo:ISR":                      "http://example.com/cpo#cpo_0000029",
+    "slowmo:normative_comparator":  "http://example.com/slowmo#normative_comparator",
+    "cpo:prevention_framing":       "http://example.com/cpo#cpo_0000038",
+    "cpo:promotion_framing":        "http://example.com/cpo#cpo_0000037",
+    "slowmo:performer_cardinality": "http://example.com/slowmo#performer_cardinality",
+    "slowmo:time_cardinality":      "http://example.com/slowmo#time_cardinality",
+    "slowmo:capability_barrier": "http://example.com/slowmo#slowmo_0000132",
+    "cpo:prevention_focus":      "http://example.com/cpo#cpo_0000036",
+    "cpo:promotion_focus":       "http://example.com/cpo#cpo_0000035",
+    "slowmo:perf_gap_pos":       "http://example.com/slowmo#performance_gap_pos",
+    "slowmo:perf_gap_neg":       "http://example.com/slowmo#performance_gap_neg",
+    "slowmo:perf_trend_pos":     "http://example.com/slowmo#performance_trend_pos",
+    "slowmo:perf_trend_neg":     "http://example.com/slowmo#performance_trend_neg",
+    "app:related_location":      "http://example.com/app#related_location",
+    "has_part":        "http://purl.obolibrary.org/obo/bfo#BFO_0000051",
+    "has_disposition": "http://purl.obolibrary.org/obo/RO_0000091",
+    "client_spek":     "http://example.com/app#clientname_spek"
+  },
+  "@id": "http://example.com/app#example-client",
+  "@type": "http://example.com/slowmo#slowmo_0000140",
+  "app:related_location": {
+      "@type": "Organization",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "United States",
+        "addressLocality": "Ann Arbor",
+        "addressRegion": "Michigan",
+        "postalCode": "48109",
+        "streetAddress": "903 South Univeristy",
+        "name": "Example Client"
+      }
+    },
+  "slowmo:has_performer": [
+    {
+      "@id": "http://example.com/app#Alice",
+      "@type": "http://example.com/slowmo#ascribee"
+    },
+    {
+      "@id": "http://example.com/app#Bob",
+      "@type": "http://example.com/slowmo#ascribee"
+    }],
+  "slowmo:uses_ISR": [
+    {
+      "@id": "http://example.com/app#EliminateGap",
+      "@type": "http://example.com/cpo#cpo_0000029"
+    }],
+  "slowmo:uses_template": [
+    {
+      "@id": "http://example.com/app#ShowGapTemplate"
+    },
+    {
+      "@id": "http://example.com/app#ShowTrendTemplate"
+    }],
+  "slowmo:measure": {
+    "dc:title": "Generic Performance",
+    "slowmo:guideline": 10
+  },
+  "slowmo:input_table":{
+    "@type": "csvw:Table",
+    "dc:title": "Mock Performance Data", 
+    "csvw:dialect": {
+      "csvw:commentPrefix": "", 
+      "csvw:delimiter": ",", 
+      "csvw:doubleQuote": true, 
+      "csvw:encoding": "utf-8", 
+      "csvw:header": true, 
+      "csvw:headerRowCount": "1", 
+      "csvw:lineTerminators": [
+        "\\n"
+      ], 
+      "csvw:quoteChar": "\"", 
+      "csvw:skipBlankRows": true, 
+      "csvw:skipColumns": 0, 
+      "csvw:skipInitialSpace": false, 
+      "csvw:skipRows": "", 
+      "csvw:trim": false
+    }, 
+    "csvw:tableSchema": {
+      "csvw:columns": [
+        {
+          "csvw:datatype": "string", 
+          "dc:description": "Performer unique ID", 
+          "csvw:name": "performer", 
+          "csvw:titles": "Name",
+          "slowmo:use": "identifier"
+        },
+        {
+          "csvw:datatype": "integer", 
+          "dc:description": "Time at which performance was measured.", 
+          "csvw:name": "timepoint", 
+          "csvw:titles": "Time",
+          "slowmo:use": "time"
+        },
+        {
+          "csvw:datatype": "integer", 
+          "dc:description": "Demonstration performance value", 
+          "csvw:name": "performance", 
+          "csvw:titles": "Performance",
+          "slowmo:use": "value"
+        }
+      ] 
+    } 
+  }
+}
+
