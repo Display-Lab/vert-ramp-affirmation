@@ -16,7 +16,7 @@ command -v jq 1> /dev/null 2>&1 || \
 
 
 # Check and Start FUSEKI running.
-FUSEKI_DIR=/opt/fuseki/apache-jena-fuseki-3.8.0
+FUSEKI_DIR=/opt/fuseki/apache-jena-fuseki-3.10.0
 
 ping_fuseki(){ curl -s -o /dev/null -w "%{http_code}" localhost:3030/$/ping; }
 
@@ -24,7 +24,7 @@ if [[ $(ping_fuseki) -ne 200 ]]; then
   echo >&2 "Fuseki not running locally. Attempting to start it."; 
 
   # Try to start custom fuseki locally
-  ${FUSEKI_DIR}/fuseki-server --mem --update /ds 1> fuseki.out 2>&1 &!
+  ${FUSEKI_DIR}/fuseki-server --mem --update /ds 1> fuseki.out 2>&1 &
 
   # Wait for it to start.
   COUNTER=0
@@ -44,25 +44,16 @@ fi
 
 # Run Pipeline
 
-## Bitstomach
-BS=~/workspace/bitstomach
-## Candidate Smasher
-CS=~/workspace/candidate-smasher
-## Think Pudding
-TP=~/workspace/think-pudding
-## Esteemer
-ES=~/workspace/esteemer
-
-IDIR=${BS}/inst/example/causal_pathways
+# All CLI's are required to be on PATH
 
 echo -e "\nPIPELINE:\n" >> /dev/stderr
 
-${BS}/bin/bitstomach.sh -a $IDIR/annotations.r -s $IDIR/spek.json -d $IDIR/performer-data.csv |\
+bitstomach.sh -a example/annotations.r -s example/spek.json -d example/performer-data.csv |\
   tee /tmp/bs.json |\
-  ${CS}/bin/cansmash --md-source=${CS}/spec/fixtures/templates-cp.json |\
+  cansmash --md-source=example/templates-cp.json |\
   tee /tmp/cs.json |\
-  ${TP}/bin/tp.sh -p ${TP}/example/causal_pathways_list.json |\
+  thinkpudding.sh -p example/causal_pathways_list.json |\
   tee /tmp/tp.json |\
-  ${ES}/bin/esteemer.sh |\
+  esteemer.sh |\
   tee /tmp/es.json
 
