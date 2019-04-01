@@ -11,6 +11,7 @@
     "slowmo:uses_template":    "http://example.com/slowmo#slowmo_0000003",
     "slowmo:uses_ISR":         "http://example.com/slowmo#slowmo_0000002",
     "slowmo:rid_template":     "http://example.com/slowmo#template",
+    "slowmo:ColumnUse":        "http://example.com/slowmo#ColumnUse",
     "slowmo:spek":                  "http://example.com/slowmo#slowmo_0000140",
     "cpo:ISR":                      "http://example.com/cpo#cpo_0000029",
     "slowmo:normative_comparator":  "http://example.com/slowmo#normative_comparator",
@@ -96,21 +97,21 @@
           "dc:description": "Performer unique ID", 
           "csvw:name": "performer", 
           "csvw:titles": "Name",
-          "slowmo:use": "identifier"
+          "slowmo:ColumnUse": "identifier"
         },
         {
           "csvw:datatype": "integer", 
           "dc:description": "Time at which performance was measured.", 
           "csvw:name": "timepoint", 
           "csvw:titles": "Time",
-          "slowmo:use": "time"
+          "slowmo:ColumnUse": "time"
         },
         {
           "csvw:datatype": "integer", 
           "dc:description": "Demonstration performance value", 
           "csvw:name": "performance", 
           "csvw:titles": "Performance",
-          "slowmo:use": "value"
+          "slowmo:ColumnUse": "value"
         }
       ] 
     } 
