@@ -25,6 +25,7 @@
     "slowmo:perf_gap_neg": "http://example.com/slowmo#performance_gap_neg",
     "slowmo:perf_trend_pos": "http://example.com/slowmo#performance_trend_pos",
     "slowmo:perf_trend_neg": "http://example.com/slowmo#performance_trend_neg",
+    "slowmo:ColumnUse": "http://example.com/slowmo#ColumnUse",
     "app:related_location": "http://example.com/app#related_location",
     "has_part": "http://purl.obolibrary.org/obo/bfo#BFO_0000051",
     "has_disposition": "http://purl.obolibrary.org/obo/RO_0000091",
@@ -171,14 +172,12 @@
     }
   ],
   "slowmo:measure": {
-    "dc:title": "Generic Performance",
-    "slowmo:guideline": 10
+    "dc:title": "Completed LST Template Documentation"
   },
   "slowmo:input_table": {
     "@type": "csvw:Table",
-    "dc:title": "How many total newly admitted Veterans have a completed LST template?",
+    "dc:title": "How many total newly admitted Veterans have documented completing a LST template?",
     "csvw:dialect": {
-      "csvw:commentPrefix": "",
       "csvw:delimiter": ",",
       "csvw:doubleQuote": true,
       "csvw:encoding": "utf-8",
@@ -201,28 +200,28 @@
           "dc:description": "Performer unique ID",
           "csvw:name": "sta6a",
           "csvw:titles": "Site",
-          "slowmo:use": "identifier"
+          "slowmo:ColumnUse": "identifier"
         },
         {
           "csvw:datatype": "date",
           "dc:description": "Report month",
           "csvw:name": "report_month",
           "csvw:titles": "Report Month",
-          "slowmo:use": "time"
+          "slowmo:ColumnUse": "time"
         },
         {
           "csvw:datatype": "integer",
-          "dc:description": "Veterans that have been documented",
+          "dc:description": "Veterans who have been documented",
           "csvw:name": "documented",
           "csvw:titles": "Documented",
-          "slowmo:use": "value"
+          "slowmo:ColumnUse": "value"
         },
         {
           "csvw:datatype": "integer",
-          "dc:description": "Veterans that have not been documented",
+          "dc:description": "Veterans who have not been documented",
           "csvw:name": "not_documented",
           "csvw:titles": "Not Documented",
-          "slowmo:use": "value"
+          "slowmo:ColumnUse": "value"
         }
       ]
     }
