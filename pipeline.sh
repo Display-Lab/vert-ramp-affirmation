@@ -48,11 +48,11 @@ fi
 
 echo -e "\nPIPELINE:\n" >> /dev/stderr
 
-bitstomach.sh -a example/annotations.r -s example/spek.json -d example/performer-data.csv |\
+bitstomach.sh -a example/sham-annotations.r -s example/sham-spek.json -d example/sham-data.csv |\
   tee /tmp/bs.json |\
-  cansmash --md-source=example/templates-cp.json |\
+  cansmash --md-source=example/sham-templates-md.json |\
   tee /tmp/cs.json |\
-  thinkpudding.sh -p example/causal_pathways_list.json |\
+  thinkpudding.sh -p example/sham-causal-paths.json |\
   tee /tmp/tp.json |\
   esteemer.sh |\
   tee /tmp/es.json
