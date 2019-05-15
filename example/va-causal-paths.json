@@ -1,0 +1,85 @@
+{
+  "@context": {
+    "cpo":    "http://example.com/cpo#",
+    "slowmo": "http://example.com/slowmo#",
+    "xsd":    "http://www.w3.org/2001/XMLSchema#"
+  },
+
+  "@graph": [
+    {
+      "@id": "http://example.com/app#observation_paucity",
+      "@type": "cpo:causal_pathway",
+      "name": "Paucity of observations",
+
+      "cpo:has_prerequisite":[
+        "observation_paucity",
+        "show_tabular"
+      ],
+
+
+      "cpo:mechanism": "awareness",
+      "cpo:proximal_outcome": "awareness increases"
+    },
+    {
+      "@id": "http://example.com/app#downward_trend",
+      "@type": "cpo:causal_pathway",
+      "name": "Downward Trend",
+
+      "cpo:has_prerequisite":[
+        "negative_trend",
+        "show_trend"
+      ],
+
+      "cpo:has_moderator":[
+        { "slowmo:candidate_attribute": "show_tabular",
+          "slowmo:weight": {"@value": -10 }},
+        { "slowmo:candidate_attribute": "show_trend",
+          "slowmo:weight": {"@value": 100 }}
+      ],
+
+      "cpo:mechanism": "motivation",
+      "cpo:proximal_outcome": "performance improves"
+    },
+    {
+      "@id": "http://example.com/app#onward_upward",
+      "@type": "cpo:causal_pathway",
+      "name": "Onward Upward",
+
+      "cpo:has_prerequisite":[
+        "positive_trend",
+        "show_trend"
+      ],
+
+      "cpo:has_moderator":[
+        { "slowmo:candidate_attribute": "show_tabular",
+          "slowmo:weight": {"@value": -10 }},
+        { "slowmo:candidate_attribute": "slowmo:trend_slope_steep",
+          "slowmo:weight": {"@value": 100 }}
+      ],
+
+      "cpo:mechanism": "motivation",
+      "cpo:proximal_outcome": "performance improves",
+      "slowmo:source_reference": "Kluger and DeNisi 1996"
+    },
+    {
+      "@id": "http://example.com/app#negative_gap",
+      "@type": "cpo:causal_pathway",
+      "name": "Negative gap",
+
+      "cpo:has_prerequisite":[
+        "negative_gap",
+        "show_gap"
+      ],
+
+      "cpo:has_moderator":[
+        { "slowmo:candidate_attribute": "show_tabular",
+          "slowmo:weight": {"@value": -10 }},
+        { "slowmo:candidate_attribute": "slomo:large_gap",
+          "slowmo:weight": {"@value": 100 }}
+      ],
+
+      "cpo:mechanism": "motivation",
+      "cpo:proximal_outcome": "performance improves"
+    }
+  ]
+}
