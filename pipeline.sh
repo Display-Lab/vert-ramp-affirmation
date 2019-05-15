@@ -42,12 +42,14 @@ if [[ $(ping_fuseki) -ne 200 ]]; then
   exit 1
 fi
 
-# Run Pipeline
-
+# Run Pipeline for all examples sets
 # All CLI's are required to be on PATH
 
 echo -e "\nPIPELINE:\n" >> /dev/stderr
 
+echo -e "\nSham Example:\n" >> /dev/stderr
+
+# Run pipeline for sham example
 bitstomach.sh -a example/sham-annotations.r -s example/sham-spek.json -d example/sham-data.csv |\
   tee /tmp/bs.json |\
   cansmash --md-source=example/sham-templates-md.json |\
@@ -57,3 +59,18 @@ bitstomach.sh -a example/sham-annotations.r -s example/sham-spek.json -d example
   esteemer.sh |\
   tee /tmp/es.json
 
+echo -e "\nVA Example:\n" >> /dev/stderr
+
+# Run pipeline for va example
+bitstomach.sh -a example/va-annotations.r -s example/va-spek.json -d example/va-data.csv |\
+  cansmash --md-source=example/sham-templates-md.json |\
+  thinkpudding.sh -p example/va-causal-paths.json |\
+  esteemer.sh > /tmp/es-va.json
+
+echo -e "\nMtx Example:\n" >> /dev/stderr
+
+# Run pipeline for mtx example
+bitstomach.sh -a example/mtx-annotations.r -s example/mtx-spek.json -d example/mtx-data.csv |\
+  cansmash --md-source=example/sham-templates-md.json |\
+  thinkpudding.sh -p example/mtx-causal-paths.json |\
+  esteemer.sh > /tmp/es-mtx.json
