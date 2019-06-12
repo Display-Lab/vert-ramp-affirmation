@@ -33,7 +33,7 @@ The major steps of the intervention generation pipeline:
 - Annotations: Mathematical calculations to make assertions from performance data.
 - Candidate: A mashup of the attributes of a template and an ascribee.  Created as a computational convenience.
 - Causal Pathway: Computable representation of theory or domain expertise about what makes a performance display candidate appropriate.
-- Spek: top level data container for templates, causal pathways, ascribees, and candidates.
+- Spek: top level data container for metadata: templates, causal pathways, ascribees, and candidates.
 
 ## The Pipeline
 
@@ -68,7 +68,7 @@ For a more detailed explanation and example, see: [pipeline example](pipeline_ex
 - Outputs:
     - Spek with additional candidate annotations
 
-### Figure Generator (Pictoralist)
+### Figure Generator ([Pictoralist](https://github.com/Display-Lab/pictoralist))
 - Inputs:
     - Spek
     - Performance data
