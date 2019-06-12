@@ -54,7 +54,7 @@ calc_achievable_benchmark <- function(data, spek){
   return(stats::median(top_means))
 }
 
-annotate_negative_gap <- function(data, col_spec){
+annotate_negative_gap <- function(data, spek){
   # Hardcode column names.  Extract from spek in subsequent versions.
   id_colname <- 'id'
   denom_colname <- 'total_scripts'
@@ -73,7 +73,7 @@ annotate_negative_gap <- function(data, col_spec){
     summarize(negative_gap = rate < cache$achievable_benchmark)
 }
 
-annotate_positive_gap <- function(data, col_spec){
+annotate_positive_gap <- function(data, spek){
   # Hardcode column names.  Extract from spek in subsequent versions.
   id_colname <- 'id'
   denom_colname <- 'total_scripts'

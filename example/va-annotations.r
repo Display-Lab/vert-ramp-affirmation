@@ -34,20 +34,20 @@ eval_negative_gap <- function(doc, ndoc){
 }
 
 ## Annotation functions
-annotate_obs_paucity <- function(data, col_spec){
+annotate_obs_paucity <- function(data, spek){
   data %>%
     group_by(id) %>%
     arrange(report_month) %>%
     summarize(obs_paucity = eval_obs_paucity(documented, not_documented))
 }
 
-annotate_negative_gap <- function(data, col_spec){
+annotate_negative_gap <- function(data, spek){
   data %>% group_by(id) %>%
     dplyr::filter(report_month == max(report_month)) %>%
     summarize(negative_gap = eval_negative_gap(documented, not_documented))
 }
 
-annotate_negative_trend <- function(data, col_spec){
+annotate_negative_trend <- function(data, spek){
   #cat(paste("\nnegTrend\n"), file=stderr())
   data %>%
     group_by(id) %>%
