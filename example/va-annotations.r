@@ -23,9 +23,9 @@ eval_obs_paucity <- function(doc, ndoc){
 }
 
 eval_negative_trend <- function(doc, ndoc){
-  ratio <- doc/ndoc
-  is_tail_ascending <- !is.unsorted(utils::tail(ratio,3), strictly=T)
-  return(is_tail_ascending)
+  x <- doc/ndoc
+  is_tail_descending <- !is.unsorted(rev(utils::tail(x,3)), strictly=T)
+  return(is_tail_descending)
 }
 
 eval_negative_gap <- function(doc, ndoc){
