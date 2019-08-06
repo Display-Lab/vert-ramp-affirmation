@@ -42,8 +42,8 @@ URIS_PATH=/tmp/uris
 # Find urls in files in directory
 #   excluding dot directories like .git
 #   exclude known good uri patterns
-grep -I --exclude='*.csv' --exclude='*.json'\
-  --exclude-dir='.git' -o -h -e "http[^]' @!$&()*+,;=%]*" -r ${1} |\
+grep -I --exclude=*.CSV --exclude=*.csv --exclude-dir='.git' \
+     -o -h -e "http[^]' @!$&()*+,;=%]*" -r ${1} |\
   sed 's;[^[:alnum:]]*$;;g' |\
   sort |\
   uniq |\
