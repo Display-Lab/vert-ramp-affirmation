@@ -28,6 +28,11 @@ if [[ ! -e ${BS_SPEK} ]]; then
   bitstomach.sh -s ${SPEK_PATH} -a ${ANNO_PATH} -d ${DATA_PATH} > ${BS_SPEK}
 fi
 
+TP_SPEK=/tmp/tp.json
+if [[ ! -e ${TP_SPEK} ]]; then
+  cansmash generate --path ${BS_SPEK} > ${TP_SPEK}
+fi
+
 CP_DIR=/home/grosscol/workspace/kb/causal_pathways
 CP_JSON=/tmp/cp.json
 
@@ -36,8 +41,8 @@ if [[ ! -e ${CP_JSON} ]]; then
     ${CP_DIR}/*.json > ${CP_JSON}
 fi
 
-# Load bitstomach emitted spek into graph 
-curl --silent -X PUT --data-binary "@${SPEK_FILE}" \
+# Load candidate smasher emitted spek into graph 
+curl --silent -X PUT --data-binary "@${TP_SPEK}" \
   --header 'Content-type: application/ld+json' \
   'http://localhost:3030/ds?graph=spek' >&2
  
