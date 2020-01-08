@@ -41,6 +41,20 @@ WHERE {
 }
 ANCEST
 
+# Count ancestor performers of accepted candidates
+read -r -d '' ACCANDI <<'ACCANDI'
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX slowmo: <http://example.com/slowmo#>
+
+SELECT (COUNT(DISTINCT(?perf)) as ?count)
+FROM <http://localhost:3030/ds/spek>
+WHERE {
+  ?candi slowmo:AncestorPerformer ?perf .
+  ?candi slowmo:acceptable_by ?path .
+}
+ACCANDI
+
 # Count causal pathways accepts
 read -r -d '' CPATHS <<'CPATHS'
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -64,8 +78,8 @@ PREFIX slowmo: <http://example.com/slowmo#>
 SELECT ?dtype (COUNT(?dtype) as ?count)
 FROM <http://localhost:3030/ds/spek>
 WHERE {
-  ?perf a <http://purl.obolibrary.org/obo/psdo_0000085> .
-  ?perf obo:RO_0000091 ?disp .
+  ?candi a <http://purl.obolibrary.org/obo/cpo_0000053> .
+  ?candi obo:RO_0000091 ?disp .
   ?disp a ?dtype .
 }
 GROUP BY ?dtype
@@ -127,8 +141,11 @@ echo -e "candi,accepted_count,all,${RES}"
 RES=$($SQ --server "http://localhost:3030/ds" "${ANCEST}" | jq "${JQ_FMT_CAND}")
 echo -e "candi,uniq_perf_count,all,${RES}"
 
+RES=$($SQ --server "http://localhost:3030/ds" "${ACCANDI}" | jq "${JQ_FMT_CAND}")
+echo -e "perf,count,with_accept,${RES}"
+
 $SQ --server "http://localhost:3030/ds" "${CPATHS}" | jq "${JQ_FMT_PATH}" | tr -d '"'
-$SQ --server "http://localhost:3030/ds" "${ANNOS}"  | jq "${JQ_FMT_ANNO}" | tr -d '"'
+#$SQ --server "http://localhost:3030/ds" "${ANNOS}"  | jq "${JQ_FMT_ANNO}" | tr -d '"'
 $SQ --server "http://localhost:3030/ds" "${CPP}"    | jq "${JQ_FMT_CPP}"  | tr -d '"'
 $SQ --server "http://localhost:3030/ds" "${ACPP}"   | jq "${JQ_FMT_ACPP}" | tr -d '"'
 
