@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 
 # Input paths
-ANNO_PATH='/home/grosscol/workspace/spekex/inst/extdata/aspire-annotations.r'
+ANNO_PATH='/home/grosscol/workspace/spekex/inst/extdata/aspire-stepping-annotations.r'
 DATA_PATH='/home/grosscol/workspace/spekex/inst/extdata/aspire-data.csv'
+#DATA_PATH='/home/grosscol/workspace/aspire/preconditions/mpog-unfucked.csv'
 SPEK_PATH='/home/grosscol/workspace/spekex/inst/extdata/aspire-spek.json'
 CP_DIR=/home/grosscol/workspace/kb/causal_pathways
 
