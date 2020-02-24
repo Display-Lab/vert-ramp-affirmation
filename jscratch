@@ -1,0 +1,9 @@
+# Get list of performers
+."http://example.com/slowmo#IsAboutPerformer"[0:2] |
+
+# Modify each performer
+.[]."http://purl.obolibrary.org/obo/RO_0000091" as $p |
+  map(. + {"http://purl.obolibrary.org/obo/RO_0000091": 
+        ( ."http://purl.obolibrary.org/obo/RO_0000091" | map(. + {foo: 1})) 
+      }
+    )
