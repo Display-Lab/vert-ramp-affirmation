@@ -106,8 +106,8 @@ If the patio has all the required causalPathwayAcceptance then the patio gets ma
 ```
 
 ### Which message to choose?
-For a given patio, collection of all the information about a single performer and measure, which message to send when there are multiple compatible scoring methods?
-
+A collection of all the information about a single performer and measure (patio) may indicate that there are more than one messages that could be sent to the performer about that measure.
+When there are mulitiple compatible messages for a patio which message to choose?
 A precendence of message templates or a scoring method is needed.
 
 ### Multiple Messages with Unaligned Causal Pathways
