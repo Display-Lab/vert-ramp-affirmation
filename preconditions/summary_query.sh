@@ -80,7 +80,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX obo: <http://purl.obolibrary.org/obo/>
 PREFIX slowmo: <http://example.com/slowmo#>
 
-SELECT ?path (COUNT(?perf) as ?count)
+SELECT ?path (COUNT(DISTINCT(?perf)) as ?count)
 FROM <http://localhost:3030/ds/spek>
 WHERE {
   ?candi a obo:cpo_0000053 .
@@ -106,8 +106,7 @@ WHERE {
 GROUP BY ?dtype
 ANNOS
 
-# Min, Max, Ave number of acceptabl candidates per performer
-# Will never give min < 1.  Figure out how to find performers without candidates.
+# Min, Max, Ave number of acceptable candidates per performer
 read -r -d '' ACPP <<'ACPP'
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX obo: <http://purl.obolibrary.org/obo/>
@@ -116,11 +115,11 @@ PREFIX slowmo: <http://example.com/slowmo#>
 SELECT (MAX(?count) as ?max) (MIN(?count) as ?min) (AVG(?count) as ?avg)
 FROM <http://localhost:3030/ds/spek>
 WHERE {
-  SELECT (COUNT(?candi) as ?count)
+  SELECT (COUNT(DISTINCT(?candi)) as ?count)
   WHERE {
-    ?candi a obo:cpo_0000053 .
-    ?candi slowmo:AncestorPerformer ?perf .
     ?candi slowmo:acceptable_by ?path .
+    ?candi slowmo:AncestorPerformer ?perf .
+    ?candi a obo:cpo_0000053 .
   }
   GROUP BY ?perf
 }
@@ -138,8 +137,8 @@ FROM <http://localhost:3030/ds/spek>
 WHERE {
   SELECT (COUNT(?candi) as ?count)
   WHERE {
-    ?candi a obo:cpo_0000053 .
     ?candi slowmo:AncestorPerformer ?perf .
+    ?candi a obo:cpo_0000053 .
   }
   GROUP BY ?perf
 }
@@ -150,6 +149,7 @@ JQ_FMT_PATH='.results.bindings | map("path,accepted_count,\(.path.value),\(.coun
 JQ_FMT_ANNO='.results.bindings | map("anno,count,\(.dtype.value),\(.count.value)") | .[]'
 JQ_FMT_ACPP='.results.bindings | .[] | to_entries[] | "perf,\(.key),acceptable_candidates,\(.value.value)"'
 JQ_FMT_CPP='.results.bindings | .[] | to_entries[] | "perf,\(.key),candidates,\(.value.value)"'
+JQ_FMT_PPTH='.results.bindings | map("path,perf_count,\(.path.value),\(.count.value)") | .[]'
 
 echo "subject,what,which,value"
 
@@ -169,5 +169,5 @@ s-query --server "http://localhost:3030/ds" "${CPATHS}"    | jq "${JQ_FMT_PATH}"
 #s-query --server "http://localhost:3030/ds" "${ANNOS}"  | jq "${JQ_FMT_ANNO}" | tr -d '"'
 s-query --server "http://localhost:3030/ds" "${CPP}"       | jq "${JQ_FMT_CPP}"  | tr -d '"'
 s-query --server "http://localhost:3030/ds" "${ACPP}"      | jq "${JQ_FMT_ACPP}" | tr -d '"'
-s-query --server "http://localhost:3030/ds" "${PERFPATHS}" | jq "${JQ_FMT_PATH}" | tr -d '"'
+s-query --server "http://localhost:3030/ds" "${PERFPATHS}" | jq "${JQ_FMT_PPTH}" | tr -d '"'
 

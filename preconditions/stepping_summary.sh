@@ -115,7 +115,7 @@ PREFIX slowmo: <http://example.com/slowmo#>
 SELECT (MAX(?count) as ?max) (MIN(?count) as ?min) (AVG(?count) as ?avg)
 FROM <http://localhost:3030/ds/spek>
 WHERE {
-  SELECT (COUNT(?candi) as ?count)
+  SELECT (COUNT(DISTINCT(?candi)) as ?count)
   WHERE {
     ?candi slowmo:AncestorPerformer ?perf .
     ?candi slowmo:acceptable_by ?path .
@@ -157,7 +157,7 @@ JQ_FMT_PATH='.results.bindings | map("\($step),path,accepted_count,\(.path.value
 JQ_FMT_ANNO='.results.bindings | map("\($step),anno,count,\(.dtype.value),\(.count.value)") | .[]'
 JQ_FMT_ACPP='.results.bindings | .[] | to_entries[] | "\($step),perf,\(.key),acceptable_candidates,\(.value.value)"'
 JQ_FMT_CPP='.results.bindings | .[] | to_entries[]  | "\($step),perf,\(.key),candidates,\(.value.value)"'
-JQ_FMT_PPATH='.results.bindings | map("\($step),path,perf_count,\(.path.value),\(.count.value)") | .[]'
+JQ_FMT_PPTH='.results.bindings | map("\($step),path,perf_count,\(.path.value),\(.count.value)") | .[]'
 
 # prepend the give step name, $1 to the output.
 emit_step(){
@@ -183,7 +183,7 @@ emit_step(){
   s-query --server "http://localhost:3030/ds" "${ACPP}"   |\
     jq --arg step "${STEP}" "${JQ_FMT_ACPP}" | tr -d '"'
   s-query --server "http://localhost:3030/ds" "${PERFPATHS}" |\
-    jq --arg step "${STEP}" "${JQ_FMT_PPATH}" | tr -d '"'
+    jq --arg step "${STEP}" "${JQ_FMT_PPTH}" | tr -d '"'
 }
 
 # Swap type $1 for type $2
