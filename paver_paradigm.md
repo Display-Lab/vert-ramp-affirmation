@@ -1,7 +1,18 @@
 # Paver Paradigm
 
-Change from candidates to pavers to better model the eventual messages being generated
-and delivered to people.
+Change from candidates to pavers to better model the eventual messages being generated and delivered to people.
+Pavers focus on the dispositions of a performer.
+In contrast to the candidates of the previous modeliing, do not require concatenation with template metadata.
+Instead templates support a paver in a similar fashion to how causal pathways approve a paver.
+This main difference is a one-to-many mapping between a paver and the templates that support it.
+
+This puts more importance on esteemer's mechanism of scoring.
+It must now score two things:
+
+  - Pavers
+  - Templates supporting a paver.
+
+In essence, this means esteemer has to choose the paver AND the template that should render it.
 
 ## Paver
 The annotations about a performer-measure-comparator.
@@ -55,7 +66,10 @@ The matching criteria of a figure template is listed in supportedDispositions:
   ]
 }
 ```
-
+Supported dispositions are those that the figure template can possibly support.
+A template can be said to support a paver if the performance dispositions of the paver are all incluced in those supported.
+This leads to a problem stuffing non-performance dispositions into pavers.  E.g. role when it's included in performance data.
+Might need to make a separate bitstomach and spek accomodation to process non-performance dispositions out of performance data.
 If a figure template supports all of the dispositions of a paver, then the paver gets marked as supported by the figure template:
 
 ```json
@@ -71,6 +85,7 @@ The following example collects two pavers, \_:pv1 and \_:pv2, which are about th
 Both pavers in this example annotate postive gaps with regard to their comparator.
 
 As a computational convenience, all the causal pathways that accept at least one of the pavers is listed under CausalPathwayAcceptances.
+Do the number of accepts for a causal pathway matter?  I.e. the number of comparators about which a causal pathway is true.
 
 ```json
 {
@@ -113,7 +128,8 @@ A precendence of message templates or a scoring method is needed.
 ### Multiple Messages with Unaligned Causal Pathways
 The question is, "There is a performer, a measure, and multiple messages that could be sent to that performer about the measure.  Which should be sent?"
 
-When there is more than one comparator for a measure, each performer will generate multiple pavers regarding that measure.  This can be a problem because they may have causal pathways that are perfectly aligned.  E.g. a positive gap with a goal and negative gap with social benchmark.
+When there is more than one comparator for a measure, each performer will generate multiple pavers regarding that measure.  
+This can be a problem because they may have causal pathways that are perfectly aligned.  E.g. a positive gap with a goal and negative gap with social benchmark.
 
 The patio would look like:
 ```json
@@ -131,13 +147,13 @@ The patio would look like:
 Given the existence of a message template for each causal pathway, both will be compatible with the patio.
 ```json
 {
-  "@type": "slowmo#messageTemplate",
   "@id": "slowmo#belowSocialComparison",
+  "@type": "slowmo#messageTemplate",
   "slowmo:requiredPathwayAcceptances": [ {"@id": "slowmo#benchDiff"} ]
 },
 {
-  "@type": "slowmo#messageTemplate",
   "@id": "slowmo#goalAchiever",
+  "@type": "slowmo#messageTemplate",
   "slowmo:requiredPathwayAcceptances": [ {"@id": "slowmo#benchAchievement"} ]
 }
 ```
@@ -157,7 +173,18 @@ Does the addition of a combination message template change the information neede
 }
 ```
 
-## Choosing amongst Measures
+## Choosing between Measures
 The question is, "There is a performer with a compatible message for each of three measures, and the constraint is only one message can be sent.  Which message should be sent?"
 
 What information is needed to answer this?
+
+## Choosing the figure template to render for the message.
+Assume there were multiple measures each with the same comparator for simplicity.
+(Handling multiple comparator figure templates is going to be a pain in the ass, but doable.)
+The most important single measure has been selected.
+That patio is contains a single a paver.  
+Single performer, measure, comparator.
+The problem is there are a half dozen figure templates that support it, becaue it's dispositions is `positive_gap`.
+There are many ways to display `positive_gap`, how do we choose which one?
+What information is require to choose?
+
