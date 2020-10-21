@@ -53,6 +53,8 @@ If a paver has all the dispositions required by the preconditions, then the pave
 ```
 
 ### Figure Template Support
+Might not need these.
+
 The matching criteria of a figure template is listed in supportedDispositions:
 ```json
 {
@@ -71,6 +73,27 @@ A template can be said to support a paver if the performance dispositions of the
 This leads to a problem stuffing non-performance dispositions into pavers.  E.g. role when it's included in performance data.
 Might need to make a separate bitstomach and spek accomodation to process non-performance dispositions out of performance data.
 If a figure template supports all of the dispositions of a paver, then the paver gets marked as supported by the figure template:
+
+```json
+  "SupportedBy": [{"@id": "slowmo#horizontalBar"}]
+```
+
+### Email Template Support
+Might able to use this directly.
+
+
+requiredDispositions function the same as preconditions.
+
+```json
+  "@type": "slowmo#figureTemplate",
+  "@id": "slowmo#EmailCardStudy1",
+  "slowmo:requiredDispositions": [
+    {"@type": "psdo#positive_gap"},
+    {"@type": "psdo#negative_gap"},
+    {"@type": "cpo#goal_comparator"},
+    {"@type": "cpo#social_comparator"}
+  ]
+```
 
 ```json
   "SupportedBy": [{"@id": "slowmo#horizontalBar"}]
@@ -100,6 +123,8 @@ Do the number of accepts for a causal pathway matter?  I.e. the number of compar
 ```
 
 ### Message Compatibility
+Might not need this.  May go with emailt template directly.
+
 A patio is compatible with a message iff the causalPathwayAcceptance includes all of the required causal pathways of a message template.
 
 E.g. a message designed for the BenchAchievement causal pathway
