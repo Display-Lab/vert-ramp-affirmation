@@ -9,3 +9,5 @@ doc/**/figures/*
 fuseki.out
 run/
 
+vignettes/**/outputs/*
+

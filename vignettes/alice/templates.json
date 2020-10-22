@@ -1,0 +1,23 @@
+ {
+  "@context": {
+    "@vocab": "http://schema.org/",
+    "obo":    "http://purl.obolibrary.org/obo/",
+    "slowmo": "http://example.com/slowmo#",
+    "IAOIsAbout": "http://purl.obolibrary.org/obo/IAO_0000136"
+  },
+  "@graph": [
+    {
+      "@id": "http://feedbacktailor.org/ftkb#TopPerformerBar",
+      "@type": "http://example.com/slowmo#EmailTemplate",
+      "name": "top performer bar",
+
+      "IAOIsAbout":[
+        {"@type": "http://purl.obolibrary.org/obo/psdo_0000117"},
+        {"@type": "http://purl.obolibrary.org/obo/psdo_0000045"},
+        {"@type": "http://purl.obolibrary.org/obo/psdo_0000041"}
+      ],
+      "psdo:PerformanceSummaryTextualEntity": "You are a top performer this month for the measure [measure_details]",
+      "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R"
+    }
+  ]
+}
