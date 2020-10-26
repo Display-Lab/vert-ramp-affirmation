@@ -3,7 +3,13 @@
     "@vocab": "http://schema.org/",
     "obo":    "http://purl.obolibrary.org/obo/",
     "slowmo": "http://example.com/slowmo#",
-    "IAOIsAbout": "http://purl.obolibrary.org/obo/IAO_0000136"
+    "psdo-PerformanceSummaryDocument":      "http://purl.obolibrary.org/obo/psdo_0000098",
+    "psdo-PositivePerformanceGapSet":       "http://purl.obolibrary.org/obo/psdo_0000117",
+    "psdo-RecipientElement":                "http://purl.obolibrary.org/obo/psdo_0000041",
+    "psdo-SocialComparatorElement":         "http://purl.obolibrary.org/obo/psdo_0000045",
+    "psdo-PerformanceSummaryDisplay":       "http://purl.obolibrary.org/obo/psdo_0000003",
+    "psdo-PerformanceSummaryTextualEntity": "http://purl.obolibrary.org/obo/psdo_0000110",
+    "IAO-IsAbout": "http://purl.obolibrary.org/obo/IAO_0000136"
   },
   "@graph": [
     {
@@ -11,7 +17,7 @@
       "@type": "http://example.com/slowmo#EmailTemplate",
       "name": "top performer bar",
 
-      "IAOIsAbout":[
+      "IAO-IsAbout":[
         {"@type": "http://purl.obolibrary.org/obo/psdo_0000117"},
         {"@type": "http://purl.obolibrary.org/obo/psdo_0000045"},
         {"@type": "http://purl.obolibrary.org/obo/psdo_0000041"}

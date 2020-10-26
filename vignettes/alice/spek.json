@@ -44,7 +44,7 @@
         "dc:title": "PEERS"}]
     }
   ],
-  "slowmo:IsAboutTemplate": [{ "@id": "http://example.com/app#TopPerformerBar" }],
+  "slowmo:IsAboutTemplate": [{ "@id": "http://feedbacktailor.org/ftkb#TopPerformerBar" }],
   "slowmo:InputTable":{
     "@type": "http://www.w3.org/ns/csvw#Table",
     "dc:title": "Demonstration Performance Data", 
