@@ -41,3 +41,30 @@ fucked up the `@context` element of the json-ld docs.
   consider dropping the prefix for the context entries that are convenient lookups.
   using "psdo:term" should still work as the psdo prefix is define in the context.
   see templates.json in alice example for corrected version.
+
+should rewrite run annotation script as a makefile.
+  Also need message to check for installed components.
+
+ruby's rdf + json/ld doesn't think spek is valid RDF format.
+  needs `format: :jsonld` specified in options hash
+
+in cansmash, if no spek templates are found, use all from external source.
+need to sort out mode of operation for spek templates:
+  - spek templates select which templates to use?
+  - spek templates provide additional templates?
+  - spek templates provide additional annotations?
+  - spek templates override external templates?
+Do selection.
+If no spek templates, use all external.
+If no spek templates & no external templates, die.
+
+Double check on template attributes, e.g. psdo:45 (social comparator element)
+  The template should have a set of marks to display social comparator
+  but the performer actually has the annotation of if a social comparator was calc'd for the performance.
+
+why is template type "http://example.com/slowmo#EmailTemplate"?
+  why not psdo:2 
+  is email template being handled differently than psdo:2?
+
+candidate smasher merging graphs of external templates was only superficially implemented.
+  need to fully subset graphs, or you just end up with bnode references.
