@@ -8,7 +8,7 @@ read -r -d '' RDFCHECK << HEREDOC
 require 'rdf';
 require 'json/ld';
 
-RDF::Graph.load(ARGV[0])
+RDF::Graph.load(ARGV[0], format: :jsonld)
 HEREDOC
 
 # Check for existence of required files
