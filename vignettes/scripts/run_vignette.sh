@@ -17,4 +17,4 @@ cansmash --path=outputs/spek_bs.json --md-source=templates.json 2>> vignette.log
 echo "Running ThinkPudding"
 thinkpudding.sh -s outputs/spek_cs.json -p causal_pathways.json 2>> vignette.log > outputs/spek_tp.json
 
-echo "Stderr written to vignette.log"
+echo "Log written to vignette.log"
