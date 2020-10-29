@@ -10,4 +10,7 @@ fuseki.out
 run/
 
 vignettes/**/outputs/*
+vignettes/**/run/*
+vignettes/**/fuseki.out
+vignettes/**/vignette.log
 

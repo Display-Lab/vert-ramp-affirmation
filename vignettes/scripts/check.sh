@@ -12,7 +12,8 @@ RDF::Graph.load(ARGV[0], format: :jsonld)
 HEREDOC
 
 # Check for existence of required files
-REQ_FILES=( spek.json performance.csv annotations.r templates.json )
+JSONLD_FILES=( spek.json templates.json causal_pathways.json )
+REQ_FILES=("${JSONLD_FILES[@]}" performance.csv annotations.r )
 
 for f in "${REQ_FILES[@]}"; do
   if ([[ -f ${f} ]]); then
@@ -25,7 +26,6 @@ for f in "${REQ_FILES[@]}"; do
 done
 
 # Check json well formed
-JSONLD_FILES=( spek.json templates.json )
 for f in "${JSONLD_FILES[@]}"; do
   # Check json syntax of spek
   jq 'empty' ${f}
