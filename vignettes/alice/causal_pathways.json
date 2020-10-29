@@ -48,7 +48,6 @@
       "cpo-Mechanism": ["knowledge", "subjective norms"],
 
       "slowmo-HasPrecondition":[
-        {"@type": "http://purl.obolibrary.org/obo/psdo_0000097"},
         {"@type": "http://purl.obolibrary.org/obo/psdo_0000041"},
         {"@type": "http://purl.obolibrary.org/obo/psdo_0000095"},
         {"@type": "http://purl.obolibrary.org/obo/psdo_0000045"},
