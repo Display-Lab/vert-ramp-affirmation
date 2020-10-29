@@ -3,12 +3,27 @@
 
 # Output column width
 COL_WIDTH=20
+RES_WIDTH=13
+MSG_FORMAT="%-${COL_WIDTH}s ...%-${RES_WIDTH}s %s"
 
 # Check for existence of expected run artifacts
 OUT_FILES=( fuseki.out run outputs vignette.log )
 
 # Shutdown fuseki if running
-# TODO
+FUSEKI_PID=$(ps -ef | grep 'java.*fuseki' | grep -v grep | awk '{ print $2 }')
+if [[ -z "$FUSEKI_PID" ]]; then
+  RES="not running"
+  ACT="skipping"
+else
+  RES="running"
+  if kill ${FUSEKI_PID}; then
+    ACT="killed process"
+  else
+    ACT="proc not killed"
+  fi
+fi
+MSG=$(printf "${MSG_FORMAT}" "fuseki-server" "${RES}." "${ACT}")
+echo "${MSG}"
 
 # Remove run artifacts if present
 for f in "${OUT_FILES[@]}"; do
@@ -25,6 +40,6 @@ for f in "${OUT_FILES[@]}"; do
     RES="not found"
     ACT="skipping"
   fi
-  MSG=$(printf "%-${COL_WIDTH}s ...%-10s %s" "${f}" "${RES}." "${ACT}")
+  MSG=$(printf "${MSG_FORMAT}" "${f}" "${RES}." "${ACT}")
   echo "${MSG}"
 done
