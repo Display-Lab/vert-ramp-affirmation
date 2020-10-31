@@ -13,7 +13,7 @@ HEREDOC
 
 # Check for existence of required files
 JSONLD_FILES=( spek.json templates.json causal_pathways.json )
-REQ_FILES=("${JSONLD_FILES[@]}" performance.csv annotations.r )
+REQ_FILES=("${JSONLD_FILES[@]}" performance.csv annotations.r synopsis.md)
 
 for f in "${REQ_FILES[@]}"; do
   if ([[ -f ${f} ]]); then
