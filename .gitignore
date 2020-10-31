@@ -14,3 +14,6 @@ vignettes/**/run/*
 vignettes/**/fuseki.out
 vignettes/**/vignette.log
 
+Vagrantfile
+.vagrant
+
