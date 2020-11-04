@@ -28,9 +28,9 @@
       "@type": "PostalAddress",
       "addressCountry": "USA",
       "addressRegion": "MI",
-      "streetAddress": "NCRC, Building 16 G023W, 2800 Plymouth Road",
+      "streetAddress": "DLHS, 1161 NIB, 300 N Ingalls St.",
       "postalCode": "48109",
-      "name": "MPOG"
+      "name": "DisplayLab"
     }
   },
   "slowmo:IsAboutMeasure":[
@@ -44,7 +44,7 @@
         "dc:title": "PEERS"}]
     }
   ],
-  "slowmo:IsAboutTemplate": [{ "@id": "http://feedbacktailor.org/ftkb#TopPerformerBar" }],
+  "slowmo:IsAboutTemplate": [{ "@id": "http://feedbacktailor.org/ftkb#ReachedSocial" }],
   "slowmo:InputTable":{
     "@type": "http://www.w3.org/ns/csvw#Table",
     "dc:title": "Demonstration Performance Data", 
