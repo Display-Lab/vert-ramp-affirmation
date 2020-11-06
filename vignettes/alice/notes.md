@@ -88,5 +88,36 @@ Template issues:
      -  redesigning to accomodate non-displays might require a lot of ontology work.
      -  probably do ontology work before getting to the coding.
   
+Spek needs to indicate template ids to consider.  This will change per vignette.
+  Run `vimdiff alice/spek.json bob/spek.json to see difference.
 
+Debugging unexpected annotation result.
+1. Check bitstomach (and spekex) package has lookup for annotate_X
+    1. Look in bitstomach/R/package_constants.R for `DEFAULT_URI_LOOKUP` list.
+    2. Ensure the X of `annotate_X` function name is present in list.
+    3. Check that value of right hand side is expected IRI.  (value likely in spekex)
+    4. Check the spekex/R/package_constants.R for literal value of IRI constant.
+    5. Run command to check value in local library version of bitstomach where X is X of `annotate_X` function.
+       ```sh 
+       # E.g. lookup IRI for annotate_positive_trend
+       Rscript --default-packages=bitstomach -e 'bitstomach:::BS$DEFAULT_URI_LOOKUP$positive_trend'
+       ```
+2. Check `annotations.r` for function with name `annotate_X` e.g. annotate_positive_gap
+3. Use BitStomach annotation [testing harness](https://github.com/Display-Lab/bit-stomach/blob/master/testing_annotations.md) to run the annotation function and examine resulting table. If issue persists, step through the annotation function line by line to find issue.
 
+Checking that the Vignette is working.
+1. Run `../scripts/run_vignette.sh` to generate outputs
+2. Open `causal_pathways.json` to view list of preconditions of causal pathways.
+3. Open `outputs/spek_tp.json` to get list of dispositions of named candidate.
+  I use the `less` program and pattern searching to do this: `less outputs/spek_tp.json`
+  1. Use `/Bob` (less' search navigation) to find candidate with Bob the performer listed as AncestorPerformer
+  2. Lookup each of the RO_0000091 blank nodes to get the list of dispositions
+    1. Use `/"@id" : "\_b:X"` to find blank node X 
+    2. Note the `@type` of the node
+4. Compare list of preconditions and dispositions for precond that isn't in the disps list.
+5. Missing precondition is result of:
+  - Wrong IRI listed for precondition.
+  - Wrong IRI listed for disposition.
+  - Disposition that should be supplied by template
+  - Disposition that should be supplied by performer
+  - Precondition might be a mistake

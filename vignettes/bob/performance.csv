@@ -1,0 +1,13 @@
+measure,performer,time,rate
+demo,Bob,2020-07-01,0.92
+demo,Bob,2020-08-01,0.93
+demo,Bob,2020-09-01,0.96
+demo,Peer1,2020-07-01,0.96
+demo,Peer2,2020-07-01,0.96
+demo,Peer3,2020-07-01,0.92
+demo,Peer1,2020-08-01,0.95
+demo,Peer2,2020-08-01,0.96
+demo,Peer3,2020-08-01,0.92
+demo,Peer1,2020-09-01,0.94
+demo,Peer2,2020-09-01,0.95
+demo,Peer3,2020-09-01,0.95
