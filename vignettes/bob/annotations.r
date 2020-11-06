@@ -121,9 +121,6 @@ annotate_achievement <- function(data, spek){
     group_by(!!id) %>%
     summarize( achievement = eval_achievement(!!rate,cache$comparator)) %>%
     right_join(all_ids_df)
-
-  id <- cache$id_col_sym
-  data %>% group_by(!!id) %>% summarize( achievement = FALSE)
 }
 
 annotate_comparators <- function(data, spek){

@@ -88,5 +88,19 @@ Template issues:
      -  redesigning to accomodate non-displays might require a lot of ontology work.
      -  probably do ontology work before getting to the coding.
   
+Spek needs to indicate template ids to consider.  This will change per vignette.
+  Run `vimdiff alice/spek.json bob/spek.json to see difference.
 
-
+Debugging unexpected annotation result.
+1. Check bitstomach (and spekex) package has lookup for annotate_X
+    1. Look in bitstomach/R/package_constants.R for `DEFAULT_URI_LOOKUP` list.
+    2. Ensure the X of `annotate_X` function name is present in list.
+    3. Check that value of right hand side is expected IRI.  (value likely in spekex)
+    4. Check the spekex/R/package_constants.R for literal value of IRI constant.
+    5. Run command to check value in local library version of bitstomach where X is X of `annotate_X` function.
+       ```sh 
+       # E.g. lookup IRI for annotate_positive_trend
+       Rscript --default-packages=bitstomach -e 'bitstomach:::BS$DEFAULT_URI_LOOKUP$positive_trend'
+       ```
+2. Check `annotations.r` for function with name `annotate_X` e.g. annotate_positive_gap
+3. Use BitStomach annotation [testing harness](https://github.com/Display-Lab/bit-stomach/blob/master/testing_annotations.md) to run the annotation function and examine resulting table. If issue persists, step through the annotation function line by line to find issue.

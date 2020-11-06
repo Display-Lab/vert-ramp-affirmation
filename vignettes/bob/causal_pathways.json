@@ -55,14 +55,14 @@
 
       "slowmo-HasPrecondition":[
         {"@type": "http://purl.obolibrary.org/obo/psdo_0000041"},
-        {"@type": "http://purl.obolibrary.org/obo/psdo_0000099"},
-        {"@type": "http://purl.obolibrary.org/obo/psdo_0000120"},
-        {"@type": "http://purl.obolibrary.org/obo/psdo_0000112"},
-        {"@type": "http://purl.obolibrary.org/obo/psdo_0000121"},
-        {"@type": "http://purl.obolibrary.org/obo/psdo_0000095"},
         {"@type": "http://purl.obolibrary.org/obo/psdo_0000045"},
+        {"@type": "http://purl.obolibrary.org/obo/psdo_0000095"},
+        {"@type": "http://purl.obolibrary.org/obo/psdo_0000099"},
+        {"@type": "http://purl.obolibrary.org/obo/psdo_0000104"},
+        {"@type": "http://purl.obolibrary.org/obo/psdo_0000112"},
         {"@type": "http://purl.obolibrary.org/obo/psdo_0000117"},
-        {"@type": "http://purl.obolibrary.org/obo/psdo_0000104"}
+        {"@type": "http://purl.obolibrary.org/obo/psdo_0000120"},
+        {"@type": "http://purl.obolibrary.org/obo/psdo_0000121"}
       ],
 
       "slowmo-HasModerator":[
