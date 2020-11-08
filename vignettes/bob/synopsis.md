@@ -23,7 +23,7 @@ The reached_social_bar template is about a positive performance gap set, a socia
 4. Achievement set (http://purl.obolibrary.org/obo/psdo_0000121)
 
 ## Resulting candidates
-The candidate produced for Alice has:
+The candidate produced for Bob has:
 
 1. Social comparator content (http://purl.obolibrary.org/obo/psdo_0000095)
 2. Social comparator element (http://purl.obolibrary.org/obo/psdo_0000045)

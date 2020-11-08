@@ -6,11 +6,9 @@
     "psdo-PerformanceSummaryDocument":      "http://purl.obolibrary.org/obo/psdo_0000098",
     "psdo-PositivePerformanceGapSet":       "http://purl.obolibrary.org/obo/psdo_0000117",
     "psdo-RecipientElement":                "http://purl.obolibrary.org/obo/psdo_0000041",
-    "psdo-SocialComparatorElement":         "http://purl.obolibrary.org/obo/psdo_0000045",
+    "psdo-GoalComparatorElement":           "http://purl.obolibrary.org/obo/psdo_0000046",
     "psdo-PerformanceSummaryDisplay":       "http://purl.obolibrary.org/obo/psdo_0000003",
     "psdo-PerformanceSummaryTextualEntity": "http://purl.obolibrary.org/obo/psdo_0000110",
-    "psdo-PositivePerformanceTrendSet":     "http://purl.obolibrary.org/obo/psdo_0000120",
-    "psdo-AchievementSet":                  "http://purl.obolibrary.org/obo/psdo_0000121",
     "psdo-Template":                        "http://purl.obolibrary.org/obo/psdo_0000002",
     "IAO-IsAbout":                          "http://purl.obolibrary.org/obo/IAO_0000136",
     "schema-name":                          "http://schema.org/name"
@@ -18,18 +16,16 @@
 
   "@graph": [
     {
-      "@id": "http://feedbacktailor.org/ftkb#ReachedSocialBar",
+      "@id": "http://feedbacktailor.org/ftkb#BetterGoalBar",
       "@type": "http://purl.obolibrary.org/obo/psdo_0000002",
-      "name": "reached social bar",
+      "name": "better goal bar",
 
       "http://purl.obolibrary.org/obo/IAO_0000136":[
-        {"@type": "http://purl.obolibrary.org/obo/psdo_0000041"},
         {"@type": "http://purl.obolibrary.org/obo/psdo_0000117"},
-        {"@type": "http://purl.obolibrary.org/obo/psdo_0000045"},
-        {"@type": "http://purl.obolibrary.org/obo/psdo_0000120"},
-        {"@type": "http://purl.obolibrary.org/obo/psdo_0000121"}
+        {"@type": "http://purl.obolibrary.org/obo/psdo_0000046"},
+        {"@type": "http://purl.obolibrary.org/obo/psdo_0000041"}
       ],
-      "psdo:PerformanceSummaryTextualEntity": "You reached the benchmark this month for the measure [measure_details]",
+      "psdo:PerformanceSummaryTextualEntity": "Your performance is above the goal for the measure [measure_details]",
       "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R"
     }
   ]
