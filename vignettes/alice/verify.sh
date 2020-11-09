@@ -2,13 +2,18 @@
 # This is designed to be run from within a specific vignette's directory
 #   Use verify script as a reminder of what this particular result should be.
 
-
+##################################
+# DEFINITIONS OF EXPECTED VALUES #
+##################################
 EXPECTED_FILE=outputs/spek_tp.json
 FULL_CP="http://feedbacktailor.org/ftkb#SocialBetter"
+FULL_TEMPLATE="http://feedbacktailor.org/ftkb#ReachedSocial"
 SHORT_CP=$(echo "${FULL_CP}" | sed 's;http://feedbacktailor.org/ftkb#;;')
 PERFORMER="Alice"
 
-echo "SHORT CP: $SHORT_CP"
+######################
+# Verification logic #
+######################
 
 # Expect spek from think pudding to exist and not be empty.
 if [[ -f "${EXPECTED_FILE}" ]]; then
@@ -24,7 +29,7 @@ echo "Expected candidate contents:"
 cat << HEREDOC
   "@type" : "http://purl.obolibrary.org/obo/cpo_0000053",
   "AncestorPerformer" : "_:p${PERFORMER}",
-  "AncestorTemplate" : "http://feedbacktailor.org/ftkb#TopPerformerBar",
+  "AncestorTemplate" : "${FULL_TEMPLATE}",
   "acceptable_by" : "${FULL_CP}",
 HEREDOC
 
@@ -46,7 +51,6 @@ RESULT=$(jq --arg CP "${SHORT_CP}" --arg PERF "_:p${PERFORMER}" \
 RESULT=${RESULT:-0}
 
 if [[ ${RESULT} != 0 ]]; then
-  echo "RESULT: ${RESULT}"
   echo -e "\n✓ Candidate appears good."
 else
   echo -e "\n✗ No candidate appears good."
