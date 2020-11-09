@@ -121,7 +121,7 @@ ln -s ~/display-lab/fuseki/fuseki-server ~/display-lab/bin/fuseki-server
 ```
 ### Add bin directory to PATH
 
-Add the following line to your `.bashrc` file, then restart your terminal session.
+Edit your `.bashrc` file by **adding** the following line, then restart your terminal session.
 ```sh
 export PATH="$PATH:$HOME/display-lab/bin"
 ```
