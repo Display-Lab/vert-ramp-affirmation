@@ -121,3 +121,5 @@ Checking that the Vignette is working.
   - Disposition that should be supplied by template
   - Disposition that should be supplied by performer
   - Precondition might be a mistake
+
+If the candidate is missing attributes from the template, check that the `@id` of the templates.json matches the `slowmo:IsAboutTemplate` values.
