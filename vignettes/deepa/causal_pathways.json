@@ -14,8 +14,8 @@
     "cpo-MechanismPrecondition":                        "http://purl.obolibrary.org/obo/cpo_0000054",
     "cpo-OutcomePrecondition":                          "http://purl.obolibrary.org/obo/cpo_0000055",
     "psdo-RecipientElement":                            "http://purl.obolibrary.org/obo/psdo_0000041",
-    "psdo-SocialComparatorElement":                     "http://purl.obolibrary.org/obo/psdo_0000045",
-    "psdo-SocialComparatorContent":                     "http://purl.obolibrary.org/obo/psdo_0000095",
+    "psdo-GoalComparatorElement":                       "http://purl.obolibrary.org/obo/psdo_0000046",
+    "psdo-GoalComparatorContent":                       "http://purl.obolibrary.org/obo/psdo_0000094",
     "psdo-RecipientContent":                            "http://purl.obolibrary.org/obo/psdo_0000097",
     "psdo-PositivePerformanceTrendContent":             "http://purl.obolibrary.org/obo/psdo_0000099",
     "psdo-NegativePerformanceTrendContent":             "http://purl.obolibrary.org/obo/psdo_0000100",
@@ -43,31 +43,28 @@
 
   "@graph": [
     {
-      "@id": "http://feedbacktailor.org/ftkb#SocialGain",
+      "@id": "http://feedbacktailor.org/ftkb#GoalApproach",
       "@type": "http://purl.obolibrary.org/obo/cpo_0000029",
-      "name": "social gain",
+      "name": "goal approach",
 
-      "cpo-ImplementationStrategy": "Show recipient performance becoming better than that of a social comparator",
+      "cpo-ImplementationStrategy": "Show a performance that is approaching a goal",
 
-      "slowmo-InterventionContent": ["BCT 2.2 Feedback on behavior", "BCT 2.7 Feedback on outcomes of behavior", "BCT 6.2 Social comparison"],
+      "slowmo-InterventionContent": ["BCT 2.2 Feedback on behavior", "BCT 2.7 Feedback on outcomes of behavior", "BCT 1.6 Discrepancy between current behavior and goal"],
 
-      "cpo-Mechanism": ["knowledge", "subjective norms"],
+      "cpo-Mechanism": ["knowledge", "goals", "optimism"],
 
       "slowmo-HasPrecondition":[
         {"@type": "http://purl.obolibrary.org/obo/psdo_0000041"},
-        {"@type": "http://purl.obolibrary.org/obo/psdo_0000045"},
-        {"@type": "http://purl.obolibrary.org/obo/psdo_0000095"},
+        {"@type": "http://purl.obolibrary.org/obo/psdo_0000046"},
+        {"@type": "http://purl.obolibrary.org/obo/psdo_0000094"},
         {"@type": "http://purl.obolibrary.org/obo/psdo_0000099"},
-        {"@type": "http://purl.obolibrary.org/obo/psdo_0000104"},
-        {"@type": "http://purl.obolibrary.org/obo/psdo_0000112"},
-        {"@type": "http://purl.obolibrary.org/obo/psdo_0000117"},
-        {"@type": "http://purl.obolibrary.org/obo/psdo_0000120"},
-        {"@type": "http://purl.obolibrary.org/obo/psdo_0000121"}
+        {"@type": "http://purl.obolibrary.org/obo/psdo_0000105"},
+        {"@type": "http://purl.obolibrary.org/obo/psdo_0000116"},
+        {"@type": "http://purl.obolibrary.org/obo/psdo_0000120"}
       ],
 
       "slowmo-HasModerator":[
         {"@type": "http://example.com/slowmo#RegulatoryFit"},
-        {"@type": "http://example.com/slowmo#TimeSinceLastAchievement"},
         {"@type": "http://example.com/slowmo#Habituation"},
         {"@type": "http://example.com/slowmo#TrendSlope"},
         {"@type": "http://example.com/slowmo#PerformanceGapSize"}
@@ -77,7 +74,7 @@
 
       "cpo-DistalOutcome": "clinical outcome performance improvement",
 
-      "slowmo-ExampleKeyMessage": "You reached the benchmark this month"
+      "slowmo-ExampleKeyMessage": "Your performance is approaching the goal"
     }
   ]
 }
