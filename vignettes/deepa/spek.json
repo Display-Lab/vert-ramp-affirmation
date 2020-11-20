@@ -39,12 +39,14 @@
       "dc:title": "Demonstration Measure",
       "identifier": "demo",
       "slowmo:WithComparator":[
-        { "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
-        "name": "peers",
-        "dc:title": "PEERS"}]
+        { "@type": "http://purl.obolibrary.org/obo/psdo_0000094",
+        "name": "goal",
+        "dc:title": "GOAL",
+        "slowmo:ComparisonValue": 0.95}
+      ]
     }
   ],
-  "slowmo:IsAboutTemplate": [{ "@id": "http://feedbacktailor.org/ftkb#ReachedSocial" }],
+  "slowmo:IsAboutTemplate": [{ "@id": "http://feedbacktailor.org/ftkb#ApproachingGoalBar" }],
   "slowmo:InputTable":{
     "@type": "http://www.w3.org/ns/csvw#Table",
     "dc:title": "Demonstration Performance Data", 

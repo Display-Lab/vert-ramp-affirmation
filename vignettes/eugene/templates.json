@@ -1,0 +1,37 @@
+ {
+  "@context": {
+    "@vocab":                               "http://schema.org/",
+    "obo":                                  "http://purl.obolibrary.org/obo/",
+    "slowmo":                               "http://example.com/slowmo#",
+    "psdo-PerformanceSummaryDocument":      "http://purl.obolibrary.org/obo/psdo_0000098",
+    "psdo-NegativePerformanceGapSet":       "http://purl.obolibrary.org/obo/psdo_0000116",
+    "psdo-RecipientElement":                "http://purl.obolibrary.org/obo/psdo_0000041",
+    "psdo-GoalComparatorElement":           "http://purl.obolibrary.org/obo/psdo_0000046",
+    "psdo-PerformanceSummaryDisplay":       "http://purl.obolibrary.org/obo/psdo_0000003",
+    "psdo-PerformanceSummaryTextualEntity": "http://purl.obolibrary.org/obo/psdo_0000110",
+    "psdo-PositivePerformanceTrendSet":     "http://purl.obolibrary.org/obo/psdo_0000120",
+    "psdo-AchievementSet":                  "http://purl.obolibrary.org/obo/psdo_0000121",
+    "psdo-Template":                        "http://purl.obolibrary.org/obo/psdo_0000002",
+    "IAO-IsAbout":                          "http://purl.obolibrary.org/obo/IAO_0000136",
+    "schema-name":                          "http://schema.org/name"
+  },
+
+  "@graph": [
+    {
+      "@id": "http://feedbacktailor.org/ftkb#LostGoalBar",
+      "@type": "http://purl.obolibrary.org/obo/psdo_0000002",
+      "name": "lost goal bar",
+
+      "http://purl.obolibrary.org/obo/IAO_0000136":[
+
+        {"@type": "http://purl.obolibrary.org/obo/psdo_0000041"},
+        {"@type": "http://purl.obolibrary.org/obo/psdo_0000116"},
+        {"@type": "http://purl.obolibrary.org/obo/psdo_0000046"},
+        {"@type": "http://purl.obolibrary.org/obo/psdo_0000119"},
+        {"@type": "http://purl.obolibrary.org/obo/psdo_0000122"}
+      ],
+      "psdo:PerformanceSummaryTextualEntity": "Your performance dropped below the goal for the measure [measure_details]",
+      "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R"
+    }
+  ]
+}
