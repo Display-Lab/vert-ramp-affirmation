@@ -41,9 +41,8 @@
       "slowmo:WithComparator":[
         { "@type": "http://purl.obolibrary.org/obo/psdo_0000094",
         "name": "goal",
-        "dc:title": "GOAL"},
-        "slowmo:ComparisonValue": 0.95}
-      ]
+        "dc:title": "GOAL",
+        "slowmo:ComparisonValue": 0.95}]
     }
   ],
   "slowmo:IsAboutTemplate": [{ "@id": "http://feedbacktailor.org/ftkb#ReachedGoalBar" }],
