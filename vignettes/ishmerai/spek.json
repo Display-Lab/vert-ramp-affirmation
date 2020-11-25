@@ -40,7 +40,7 @@
       "identifier": "demo"
     }
   ],
-  "slowmo:IsAboutTemplate": [{ "@id": "http://feedbacktailor.org/ftkb#PerformanceWorsening" }],
+  "slowmo:IsAboutTemplate": [{ "@id": "http://feedbacktailor.org/ftkb#PerformanceWorseningBar" }],
   "slowmo:InputTable":{
     "@type": "http://www.w3.org/ns/csvw#Table",
     "dc:title": "Demonstration Performance Data", 
