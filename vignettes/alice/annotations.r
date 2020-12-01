@@ -1,9 +1,9 @@
 library(dplyr, warn.conflicts = FALSE)
-library(tidyr)
-library(utils)
-library(rlang)
-library(stats)
-library(lubridate)
+library(tidyr, warn.conflicts = FALSE)
+library(utils, warn.conflicts = FALSE)
+library(rlang, warn.conflicts = FALSE)
+library(stats, warn.conflicts = FALSE)
+library(lubridate, warn.conflicts = FALSE)
 
 ############
 # Run Once #
@@ -61,15 +61,14 @@ calc_comparator_value <- function(data, spek, m_id, c_id){
 ########################
 
 annotate_positive_gap <- function(data, spek){
+  rate <- cache$rate_col_sym
   time <- cache$time_col_sym
-  denom <- cache$denom_col_sym
-  numer <- cache$numer_col_sym
   id <- cache$id_col_sym
 
   data %>%
     dplyr::filter(!!time == max(!!time)) %>%
     group_by(!!id) %>%
-    summarize(positive_gap = (rate > cache$comparator))
+    summarize(positive_gap = (!!rate > cache$comparator))
 }
 
 annotate_comparators <- function(data, spek){
