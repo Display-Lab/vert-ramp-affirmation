@@ -30,8 +30,9 @@ setup_cache <- function(data, spek){
 
   # Calculate peer average by measure
   cache$measure_id      <- measure_id
-  cache$comparator_id   <- comparator_id
-  cache$comparator      <- calc_comparator_value(data, spek, measure_id, comparator_id)
+  # Use get0 to handle comparator present.
+  cache$comparator_id   <- get0('comparator_id', ifnotfound=NULL)
+  cache$comparator      <- calc_comparator_value(data, spek, measure_id, cache$comparator_id)
 
   return(cache)
 }
@@ -183,7 +184,11 @@ annotate_loss_content <- function(data, spek){
 
 annotate_comparators <- function(data, spek){
   # comparator_id provided by running environment. Resides in cache.
-  cache$comparator_id
+  if(is.null(cache$comparator_id)){
+    return(NULL)
+    #return(data.frame('id'=character()))
+  }
+
   comp_type <- spekex::type_of_comparator( spekex::lookup_comparator(cache$comparator_id, spek))
 
   is_std <- identical(spekex::SE$STANDARD_COMPARATOR_IRI, comp_type)
