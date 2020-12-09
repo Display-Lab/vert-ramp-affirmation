@@ -1,7 +1,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1300847.svg)](https://doi.org/10.5281/zenodo.1300847)
 
 # Vert Ramp Affirmation
-Softare pipeline overview for Display Lab's Tailored Performance Feedback System.
+Software pipeline overview for Display Lab's Tailored Performance Feedback System.
 ![overview](doc/overview.svg)
 
 This project serves as the overview of the parts of the feedback production pipeline.
