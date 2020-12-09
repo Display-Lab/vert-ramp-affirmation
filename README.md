@@ -78,7 +78,8 @@ For a more detailed explanation and example, see: [pipeline example](pipeline_ex
 
 
 ## Installing Dependencies on OSX
-[OSX installation instructions](./OSX_Install.md)
+- [OSX installation instructions](./OSX_Install.md)
+- [Ubuntu installation instructions](./Ubuntu_Install.md)
 
 
 
