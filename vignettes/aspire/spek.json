@@ -44,7 +44,16 @@
         { "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
         "name": "peers",
         "dc:title": "PEERS"}]}  ],
-  "slowmo:IsAboutTemplate": [{ "@id": "http://example.com/app#MultiMeasureBars" }],
+  "slowmo:IsAboutTemplate": [
+    {"@id": "http://feedbacktailor.org/ftkb#TopPerformerBar"},
+    {"@id": "http://feedbacktailor.org/ftkb#WorseSocialBar"},
+    {"@id": "http://feedbacktailor.org/ftkb#ReachedSocialBar"},
+    {"@id": "http://feedbacktailor.org/ftkb#BetterGoalBar"},
+    {"@id": "http://feedbacktailor.org/ftkb#ApproachingGoalBar"},
+    {"@id": "http://feedbacktailor.org/ftkb#LostGoalBar"},
+    {"@id": "http://feedbacktailor.org/ftkb#ReachedGoalBar"},
+    {"@id": "http://feedbacktailor.org/ftkb#PerformanceWorseningBar"}
+  ],
   "slowmo:InputTable":{
     "@type": "http://www.w3.org/ns/csvw#Table",
     "dc:title": "Case Counts", 
