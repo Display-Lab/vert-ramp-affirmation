@@ -91,54 +91,6 @@
       "slowmo-ExampleKeyMessage": "You are a top performer"
     },
     {
-      "@id": "http://feedbacktailor.org/ftkb#SocialWorse",
-      "@type": "http://purl.obolibrary.org/obo/cpo_0000029",
-      "name": "social worse",
-      "cpo-ImplementationStrategy": "Show a performance that is worse than that of a social comparator",
-      "slowmo-InterventionContent": [
-        "BCT 2.2 Feedback on behavior",
-        "BCT 2.7 Feedback on outcomes of behavior",
-        "BCT 6.2 Social comparison"
-      ],
-      "cpo-Mechanism": [
-        "knowledge",
-        "subjective norms"
-      ],
-      "slowmo-HasPrecondition": [
-        {
-          "@type": "http://purl.obolibrary.org/obo/psdo_0000041"
-        },
-        {
-          "@type": "http://purl.obolibrary.org/obo/psdo_0000095"
-        },
-        {
-          "@type": "http://purl.obolibrary.org/obo/psdo_0000045"
-        },
-        {
-          "@type": "http://purl.obolibrary.org/obo/psdo_0000116"
-        },
-        {
-          "@type": "http://purl.obolibrary.org/obo/psdo_0000105"
-        }
-      ],
-      "slowmo-HasModerator": [
-        {
-          "@type": "http://example.com/slowmo#RegulatoryFit"
-        },
-        {
-          "@type": "http://example.com/slowmo#Habituation"
-        },
-        {
-          "@type": "http://example.com/slowmo#PerformanceGapSize"
-        }
-      ],
-      "cpo-ProximalOutcome": [
-        "clinical process performance improvement"
-      ],
-      "cpo-DistalOutcome": "clinical outcome performance improvement",
-      "slowmo-ExampleKeyMessage": "You are not a top performer"
-    },
-    {
       "@id": "http://feedbacktailor.org/ftkb#SocialGain",
       "@type": "http://purl.obolibrary.org/obo/cpo_0000029",
       "name": "social gain",
