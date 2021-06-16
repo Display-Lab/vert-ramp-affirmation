@@ -6,7 +6,7 @@ Flo has performance levels of 92% for July 2020, 93% for August 2020, and 96% fo
 ## Comparator
 Flo's goal for the same time intervals are 95%. 
 
-## Peformer annotations
+## Recipient annotations
 This data set should result in an annotation that there is information content about the recipient, a goal comparator, a positive performance gap, a positive trend, and achievement:
 
 1. Goal comparator content (http://purl.obolibrary.org/obo/psdo_0000094)

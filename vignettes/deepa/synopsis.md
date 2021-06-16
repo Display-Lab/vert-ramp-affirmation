@@ -6,7 +6,7 @@ Deepa has performance levels of 88% for July 2020, 90% for August 2020, and 91% 
 ## Comparator
 Deepa's goal for September 2020 is 95%.
 
-## Peformer annotations
+## Recipient annotations
 This data set should result in an annotation that there is information content about a goal comparator, a negative performance gap, and a positive trend for Deepa:
 
 1. Goal comparator content (http://purl.obolibrary.org/obo/psdo_0000094)
@@ -19,7 +19,7 @@ The approaching_goal_bar template is about a negative performance gap set, a goa
 2. Negative performance gap set (http://purl.obolibrary.org/obo/psdo_0000116)
 3. Positive performance trend set (http://purl.obolibrary.org/obo/psdo_0000120)
 
-## Resulting Candidates
+## Resulting candidates
 The candidate produced for Deepa has:
 
 1. Goal comparator content (http://purl.obolibrary.org/obo/psdo_0000094)
@@ -29,7 +29,7 @@ The candidate produced for Deepa has:
 5. Negative performance gap set (http://purl.obolibrary.org/obo/psdo_0000116)
 6. Positive performance trend set (http://purl.obolibrary.org/obo/psdo_0000120)
 
-## Causal Pathway Preconditions
+## Causal pathway preconditions
 The goal_approach causal pathway has preconditions:
 
 1. Goal comparator content (http://purl.obolibrary.org/obo/psdo_0000094)

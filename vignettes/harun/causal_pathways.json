@@ -36,6 +36,7 @@
     "slowmo-ConsecutiveNegativeGapSet":     "http://example.com/slowmo#ConsecutiveNegativeGapSet",
     "slowmo-ConsecutivePositiveGapContent": "http://example.com/slowmo#ConsecutivePositiveGapContent",
     "slowmo-ConsecutiveNegativeGapContent": "http://example.com/slowmo#ConsecutiveNegativeGapContent",
+    "slowmo-PositiveTrendAbsence":          "http://example.com/slowmo#PositiveTrendContentAbsence",
     "slowmo-Habituation":                   "http://example.com/slowmo#Habituation",
     "slowmo-HasModerator":                  "http://example.com/slowmo#HasModerator",
     "slowmo-HasPrecondition":               "http://example.com/slowmo#HasPrecondition",
@@ -77,10 +78,7 @@
           "@type": "http://example.com/slowmo#ConsecutiveNegativeGapContent"
         },
         {
-          "@type": "http://purl.obolibrary.org/obo/psdo_0000116"
-        },
-        {
-          "@type": "http://purl.obolibrary.org/obo/psdo_0000105"
+          "@type": "http://example.com/slowmo#PositiveTrendContentAbsence"
         }
       ],
       "slowmo-HasModerator": [

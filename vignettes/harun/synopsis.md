@@ -1,28 +1,44 @@
-# Aspire Example
+# Goal Stayed Worse Example
 
 ## Performance data
-Anonymized performance data for a single measure for 207 performers.
-Trimmed last 6 months of 2017.
+Harun has performance levels of 91% for July 2020, 92% for August 2020, and 91% for September 2020.
 
 ## Comparator
-Static 90% goal benchmark.
-Peer comparison goal will be calculated. 
+Harun's goal for July, August, and September 2020 is 95%.
 
-## Peformer annotations
-The annotations function supplied with this vignette operates on numerator and denominator data.
-Each annotation calcultates the rate for the measure being examined.
+## Recipient annotations
+This data set should result in an annotation that there is information content about a goal comparator, consecutive negative performance gaps, and the absence of a positive trend for Harun:
+
+1. Goal comparator content (http://purl.obolibrary.org/obo/psdo_0000094)
+2. Consecutive negative performance gap content (http://example.com/slowmo#ConsecutiveNegativeGapContent)
+3. Absence of positive performance trend content (http://example.com/slowmo#PositiveTrendContentAbsence)
+4. Recipient content (http://purl.obolibrary.org/obo/psdo_0000041)
 
 ## Template annotations
-The worse_social_bar template is about a negative performance gap set and a social comparator element:
-1. Social comparator element (http://purl.obolibrary.org/obo/psdo_0000045)
-2. Negative performance gap set (http://purl.obolibrary.org/obo/psdo_0000116)
+The consistently_worse_goal_bar template is about a consecutive negative performance gap set and a goal comparator element:
+1. Goal comparator element (http://purl.obolibrary.org/obo/psdo_0000046)
+2. Consecutive negative performance gap set (http://example.com/slowmo#ConsecutiveNegativeGapSet)
 
-## Resulting Candidates
-The expected number of candidates is performers (207) \* templates (8) = candidates (1656)
+## Resulting candidates
+The candidate produced for Harun has:
 
-## Causal Pathway Preconditions
+1. Goal comparator content (http://purl.obolibrary.org/obo/psdo_0000094)
+2. Consecutive negative performance gap content (http://example.com/slowmo#ConsecutiveNegativeGapContent)
+3. Absence of positive performance trend content (http://example.com/slowmo#PositiveTrendContentAbsence)
+4. Recipient content (http://purl.obolibrary.org/obo/psdo_0000041)
+5. Goal comparator element (http://purl.obolibrary.org/obo/psdo_0000046)
+6. Consecutive negative performance gap set (http://example.com/slowmo#ConsecutiveNegativeGapSet)
 
+## Causal pathway preconditions
+The goal_stayed_worse causal pathway has preconditions:
+
+1. Goal comparator content (http://purl.obolibrary.org/obo/psdo_0000094)
+2. Consecutive negative performance gap content (http://example.com/slowmo#ConsecutiveNegativeGapContent)
+3. Absence of positive performance trend content (http://example.com/slowmo#PositiveTrendContentAbsence)
+4. Recipient content (http://purl.obolibrary.org/obo/psdo_0000041)
+5. Goal comparator element (http://purl.obolibrary.org/obo/psdo_0000046)
+6. Consecutive negative performance gap set (http://example.com/slowmo#ConsecutiveNegativeGapSet)
 
 ## Evaluation result
-
+The candidate is found to be acceptable by the causal pathway goal_stayed_worse.
 

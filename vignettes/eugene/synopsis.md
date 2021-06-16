@@ -6,7 +6,7 @@ Eugene has performance levels of 96% for July 2020, 95% for August 2020, and 93%
 ## Comparator
 Eugene's goal for July, August, and September 2020 is 95%.
 
-## Peformer annotations
+## Recipient annotations
 This data set should result in an annotation that there is information content about a goal comparator, a negative performance gap, a negative performance trend, and loss for Eugene:
 
 1. Goal comparator content (http://purl.obolibrary.org/obo/psdo_0000094)
@@ -21,7 +21,7 @@ The lost_goal_bar template is about a negative performance gap set, a goal compa
 3. Negative performance trend set (http://purl.obolibrary.org/obo/psdo_0000119)
 4. Loss set (http://purl.obolibrary.org/obo/psdo_0000122)
 
-## Resulting Candidates
+## Resulting candidates
 The candidate produced for Eugene has:
 
 1. Goal comparator content (http://purl.obolibrary.org/obo/psdo_0000094)
@@ -33,7 +33,7 @@ The candidate produced for Eugene has:
 7. Negative performance trend set (http://purl.obolibrary.org/obo/psdo_0000119)
 8. Loss set (http://purl.obolibrary.org/obo/psdo_0000122)
 
-## Causal Pathway Preconditions
+## Causal pathway preconditions
 The goal_loss causal pathway has preconditions:
 
 1. Goal comparator content (http://purl.obolibrary.org/obo/psdo_0000094)
