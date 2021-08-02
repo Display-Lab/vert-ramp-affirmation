@@ -86,6 +86,12 @@ eval_loss_content <- function(x, comp){
   return( nth(bools, -2) == TRUE & dplyr::nth(bools, -1) == FALSE )
 }
 
+eval_consec_neg_gap <- function(x, comp){
+  if(length(x) < 2){ return(FALSE) }
+  bools <- x < comp
+  return( nth(bools, -2) == TRUE & dplyr::nth(bools, -1) == FALSE )
+}
+
 
 ########################
 # Annotation Functions #
@@ -163,8 +169,7 @@ annotate_achievement <- function(data, spek){
 
 annotate_consec_neg_gap <- function(data, spek){
   time <- cache$time_col_sym
-  denom <- cache$denom_col_sym
-  numer <- cache$numer_col_sym
+  rate <- cache$rate_col_sym
   id <- cache$id_col_sym
 
   all_ids_df <- data %>% select(!!id) %>% distinct
@@ -176,7 +181,6 @@ annotate_consec_neg_gap <- function(data, spek){
 
   data %>%
     dplyr::filter(!!id %in% elidgibile_ids) %>%
-    mutate(rate = !!numer / !!denom) %>%
     arrange(!!time) %>%
     group_by(!!id) %>%
     summarize( consec_neg_gap = eval_consec_neg_gap(rate, cache$comparator)) %>%
