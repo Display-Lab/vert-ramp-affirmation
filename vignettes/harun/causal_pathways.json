@@ -75,10 +75,7 @@
           "@type": "http://example.com/slowmo#ConsecutiveNegativeGapSet"
         },
         {
-          "@type": "http://example.com/slowmo#ConsecutiveNegativeGapContent"
-        },
-        {
-          "@type": "http://example.com/slowmo#PositiveTrendContentAbsence"
+          "@type": "http://example.com/slowmo#ConsecutiveNegativePerformanceGapContent"
         }
       ],
       "slowmo-HasModerator": [
