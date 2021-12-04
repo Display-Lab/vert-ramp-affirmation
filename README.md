@@ -17,6 +17,7 @@ The Precision Feedback Knowledgebase is developed by Display Lab, and has the fo
 - Feedback message templates (for email and dashboard content)
 - Causal pathway models
 - Ontologies for feedback interventions
+
 Recipient requirements and preferences are developed via a human-centered design process and specified as follows:
 - Requirements: User stories are written in natural language and then translated to a computer-interpretable specification written in JSON
 - Preferences: A preference elicitiation survey is used to generate utilities (i.e. preference weights) for attributes of feedback interventions
