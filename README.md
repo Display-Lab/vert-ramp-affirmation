@@ -34,7 +34,7 @@ The major steps of the software pipeline:
 1. Generate visual displays and message text for email and dashboard content
 
 ## Definitions
-Many terms used are defined in the [Performance Summary Display Ontology (PSDO)](https://github.com/Display-Lab/psdo) and [Causal Pathway Ontology (CPO)](https://github.com/Display-Lab/cpo), developed by Display Lab. Each ontology has a published dictionary ([PSDO Dictionary](https://github.com/Display-Lab/psdo/blob/master/DICTIONARY.md), [CPO Dictionary](https://github.com/Display-Lab/cpo/blob/master/DICTIONARY.md). PSDO is also available via [BioPortal](https://bioportal.bioontology.org/ontologies/PSDO).
+Many terms used are defined in the [Performance Summary Display Ontology (PSDO)](https://github.com/Display-Lab/psdo) and [Causal Pathway Ontology (CPO)](https://github.com/Display-Lab/cpo), developed by Display Lab. Each ontology has a published dictionary ([PSDO Dictionary](https://github.com/Display-Lab/psdo/blob/master/DICTIONARY.md), [CPO Dictionary](https://github.com/Display-Lab/cpo/blob/master/DICTIONARY.md)). PSDO is also available via [BioPortal](https://bioportal.bioontology.org/ontologies/PSDO).
 Major components of the Precision Feedback Knowledgebase and the Precision Feedback Service are defined as follows:
 - Feedback message template: A collection of metadata that specifies information content for an email message, including text and code to generate charts/figures.
 - Recipient: An individual, team, or organization to whom a performance feedback message is sent. 
