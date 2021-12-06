@@ -12,6 +12,7 @@ Specifically, it has examples to demonstrate production of feedback messages for
 The software pipeline operates on two kinds of inputs: performance data and feedback intervention knowledge.
 Performance data contains performance levels (typically as a ratio or percentage) for a specified metrics, recipients, and time intervals. It may also contain comparison data, such as goals or benchmarks.
 Feedback intervention knowledge is specified in the form of 1) a Precision Feedback Knowledgebase, and 2) recipient requirements and preferences.
+
 The Precision Feedback Knowledgebase is developed by Display Lab, and has the following kinds of knowledge:
 - Performance data annotation functions
 - Feedback message templates (for email and dashboard content)
