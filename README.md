@@ -41,8 +41,8 @@ Major components of the Precision Feedback Knowledgebase and the Precision Feedb
 - Recipient: An individual, team, or organization to whom a performance feedback message is sent. 
 - Performance data annotation: Mathematical calculations to make assertions about comparisons and trends in performance data.
 - Candidate message: A mashup of the attributes of a message template and a recipient's performance comparisons and trends. Created as a computational convenience.
-- Causal pathway model: A computable representation of theory or domain expertise about the influence process of a feedback message. It has as its parts preconditions, mechanisms, moderators, and outcomes.
-- Spek: A top level data container for metadata, including feedback message templates, causal pathways, recipient requirements and preferences, and candidate messages.
+- Causal pathway model: A theory-based specification of the influence process of a feedback message. It has as its parts preconditions, mechanisms, moderators, and outcomes.
+- Spek: A top-level data container for metadata, including feedback message templates, causal pathways, recipient requirements and preferences, and candidate messages.
 - Ascribee: An entity to which a performance level is ascribed, such as a person, team, goal, peer average, or benchmark. The ascribee's performance level is specified for a given metric and time interval.
 
 ## The Software Pipeline
