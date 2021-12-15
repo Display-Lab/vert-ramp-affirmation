@@ -80,8 +80,12 @@ R CMD INSTALL --preclean --no-multiarch --with-keep.source spekex
 R CMD INSTALL --preclean --no-multiarch --with-keep.source bit-stomach
 ```
 ## Check that the _Bitstomach_ pipeline stage is running
+You should be able to execute this command from anywhere:
 ```bash
-➜  display-lab bitstomach.sh --version
+bitstomach.sh --version
+```
+If setup was successful, you should see the following:
+```bash
 bitstomach package version: 0.15.2
 spekex package version: 0.6.1
 ```
