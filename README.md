@@ -86,8 +86,5 @@ For a more detailed explanation and example, see: [pipeline example](pipeline_ex
 - Outputs:
     - Performance summary messages
 
-
-## Installing Dependencies on OSX
-- [OSX installation instructions](./OSX_Install.md)
-- [Ubuntu installation instructions](./Ubuntu_Install.md)
-
+## Installation
+- Can be installed on MacOs, and Linux. [Instructions here](installation.md).

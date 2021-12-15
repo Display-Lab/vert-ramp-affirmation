@@ -38,7 +38,7 @@ fi
 
 # Die if Fuseki not running.
 if [[ $(ping_fuseki) -ne 200 ]]; then
-  echo >&2 "Fuseki still not runnig. Exiting."; 
+  echo >&2 "Fuseki still not running. Exiting.";
   exit 1
 fi
 
