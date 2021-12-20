@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Unless specified as first arguement, assume spek.json
+# Unless specified as first argument, assume spek.json
 SPEK_PATH=${1:-spek.json}
 
 # How many performers?
