@@ -72,7 +72,7 @@ R CMD INSTALL --preclean --no-multiarch --with-keep.source spekex
 R CMD INSTALL --preclean --no-multiarch --with-keep.source bit-stomach
 ```
 ### Check that the _Bitstomach_ pipeline stage is running
-You should be able to execute this command from anywhere:
+You should be able to execute from the bin folder in bit-stomach:
 ```bash
 bitstomach.sh --version
 ```
