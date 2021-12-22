@@ -481,6 +481,47 @@
       ],
       "cpo-DistalOutcome": "clinical outcome performance improvement",
       "slowmo-ExampleKeyMessage": "Your performance is getting worse"
+    },
+    {
+      "@id": "http://feedbacktailor.org/ftkb#Improving",
+      "@type": "http://purl.obolibrary.org/obo/cpo_0000029",
+      "name": "improving",
+      "cpo-ImplementationStrategy": "Show a performance that improved",
+      "slowmo-InterventionContent": [
+        "BCT 2.2 Feedback on behavior",
+        "BCT 2.7 Feedback on outcomes of behavior"
+      ],
+      "cpo-Mechanism": [
+        "knowledge",
+        "optimism"
+      ],
+      "slowmo-HasPrecondition": [
+        {
+          "@type": "http://purl.obolibrary.org/obo/psdo_0000041"
+        },
+        {
+          "@type": "http://purl.obolibrary.org/obo/psdo_0000099"
+        },
+        {
+          "@type": "http://purl.obolibrary.org/obo/psdo_0000120"
+        }
+      ],
+      "slowmo-HasModerator": [
+        {
+          "@type": "http://example.com/slowmo#RegulatoryFit"
+        },
+        {
+          "@type": "http://example.com/slowmo#Habituation"
+        },
+        {
+          "@type": "http://example.com/slowmo#TrendSlope"
+        }
+      ],
+      "cpo-ProximalOutcome": [
+        "clinical process performance improvement"
+      ],
+      "cpo-DistalOutcome": "clinical outcome performance improvement",
+      "slowmo-ExampleKeyMessage": "Your performance is improving"
     }
   ]
 }

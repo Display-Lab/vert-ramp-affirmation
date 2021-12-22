@@ -6,7 +6,7 @@ Grady has a performance level of 94% for October 2020.
 ## Comparator
 The peer benchmark for October 2020 is 96%.
 
-## Peformer annotations
+## Recipient annotations
 This data set should result in an annotation that there is information content about social comparator and a negative performance gap for Grady:
 
 1. Social comparator content (http://purl.obolibrary.org/obo/psdo_0000095)
@@ -17,7 +17,7 @@ The worse_social_bar template is about a negative performance gap set and a soci
 1. Social comparator element (http://purl.obolibrary.org/obo/psdo_0000045)
 2. Negative performance gap set (http://purl.obolibrary.org/obo/psdo_0000116)
 
-## Resulting Candidates
+## Resulting candidates
 The candidate produced for Grady has:
 
 1. Social comparator content (http://purl.obolibrary.org/obo/psdo_0000095)
@@ -25,7 +25,7 @@ The candidate produced for Grady has:
 3. Negative performance gap content (http://purl.obolibrary.org/obo/psdo_0000105)
 4. Negative performance gap set (http://purl.obolibrary.org/obo/psdo_0000116)
 
-## Causal Pathway Preconditions
+## Causal pathway preconditions
 The social_worse causal pathway has preconditions:
 
 1. Social comparator content (http://purl.obolibrary.org/obo/psdo_0000095)

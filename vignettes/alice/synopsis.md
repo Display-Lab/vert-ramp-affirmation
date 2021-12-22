@@ -6,7 +6,7 @@ Alice has a performance level of 97% for September 2020.
 ## Comparator
 The peer benchmark for September 2020 is 93%.
 
-## Peformer annotations
+## Recipient annotations
 This data set should result in an annotation that there is information content about social comparator and a positive performance gap for Alice:
 
 1. Social comparator content (http://purl.obolibrary.org/obo/psdo_0000095)
@@ -17,7 +17,7 @@ The top_performer_bar template is about a positive performance gap set and a soc
 1. Social comparator element (http://purl.obolibrary.org/obo/psdo_0000045)
 2. Positive performance gap set (http://purl.obolibrary.org/obo/psdo_0000117)
 
-## Resulting Candidates
+## Resulting candidates
 The candidate produced for Alice has:
 
 1. Social comparator content (http://purl.obolibrary.org/obo/psdo_0000095)
@@ -25,7 +25,7 @@ The candidate produced for Alice has:
 3. Positive performance gap content (http://purl.obolibrary.org/obo/psdo_0000104)
 4. Positive performance gap set (http://purl.obolibrary.org/obo/psdo_0000117)
 
-## Causal Pathway Preconditions
+## Causal pathway preconditions
 The social_better causal pathway has preconditions:
 
 1. Social comparator content (http://purl.obolibrary.org/obo/psdo_0000095)
