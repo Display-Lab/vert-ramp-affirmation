@@ -13,8 +13,8 @@ The entire human facing half of the production pipeline.
 Talking to people for contextual inquiry.
 Not applicable in this fully synthetic example.
 
-## Data Aquisition & Munging
-Recieve or pull data from client.
+## Data Acquisition & Munging
+Receive or pull data from client.
 Preprocessing data to get into expected formats (csv, json).
 Eschewed in this fully synthetic example.
 

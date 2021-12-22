@@ -17,3 +17,4 @@ vignettes/**/vignette.log
 Vagrantfile
 .vagrant
 
+/.idea/

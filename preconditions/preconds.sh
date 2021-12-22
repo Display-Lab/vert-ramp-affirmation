@@ -14,7 +14,6 @@ CP_JSON=/tmp/cp.json
 RESULT_JSON=result.json
 
 # Dependencies (Fuseki) path
-FUSEKI_DIR=/opt/fuseki/apache-jena-fuseki-3.10.0
 ping_fuseki(){ curl -s -o /dev/null -w "%{http_code}" localhost:3030/$/ping; }
 
 if [[ $(ping_fuseki) -ne 200 ]]; then
@@ -22,7 +21,7 @@ if [[ $(ping_fuseki) -ne 200 ]]; then
 
   # Try to start custom fuseki locally
   export JVM_ARGS="-Xmx8g -Xms2g"
-  ${FUSEKI_DIR}/fuseki-server --mem --update /ds 1> fuseki.out 2>&1 &
+  ${FUSEKI_HOME}/fuseki-server --mem --update /ds 1> fuseki.out 2>&1 &
 
   # Wait for it to start.
   COUNTER=0
