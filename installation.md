@@ -24,8 +24,8 @@ git clone https://github.com/Display-Lab/pictoralist.git
 
 #### *Optional*: Create a symlink for run_pipeline.sh in you `/usr/local/bin` folder
 ```sh
-cd ~/usr/local/bin
-ln -s $DISPLAY_LAB_HOME/vert-ramp-affirmation/run_pipline.sh
+cd /usr/local/bin
+ln -s $DISPLAY_LAB_HOME/vert-ramp-affirmation/run_pipeline.sh
 ```
 now, you should be able to execute `run_pipeline.sh` from within any vignette without having to specify the entire path to the script.
 
