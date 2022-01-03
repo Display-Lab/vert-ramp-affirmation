@@ -7,7 +7,7 @@ Create a place to house the display lab tooling, and set the `DISPLAY_LAB_HOME` 
 ```sh
 mkdir -p display-lab
 cd display-lab
-export DISPLAY_LAB_HOME=`pwd` # Add this to your .bashrc or .zshrc to make it persistent
+export DISPLAY_LAB_HOME=<DISPLAY LAB DIRECTORY PATH> # Add this to your .bash_profile, .bashrc, or .zshrc to make it persistent
 ```
 
 ### Install Display Lab applications from Github
@@ -20,14 +20,8 @@ git clone https://github.com/Display-Lab/candidate-smasher.git
 git clone https://github.com/Display-Lab/think-pudding.git
 git clone https://github.com/Display-Lab/esteemer.git
 git clone https://github.com/Display-Lab/pictoralist.git
+git clone https://github.com/Display-Lab/spekex.git
 ```
-
-#### *Optional*: Create a symlink for run_pipeline.sh in you `/usr/local/bin` folder
-```sh
-cd /usr/local/bin
-ln -s $DISPLAY_LAB_HOME/vert-ramp-affirmation/run_pipeline.sh
-```
-now, you should be able to execute `run_pipeline.sh` from within any vignette without having to specify the entire path to the script.
 
 ## Set up _Bitstomach_ pipeline stage
 
@@ -71,10 +65,22 @@ Rscript -e 'library(devtools); devtools::install_deps("./bit-stomach", repos="ht
 R CMD INSTALL --preclean --no-multiarch --with-keep.source spekex
 R CMD INSTALL --preclean --no-multiarch --with-keep.source bit-stomach
 ```
+
+### Install jq (for parsing json)
+For Linux:
+```bash
+sudo apt install jq
+```
+
+For Mac Os:
+```bash
+brew install jq
+```
+
 ### Check that the _Bitstomach_ pipeline stage is running
 You should be able to execute from the bin folder in bit-stomach:
 ```bash
-bitstomach.sh --version
+./bitstomach.sh --version
 ```
 If setup was successful, you should see the following:
 ```bash
@@ -109,13 +115,18 @@ cd ~
 ```
 
 ### Check that the _Candidate Smasher_ pipeline stage is running
-```bash
-<display-lab> cansmash -h
-Commands:
-  cansmash generate        # The main function
-  ...
-```
+You should be able to execute from the bin folder in candidate-smasher:
 
+```bash
+./cansmash -h
+```
+It should display something similar to the following:
+
+```shell
+Commands:
+cansmash generate        # The main function
+...
+```
 ## Set up the _Think Pudding_ pipeline stage
 
 ### Install fuseki
@@ -124,38 +135,77 @@ Commands:
 
 ```sh
 cd ~
-wget https://downloads.apache.org/jena/binaries/apache-jena-fuseki-3.16.0.tar.gz
-tar -xzf apache-jena-fuseki-3.16.0.tar.gz -C ~/display-lab/
+wget https://dlcdn.apache.org/jena/binaries/apache-jena-fuseki-4.3.2.tar.gz
+tar -xzf apache-jena-fuseki-4.3.2.tar.gz -C $DISPLAY_LAB_HOME
 ```
 
 ### Set FUSEKI_HOME environment variable for consistent reference
 ```sh
-export FUSEKI_HOME=<FULL PATH TO FUSEKI HERE> # Add this to your .bashrc or .zshrc to make it persistent
+export FUSEKI_HOME=<FULL PATH TO FUSEKI HERE> # Add this to your .bash_profile, .bashrc, or .zshrc to make it persistent
 ```
+### Check that Fuseki is properly installed
+You should be able to execute the following from anywhere:
+```bash
+$FUSEKI_HOME/fuseki-server --version
+```
+
+It should display something similar to the following:
+```bash
+Jena:       VERSION: 4.1.0
+Jena:       BUILD_DATE: 2021-05-31T20:32:25+0000
+TDB:        VERSION: 4.1.0
+TDB:        BUILD_DATE: 2021-05-31T20:32:25+0000
+Fuseki:     VERSION: 4.1.0
+Fuseki:     BUILD_DATE: 2021-05-31T20:32:25+0000
+```
+
 
 ### Check the _Think Pudding_ pipeline stage
+You should be able to execute from the bin folder in think-pudding:
+
 ```bash
-<~/display-lab> thinkpudding.sh -h
+./thinkpudding.sh -h
+```
+It should display something similar to the following:
+
+```shell
 Usage:
   thinkpudding.sh -h
-  ...
-$FUSEKI_HOME/fuseki-server --version
-Jena:       VERSION: 4.2.0
-Jena:       BUILD_DATE: 2021-09-12T10:37:37Z
-```
-## Smoke test all
-From your home directory, you should be able to invoke the executables you linked to in the bin directory.
-```sh
-bitstomach.sh --version
-cansmash -h
-thinkpudding.sh -h
+  thinkpudding.sh -p causal_pathway.json   
+  thinkpudding.sh -s spek.json -p causal_pathway.json   
+
+TP reads a spek from stdin or provided file path.  
+Emits updated spek to stdout unless update-only is used.
+
+Options:
+  -h | --help     print help and exit
+  -p | --pathways path to configuration file
+  -s | --spek     path to spek file (default to stdin)
+  -u | --update-only Load nothing. Run update query.
 ```
 
-----
+### Try Running a Vignette
+Navigate to a vignette directory, then run the pipeline:
+```bash
+cd $DISPLAY_LAB_HOME/vert-ramp-affirmation/vignettes/aspire
+./$DISPLAY_LAB_HOME/vert-ramp-affirmation/run_pipeline.sh
+```
+
+#### *Optional*: Create a symlink for run_pipeline.sh in your `/usr/local/bin` folder
+```sh
+cd /usr/local/bin
+ln -s $DISPLAY_LAB_HOME/vert-ramp-affirmation/run_pipeline.sh
+```
+now, you should be able to execute `run_pipeline.sh` from within any vignette without having to specify the entire path to the script.
+```bash
+    cd $DISPLAY_LAB_HOME/vert-ramp-affirmation/vignettes/aspire
+    run_pipeline.sh
+```
+    
 ### Supplemental software for development
 A few steps utilize Python, see the [Python downloads](https://www.python.org/downloads/) page for details.
 ```sh
 gem install pry rdf json-ld
-sudo apt install jq python3-pip
+sudo apt install python3-pip
 pip3 install frictionless
 ```
