@@ -67,8 +67,14 @@ R CMD INSTALL --preclean --no-multiarch --with-keep.source bit-stomach
 ```
 
 ### Install jq (for parsing json)
+For Linux:
 ```bash
 sudo apt install jq
+```
+
+For Mac Os:
+```bash
+brew install jq
 ```
 
 ### Check that the _Bitstomach_ pipeline stage is running
