@@ -184,13 +184,24 @@ Options:
   -u | --update-only Load nothing. Run update query.
 ```
 
+### Try Running a Vignette
+Navigate to a vignette directory, then run the pipeline:
+```bash
+cd $DISPLAY_LAB_HOME/vert-ramp-affirmation/vignettes/aspire
+./$DISPLAY_LAB_HOME/vert-ramp-affirmation/run_pipeline.sh
+```
+
 #### *Optional*: Create a symlink for run_pipeline.sh in your `/usr/local/bin` folder
 ```sh
 cd /usr/local/bin
 ln -s $DISPLAY_LAB_HOME/vert-ramp-affirmation/run_pipeline.sh
 ```
 now, you should be able to execute `run_pipeline.sh` from within any vignette without having to specify the entire path to the script.
-
+```bash
+    cd $DISPLAY_LAB_HOME/vert-ramp-affirmation/vignettes/aspire
+    run_pipeline.sh
+```
+    
 ### Supplemental software for development
 A few steps utilize Python, see the [Python downloads](https://www.python.org/downloads/) page for details.
 ```sh
