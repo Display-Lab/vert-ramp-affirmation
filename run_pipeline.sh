@@ -9,7 +9,7 @@
 COL_WIDTH=30
 COL_WIDTH=30
 LOG_FILE="${PFP_LOG_FILE:=vignette.log}"
-KB_DIR="${PFP_KB_DIR:=.}"
+KNOWLEDGE_BASE_DIR="${PFP_KNOWLEDGE_BASE_DIR:=.}"
 DATA_DIR="${PFP_DATA_DIR:=.}"
 OUTPUT_DIR="${PFP_OUTPUT_DIR:=outputs}"
 
@@ -18,7 +18,7 @@ PARAMS=()
 while (( "$#" )); do
   case "$1" in
     -k|--knowledge)
-      KB_DIR="${2}"
+      KNOWLEDGE_BASE_DIR="${2}"
       shift 2
       ;;
     -d|--data)
@@ -70,19 +70,19 @@ date > ${LOG_FILE}
 # Run bitstomach on performance data, spek, and annotations
 printf "%-${COL_WIDTH}s" "Running BitStomach..." | tee -a ${LOG_FILE}
 printf "\n" >> ${LOG_FILE}
-$DISPLAY_LAB_HOME/bit-stomach/bin/bitstomach.sh -s ${KB_DIR}/spek.json -d ${PFP_DATA_DIR}/performance.csv -a ${KB_DIR}/annotations.r 2>> ${LOG_FILE} | jq . > ${OUTPUT_DIR}/spek_bs.json
+$DISPLAY_LAB_HOME/bit-stomach/bin/bitstomach.sh -s ${KNOWLEDGE_BASE_DIR}/spek.json -d ${PFP_DATA_DIR}/performance.csv -a ${KNOWLEDGE_BASE_DIR}/annotations.r 2>> ${LOG_FILE} | jq . > ${OUTPUT_DIR}/spek_bs.json
 printf "exit status: %d\n" "${?}"
 
 # Run candidate smasher on spek (spek_bs.json) and templates
 printf "%-${COL_WIDTH}s" "Running CandidateSmasher..." | tee -a ${LOG_FILE}
 printf "\n" >> ${LOG_FILE}
-$DISPLAY_LAB_HOME/candidate-smasher/bin/cansmash --path=${OUTPUT_DIR}/spek_bs.json --md-source=${KB_DIR}/templates.json 2>> ${LOG_FILE} | jq . > ${OUTPUT_DIR}/spek_cs.json
+$DISPLAY_LAB_HOME/candidate-smasher/bin/cansmash --path=${OUTPUT_DIR}/spek_bs.json --md-source=${KNOWLEDGE_BASE_DIR}/templates.json 2>> ${LOG_FILE} | jq . > ${OUTPUT_DIR}/spek_cs.json
 printf "exit status: %d\n" "${?}"
 
 # Run think pudding on spek (spek_cs.json) and causal pathways
 printf "%-${COL_WIDTH}s" "Running ThinkPudding..." | tee -a ${LOG_FILE}
 printf "\n" >> ${LOG_FILE}
-$DISPLAY_LAB_HOME/think-pudding/bin/thinkpudding.sh -s ${OUTPUT_DIR}/spek_cs.json -p ${KB_DIR}/causal_pathways.json 2>> ${LOG_FILE} > ${OUTPUT_DIR}/spek_tp.json
+$DISPLAY_LAB_HOME/think-pudding/bin/thinkpudding.sh -s ${OUTPUT_DIR}/spek_cs.json -p ${KNOWLEDGE_BASE_DIR}/causal_pathways.json 2>> ${LOG_FILE} > ${OUTPUT_DIR}/spek_tp.json
 printf "exit status: %d\n" "${?}"
 
 printf "Log written to ${LOG_FILE}\n"
