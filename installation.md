@@ -3,12 +3,30 @@
 ## Set up Display Lab home
 
 ### Create directory for Display Lab code
-Create a place to house the display lab tooling, and set the `DISPLAY_LAB_HOME` environment variable.
-```sh
+Create a place to house the display lab tooling, and set the required environment variables.
+```bash
 mkdir -p display-lab
 cd display-lab
-export DISPLAY_LAB_HOME=<DISPLAY LAB DIRECTORY PATH> # Add this to your .bash_profile, .bashrc, or .zshrc to make it persistent
+mkdir knowledge-base
+mkdir data
+export DISPLAY_LAB_HOME=<DISPLAY LAB DIRECTORY PATH> 
+export PFP_KNOWLEDGE_BASE_DIR=<KNOWLEDGE BASE DIRECTORY PATH>
+export PFP_DATA_DIR=<DATA DIRECTORY PATH> 
+# Add these last three lines to your .bash_profile, .bashrc, or .zshrc to make them persistent
 ```
+#### Knowledge Base Directory
+- This directory is meant to contain files that different parts of the pipeline require in order to function. Some examples include:
+  - annotations
+    - [Vert Ramp Affirmation - Aspire Annotations](https://github.com/Display-Lab/vert-ramp-affirmation/blob/main/vignettes/aspire/annotations.r)
+  - templates
+    - [Vert Ramp Affirmation - Aspire Templates](https://github.com/Display-Lab/vert-ramp-affirmation/blob/main/vignettes/aspire/templates.json)
+    - [displaylab-templates-v1.0 (externalized templates from Aspire)](https://github.com/Display-Lab/spike-external-templates/releases/download/displaylab-templates-v1.0/displaylab-templates-v1.0.zip)
+  - causal pathways
+    - [Vert Ramp Affirmation - Aspire Causal Pathways](https://github.com/Display-Lab/vert-ramp-affirmation/blob/main/vignettes/aspire/causal_pathways.json)
+  
+#### Data Directory
+- This directory is meant to contain the performance data for the pipeline to work on. For example:
+  - [Vert Ramp Affirmation - Aspire Performance Data](https://github.com/Display-Lab/vert-ramp-affirmation/blob/main/vignettes/aspire/performance.csv)
 
 ### Install Display Lab applications from Github
 Install vert-ramp-affirmation (this repo with examples) and Bit Stomach, Think Pudding, Candidate Smasher (plus additional components; not all are used in every scenario)
