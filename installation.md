@@ -209,18 +209,18 @@ These are directories meant to separate the data to be worked on from the knowle
 Navigate to a vignette directory, then run the pipeline:
 ```bash
 cd $DISPLAY_LAB_HOME/vert-ramp-affirmation/vignettes/aspire
-./$DISPLAY_LAB_HOME/vert-ramp-affirmation/run.sh
+./$DISPLAY_LAB_HOME/vert-ramp-affirmation/pfp.sh
 ```
 
-#### *Optional*: Create a symlink for run.sh in your `/usr/local/bin` folder
+#### *Optional*: Create a symlink for pfp.sh in your `/usr/local/bin` folder
 ```sh
 cd /usr/local/bin
-ln -s $DISPLAY_LAB_HOME/vert-ramp-affirmation/run.sh
+ln -s $DISPLAY_LAB_HOME/vert-ramp-affirmation/pfp.sh
 ```
-now, you should be able to execute `run.sh` from within any vignette without having to specify the entire path to the script.
+now, you should be able to execute `pfp.sh` from within any vignette without having to specify the entire path to the script.
 ```bash
     cd $DISPLAY_LAB_HOME/vert-ramp-affirmation/vignettes/aspire
-    run.sh
+    pfp.sh
 ```
     
 ### Supplemental software for development
