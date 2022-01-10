@@ -186,44 +186,17 @@ Options:
   -s | --spek     path to spek file (default to stdin)
   -u | --update-only Load nothing. Run update query.
 ```
-## Running the Pipeline
-### Optional Directories
-These are directories meant to separate the data to be worked on from the knowledge base (configuration)
-#### Knowledge Base Directory
-- This directory is meant to contain files that different parts of the pipeline require in order to function. Some examples include:
-  - annotations
-    - [Vert Ramp Affirmation - Aspire Annotations](https://github.com/Display-Lab/vert-ramp-affirmation/blob/main/vignettes/aspire/annotations.r)
-  - templates
-    - [Vert Ramp Affirmation - Aspire Templates](https://github.com/Display-Lab/vert-ramp-affirmation/blob/main/vignettes/aspire/templates.json)
-    - [displaylab-templates-v1.0 (externalized templates from Aspire)](https://github.com/Display-Lab/spike-external-templates/releases/download/displaylab-templates-v1.0/displaylab-templates-v1.0.zip)
-  - causal pathways
-    - [Vert Ramp Affirmation - Aspire Causal Pathways](https://github.com/Display-Lab/vert-ramp-affirmation/blob/main/vignettes/aspire/causal_pathways.json)
-
-#### Data Directory
-- This directory is meant to contain the performance data for the pipeline to work on. For example:
-  - [Vert Ramp Affirmation - Aspire Performance Data](https://github.com/Display-Lab/vert-ramp-affirmation/blob/main/vignettes/aspire/performance.csv)
-
-### Flags
-### Environment Variables
+## Testing the Pipeline
 ### Try Running a Vignette
 Navigate to a vignette directory, then run the pipeline:
 ```bash
 cd $DISPLAY_LAB_HOME/vert-ramp-affirmation/vignettes/aspire
 ./$DISPLAY_LAB_HOME/vert-ramp-affirmation/pfp.sh
 ```
+### Usage
+For more information on using the pipeline, see the [Usage Docs](usage.md)
 
-#### *Optional*: Create a symlink for pfp.sh in your `/usr/local/bin` folder
-```sh
-cd /usr/local/bin
-ln -s $DISPLAY_LAB_HOME/vert-ramp-affirmation/pfp.sh
-```
-now, you should be able to execute `pfp.sh` from within any vignette without having to specify the entire path to the script.
-```bash
-    cd $DISPLAY_LAB_HOME/vert-ramp-affirmation/vignettes/aspire
-    pfp.sh
-```
-    
-### Supplemental software for development
+## Supplemental software for development
 A few steps utilize Python, see the [Python downloads](https://www.python.org/downloads/) page for details.
 ```sh
 gem install pry rdf json-ld
