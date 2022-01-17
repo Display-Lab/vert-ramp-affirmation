@@ -108,7 +108,7 @@ printf "exit status: %d\n" "${?}"
 if [[ -z ${DEBUG_MODE} ]]; then
   printf "%-${COL_WIDTH}s" "Running Cleanup Script" | tee -a ${LOG_FILE}
   printf "\n" >>${LOG_FILE}
-  $DISPLAY_LAB_HOME/vert-ramp-affirmation/scripts/cleanup.sh &>>${LOG_FILE}
+  $DISPLAY_LAB_HOME/vert-ramp-affirmation/scripts/cleanup.sh >>${LOG_FILE} 2>&1
   printf "exit status: %d\n" "${?}"
 fi
 
