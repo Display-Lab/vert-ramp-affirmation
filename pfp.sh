@@ -34,8 +34,8 @@ while (("$#")); do
     shift 2
     ;;
   -x | --debug)
-    DEBUG_MODE="${2}"
-    shift 2
+    DEBUG_MODE="TRUE"
+    shift 1
     ;;
   --) # end argument parsing
     shift
