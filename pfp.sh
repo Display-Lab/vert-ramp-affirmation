@@ -52,6 +52,7 @@ while (("$#")); do
   esac
 done
 
+
 # Define
 # Check for dependencies
 
@@ -97,6 +98,12 @@ printf "\n" >>${LOG_FILE}
 $DISPLAY_LAB_HOME/think-pudding/bin/thinkpudding.sh -s ${OUTPUT_DIR}/spek_cs.json -p ${KNOWLEDGE_BASE_DIR}/causal_pathways.json 2>>${LOG_FILE} >${OUTPUT_DIR}/spek_tp.json
 printf "exit status: %d\n" "${?}"
 
+# Run esteemer on spek (spek_tp.json)
+printf "%-${COL_WIDTH}s" "Running Esteemer..." | tee -a ${LOG_FILE}
+printf "\n" >> ${LOG_FILE}
+$DISPLAY_LAB_HOME/esteemer/bin/esteemer.sh -s ${OUTPUT_DIR}/spek_tp.json -p ${KNOWLEDGE_BASE_DIR}/causal_pathways.json 2>> ${LOG_FILE} > ${OUTPUT_DIR}/spek_es.json
+printf "exit status: %d\n" "${?}"
+
 # Run cleanup if debug is not enabled
 if [[ -z ${DEBUG_MODE} ]]; then
   printf "%-${COL_WIDTH}s" "Running Cleanup Script" | tee -a ${LOG_FILE}
@@ -104,4 +111,5 @@ if [[ -z ${DEBUG_MODE} ]]; then
   $DISPLAY_LAB_HOME/vert-ramp-affirmation/scripts/cleanup.sh &>>${LOG_FILE}
   printf "exit status: %d\n" "${?}"
 fi
+
 printf "Log written to ${LOG_FILE}\n"
