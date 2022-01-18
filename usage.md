@@ -25,6 +25,10 @@ The `pfp.sh` script can be configured to write to and from different directories
   - Specifies the log directory and filename
   - Overrides `PFP_LOG_FILE` environment variable
   - Default: `./vignette.log`
+- `-x|--debug`
+  - Run pipeline in debug mode
+  - disables directory cleanup
+  - disables shutdown of Fuseki
 
 ### Environment Variables
 Environment variables that can be set if you have a more consistent structure in which the pfp pipeline is running.

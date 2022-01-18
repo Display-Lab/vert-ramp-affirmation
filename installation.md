@@ -178,7 +178,8 @@ Usage:
   thinkpudding.sh -s spek.json -p causal_pathway.json   
 
 TP reads a spek from stdin or provided file path.  
-Emits updated spek to stdout unless update-only is used.
+Emits updated spek to stdout unless update-only is
+ used.
 
 Options:
   -h | --help     print help and exit

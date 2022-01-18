@@ -7,7 +7,7 @@ RES_WIDTH=13
 MSG_FORMAT="%-${COL_WIDTH}s ...%-${RES_WIDTH}s %s"
 
 # Check for existence of expected run artifacts
-OUT_FILES=( fuseki.out run outputs vignette.log )
+OUT_FILES=( fuseki.out run outputs )
 
 # Shutdown fuseki if running
 FUSEKI_PID=$(ps -ef | grep 'java.*fuseki' | grep -v grep | awk '{ print $2 }')
