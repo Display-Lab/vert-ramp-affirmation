@@ -83,25 +83,51 @@ date >${LOG_FILE}
 # Run bitstomach on performance data, spek, and annotations
 printf "%-${COL_WIDTH}s" "Running BitStomach..." | tee -a ${LOG_FILE}
 printf "\n" >>${LOG_FILE}
-$DISPLAY_LAB_HOME/bit-stomach/bin/bitstomach.sh -s ${KNOWLEDGE_BASE_DIR}/spek.json -d ${PFP_DATA_DIR}/performance.csv -a ${KNOWLEDGE_BASE_DIR}/annotations.r 2>>${LOG_FILE} | jq . >${OUTPUT_DIR}/spek_bs.json
+$DISPLAY_LAB_HOME/bit-stomach/bin/bitstomach.sh \
+  -s ${KNOWLEDGE_BASE_DIR}/spek.json \
+  -d ${PFP_DATA_DIR}/performance.csv \
+  -a ${KNOWLEDGE_BASE_DIR}/annotations.r \
+  2>>${LOG_FILE} | jq . \
+  > ${OUTPUT_DIR}/spek_bs.json
 printf "exit status: %d\n" "${?}"
 
 # Run candidate smasher on spek (spek_bs.json) and templates
 printf "%-${COL_WIDTH}s" "Running CandidateSmasher..." | tee -a ${LOG_FILE}
 printf "\n" >>${LOG_FILE}
-$DISPLAY_LAB_HOME/candidate-smasher/bin/cansmash --path=${OUTPUT_DIR}/spek_bs.json --md-source=${KNOWLEDGE_BASE_DIR}/templates.json 2>>${LOG_FILE} | jq . >${OUTPUT_DIR}/spek_cs.json
+$DISPLAY_LAB_HOME/candidate-smasher/bin/cansmash \
+  --path=${OUTPUT_DIR}/spek_bs.json \
+  --md-source=${KNOWLEDGE_BASE_DIR}/templates.json \
+  2>>${LOG_FILE} | jq . \
+  > ${OUTPUT_DIR}/spek_cs.json
 printf "exit status: %d\n" "${?}"
 
 # Run think pudding on spek (spek_cs.json) and causal pathways
 printf "%-${COL_WIDTH}s" "Running ThinkPudding..." | tee -a ${LOG_FILE}
 printf "\n" >>${LOG_FILE}
-$DISPLAY_LAB_HOME/think-pudding/bin/thinkpudding.sh -s ${OUTPUT_DIR}/spek_cs.json -p ${KNOWLEDGE_BASE_DIR}/causal_pathways.json 2>>${LOG_FILE} >${OUTPUT_DIR}/spek_tp.json
+$DISPLAY_LAB_HOME/think-pudding/bin/thinkpudding.sh \
+  -s ${OUTPUT_DIR}/spek_cs.json \
+  -p ${KNOWLEDGE_BASE_DIR}/causal_pathways.json \
+  2>>${LOG_FILE} \
+  > ${OUTPUT_DIR}/spek_tp.json
 printf "exit status: %d\n" "${?}"
 
-# Run esteemer on spek (spek_tp.json)
+## Run presteemer on spek (spek_tp.json)
+printf "%-${COL_WIDTH}s" "Running PREsteemer..." | tee -a ${LOG_FILE}
+printf "\n" >> ${LOG_FILE}
+$DISPLAY_LAB_HOME/esteemer/bin/presteemer.sh \
+  -s ${OUTPUT_DIR}/spek_tp.json \
+  2>> ${LOG_FILE} \
+  > ${OUTPUT_DIR}/spek_pe.ttl
+printf "exit status: %d\n" "${?}"
+
+# Run esteemer on spek (spek_pe.json)
 printf "%-${COL_WIDTH}s" "Running Esteemer..." | tee -a ${LOG_FILE}
 printf "\n" >> ${LOG_FILE}
-$DISPLAY_LAB_HOME/esteemer/bin/esteemer.sh -s ${OUTPUT_DIR}/spek_tp.json -p ${KNOWLEDGE_BASE_DIR}/causal_pathways.json 2>> ${LOG_FILE} > ${OUTPUT_DIR}/spek_es.json
+$DISPLAY_LAB_HOME/esteemer/bin/esteemer.sh \
+  -s ${OUTPUT_DIR}/spek_pe.ttl \
+  -p ${KNOWLEDGE_BASE_DIR}/causal_pathways.json \
+  2>> ${LOG_FILE} \
+  > ${OUTPUT_DIR}/spek_es.json
 printf "exit status: %d\n" "${?}"
 
 # Run cleanup if debug is not enabled
