@@ -35,9 +35,8 @@ date >${LOG_FILE}
 
 #run bitstomach on each csv file in the TEST_DATA_DIR directory, and output speks / logs
 for file in ${TEST_DATA_DIR}/*.csv; do
-  echo "begin test --------------------------------------------------------" | tee -a ${LOG_FILE}
   test_name=$(basename "${file}" .csv)
-  echo "BitStomach - Aspire - ${test_name}" | tee -a ${LOG_FILE}
+  echo "begin test -------------------------------------------------------- BitStomach - Aspire - ${test_name}" | tee -a ${LOG_FILE}
   $DISPLAY_LAB_HOME/bit-stomach/bin/bitstomach.sh \
     -s ${KNOWLEDGE_BASE_DIR}/spek.json \
     -d ${file} \
@@ -49,7 +48,6 @@ for file in ${TEST_DATA_DIR}/*.csv; do
   $VR_SCRIPTS_DIR/summarize_graph.sh \
     -s ${OUTPUT_DIR}/${test_name}.spek.json \
     >>${LOG_FILE} 2>&1
-  echo "end test   --------------------------------------------------------" | tee -a ${LOG_FILE}
 done
 
 # Run cleanup if debug is not enabled
