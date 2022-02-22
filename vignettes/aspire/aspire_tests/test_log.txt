@@ -1,0 +1,26 @@
+Tue 22 Feb 2022 04:27:44 PM EST
+begin test --------------------------------------------------------
+BitStomach - Aspire - normal_data
+Loading required package: methods
+Joining, by = "id"
+Joining, by = "id"
+Joining, by = "id"
+Joining, by = "id"
+Joining, by = "id"
+Joining, by = "id"
+Joining, by = "id"
+Joining, by = "id"
+exit status: 0
+Using Spek file:  test_results/normal_data.spek.json
+{ 
+  "count" : 5803 ,
+  "tripleCount" : 5803 ,
+  "quadCount" : 0
+}
+********** SPEK SUMMARY **********
+Number of Performers: "206"
+Number of Candidates: "0"
+Number of Acceptable Candidates: "0"
+Number of Promoted Candidates: "0"
+Number of Ancestor Performers: "0"
+end test   --------------------------------------------------------
