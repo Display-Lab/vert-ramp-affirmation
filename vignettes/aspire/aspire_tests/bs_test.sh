@@ -3,10 +3,21 @@ COL_WIDTH=30
 COL_WIDTH=30
 KNOWLEDGE_BASE_DIR="${DISPLAY_LAB_HOME}/vert-ramp-affirmation/vignettes/aspire"
 TEST_DIR="${KNOWLEDGE_BASE_DIR}/aspire_tests"
-TEST_DATA_DIR="${TEST_DIR}/data"
+TEST_DATA_DIR="${TEST_DIR}/test_data"
 OUTPUT_DIR=test_results
 LOG_FILE=test_log.txt
 VR_SCRIPTS_DIR="${DISPLAY_LAB_HOME}/vert-ramp-affirmation/scripts"
+
+# CHeck for data and knowledge base overrides
+PARAMS=()
+while (("$#")); do
+  case "$1" in
+  -x | --debug)
+    DEBUG_MODE="TRUE"
+    shift 1
+    ;;
+  esac
+done
 
 # Check if FUSEKI is running.
 FUSEKI_PING=$(curl -s -o /dev/null -w "%{http_code}" localhost:3030/$/ping)
@@ -45,6 +56,14 @@ for file in ${TEST_DATA_DIR}/*.csv;
       > ${OUTPUT_DIR}/${test_name}.summary.txt
   done
 
+
+# Run cleanup if debug is not enabled
+if [[ -z ${DEBUG_MODE} ]]; then
+  printf "%-${COL_WIDTH}s" "Running Cleanup Script" | tee -a ${LOG_FILE}
+  printf "\n" >>${LOG_FILE}
+  $DISPLAY_LAB_HOME/vert-ramp-affirmation/scripts/cleanup.sh >>${LOG_FILE} 2>&1
+  printf "exit status: %d\n" "${?}"
+fi
 
 
 printf "Log written to ${LOG_FILE}\n"

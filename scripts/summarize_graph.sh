@@ -127,31 +127,36 @@ printf "Number of Performers: "
 curl --silent POST \
   --data-binary "${PERFORMER_COUNT}" \
   --header 'Content-type: application/sparql-query' \
-  "${FUSEKI_DATASET_URL}/query" | jq '.results.bindings[0].numberOfPerformers.value'
+  "${FUSEKI_DATASET_URL}/query" | jq '.results.bindings[0].numberOfPerformers.value' >&2
+
 
 printf "Number of Candidates: "
 curl --silent POST \
   --data-binary "${CANDIDATE_COUNT}" \
   --header 'Content-type: application/sparql-query' \
-  "${FUSEKI_DATASET_URL}/query" | jq '.results.bindings[0].numberOfCandidates.value'
+  "${FUSEKI_DATASET_URL}/query" | jq '.results.bindings[0].numberOfCandidates.value' >&2
+
 
 printf "Number of Acceptable Candidates: "
 curl --silent POST \
   --data-binary "${ACCEPTABLE_CANDIDATE_COUNT}" \
   --header 'Content-type: application/sparql-query' \
-  "${FUSEKI_DATASET_URL}/query" | jq '.results.bindings[0].numberOfAcceptableCandidates.value'
+  "${FUSEKI_DATASET_URL}/query" | jq '.results.bindings[0].numberOfAcceptableCandidates.value' >&2
+
 
 printf "Number of Promoted Candidates: "
 curl --silent POST \
   --data-binary "${PROMOTED_CANDIDATE_COUNT}" \
   --header 'Content-type: application/sparql-query' \
-  "${FUSEKI_DATASET_URL}/query" | jq '.results.bindings[0].numberOfPromotedCandidates.value'
+  "${FUSEKI_DATASET_URL}/query" | jq '.results.bindings[0].numberOfPromotedCandidates.value' >&2
+
 
 printf "Number of Ancestor Performers: "
 curl --silent POST \
   --data-binary "${ANCESTOR_PERFORMER_COUNT}" \
   --header 'Content-type: application/sparql-query' \
-  "${FUSEKI_DATASET_URL}/query" | jq '.results.bindings[0].numberOfAncestorPerformers.value'
+  "${FUSEKI_DATASET_URL}/query" | jq '.results.bindings[0].numberOfAncestorPerformers.value' >&2
+
 
 if [ ! -z "${SPEK_FILE}" ]; then
   curl --silent --location --request DELETE \
