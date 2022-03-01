@@ -1,0 +1,55 @@
+Mon 28 Feb 2022 03:38:57 PM EST
+begin test -------------------------------------------------------- BitStomach - mpog - 3_staff_1_measure
+Loading required package: methods
+Joining, by = "id"
+Joining, by = "id"
+Joining, by = "id"
+Joining, by = "id"
+Joining, by = "id"
+Joining, by = "id"
+Joining, by = "id"
+Joining, by = "id"
+exit status: 0
+Using Spek file:  test_results/3_staff_1_measure.spek.json
+{ 
+  "count" : 122 ,
+  "tripleCount" : 122 ,
+  "quadCount" : 0
+}
+********** SPEK SUMMARY **********
+Number of Performers: "3"
+Number of Candidates: "0"
+Number of Acceptable Candidates: "0"
+Number of Promoted Candidates: "0"
+Number of Ancestor Performers: "0"
+begin test -------------------------------------------------------- BitStomach - mpog - 3_staff_2_measures
+Loading required package: methods
+Joining, by = "id"
+Joining, by = "id"
+Joining, by = "id"
+Joining, by = "id"
+Joining, by = "id"
+Joining, by = "id"
+Joining, by = "id"
+Joining, by = "id"
+Joining, by = "id"
+Joining, by = "id"
+Joining, by = "id"
+Joining, by = "id"
+Joining, by = "id"
+Joining, by = "id"
+Joining, by = "id"
+Joining, by = "id"
+exit status: 0
+Using Spek file:  test_results/3_staff_2_measures.spek.json
+{ 
+  "count" : 186 ,
+  "tripleCount" : 186 ,
+  "quadCount" : 0
+}
+********** SPEK SUMMARY **********
+Number of Performers: "3"
+Number of Candidates: "0"
+Number of Acceptable Candidates: "0"
+Number of Promoted Candidates: "0"
+Number of Ancestor Performers: "0"

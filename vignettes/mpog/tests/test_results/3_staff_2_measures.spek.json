@@ -1,0 +1,603 @@
+{
+  "@id": "http://example.com/app#display-lab",
+  "@type": "http://example.com/slowmo#spek",
+  "http://example.com/slowmo#InputTable": [
+    {
+      "@type": "http://www.w3.org/ns/csvw#Table",
+      "http://www.w3.org/ns/csvw#dialect": [
+        {
+          "http://www.w3.org/ns/csvw#commentPrefix": [
+            {
+              "@value": ""
+            }
+          ],
+          "http://www.w3.org/ns/csvw#delimiter": [
+            {
+              "@value": ","
+            }
+          ],
+          "http://www.w3.org/ns/csvw#doubleQuote": [
+            {
+              "@value": true
+            }
+          ],
+          "http://www.w3.org/ns/csvw#encoding": [
+            {
+              "@value": "utf-8"
+            }
+          ],
+          "http://www.w3.org/ns/csvw#header": [
+            {
+              "@value": true
+            }
+          ],
+          "http://www.w3.org/ns/csvw#headerRowCount": [
+            {
+              "@value": "1"
+            }
+          ],
+          "http://www.w3.org/ns/csvw#lineTerminators": [
+            {
+              "@value": "\\n"
+            }
+          ],
+          "http://www.w3.org/ns/csvw#quoteChar": [
+            {
+              "@value": "\""
+            }
+          ],
+          "http://www.w3.org/ns/csvw#skipBlankRows": [
+            {
+              "@value": true
+            }
+          ],
+          "http://www.w3.org/ns/csvw#skipColumns": [
+            {
+              "@value": ""
+            }
+          ],
+          "http://www.w3.org/ns/csvw#skipInitialSpace": [
+            {
+              "@value": false
+            }
+          ],
+          "http://www.w3.org/ns/csvw#skipRows": [
+            {
+              "@value": ""
+            }
+          ],
+          "http://www.w3.org/ns/csvw#trim": [
+            {
+              "@value": false
+            }
+          ]
+        }
+      ],
+      "http://www.w3.org/ns/csvw#tableSchema": [
+        {
+          "http://www.w3.org/ns/csvw#columns": [
+            {
+              "http://www.w3.org/ns/csvw#datatype": [
+                {
+                  "@value": "string"
+                }
+              ],
+              "http://www.w3.org/ns/csvw#name": [
+                {
+                  "@value": "Measure_Name"
+                }
+              ],
+              "http://www.w3.org/ns/csvw#title": [
+                {
+                  "@value": "Measure"
+                }
+              ],
+              "http://purl.org/dc/terms/description": [
+                {
+                  "@value": "Name of measurement"
+                }
+              ],
+              "http://example.com/slowmo#ColumnUse": [
+                {
+                  "@value": "measure"
+                }
+              ]
+            },
+            {
+              "http://www.w3.org/ns/csvw#datatype": [
+                {
+                  "@value": "string"
+                }
+              ],
+              "http://www.w3.org/ns/csvw#name": [
+                {
+                  "@value": "Staff_Number"
+                }
+              ],
+              "http://www.w3.org/ns/csvw#title": [
+                {
+                  "@value": "Staff ID"
+                }
+              ],
+              "http://purl.org/dc/terms/description": [
+                {
+                  "@value": "Staff identification number"
+                }
+              ],
+              "http://example.com/slowmo#ColumnUse": [
+                {
+                  "@value": "identifier"
+                }
+              ]
+            },
+            {
+              "http://www.w3.org/ns/csvw#datatype": [
+                {
+                  "@value": "date"
+                }
+              ],
+              "http://www.w3.org/ns/csvw#name": [
+                {
+                  "@value": "Month"
+                }
+              ],
+              "http://www.w3.org/ns/csvw#title": [
+                {
+                  "@value": "Month"
+                }
+              ],
+              "http://purl.org/dc/terms/description": [
+                {
+                  "@value": "Performance calendar month."
+                }
+              ],
+              "http://example.com/slowmo#ColumnUse": [
+                {
+                  "@value": "time"
+                }
+              ]
+            },
+            {
+              "http://www.w3.org/ns/csvw#datatype": [
+                {
+                  "@value": "integer"
+                }
+              ],
+              "http://www.w3.org/ns/csvw#name": [
+                {
+                  "@value": "Denominator"
+                }
+              ],
+              "http://www.w3.org/ns/csvw#title": [
+                {
+                  "@value": "Count of Non-Excluded Cases"
+                }
+              ],
+              "http://purl.org/dc/terms/description": [
+                {
+                  "@value": "Count of non-excluded cases."
+                }
+              ],
+              "http://example.com/slowmo#ColumnUse": [
+                {
+                  "@value": "denominator"
+                }
+              ]
+            },
+            {
+              "http://www.w3.org/ns/csvw#datatype": [
+                {
+                  "@value": "integer"
+                }
+              ],
+              "http://www.w3.org/ns/csvw#name": [
+                {
+                  "@value": "Passed_Count"
+                }
+              ],
+              "http://www.w3.org/ns/csvw#title": [
+                {
+                  "@value": "Count of Passed Cases"
+                }
+              ],
+              "http://purl.org/dc/terms/description": [
+                {
+                  "@value": "Count of cases that passed measurement criteria."
+                }
+              ],
+              "http://example.com/slowmo#ColumnUse": [
+                {
+                  "@value": "numerator"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "http://purl.org/dc/terms/title": [
+        {
+          "@value": "Case Counts"
+        }
+      ]
+    }
+  ],
+  "http://example.com/slowmo#IsAboutMeasure": [
+    {
+      "@id": "_:m25",
+      "@type": "http://purl.obolibrary.org/obo/psdo_0000102",
+      "http://purl.org/dc/terms/title": [
+        {
+          "@value": "PEEP Utilization"
+        }
+      ],
+      "http://schema.org/identifier": [
+        {
+          "@value": "PUL03"
+        }
+      ],
+      "http://example.com/slowmo#WithComparator": [
+        {
+          "@type": "http://purl.obolibrary.org/obo/psdo_0000094",
+          "http://purl.org/dc/terms/title": [
+            {
+              "@value": "GOAL"
+            }
+          ],
+          "http://schema.org/name": [
+            {
+              "@value": "goal"
+            }
+          ],
+          "http://example.com/slowmo#ComparisonValue": [
+            {
+              "@value": 0.9
+            }
+          ],
+          "@id": "_:m1000"
+        },
+        {
+          "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
+          "http://purl.org/dc/terms/title": [
+            {
+              "@value": "PEERS"
+            }
+          ],
+          "http://schema.org/name": [
+            {
+              "@value": "peers"
+            }
+          ],
+          "@id": "_:m1001"
+        }
+      ]
+    },
+    {
+      "@id": "_:m83",
+      "@type": "http://purl.obolibrary.org/obo/psdo_0000102",
+      "http://purl.org/dc/terms/title": [
+        {
+          "@value": "Protective Tidal Volume, 8 mL/kg PBW\n"
+        }
+      ],
+      "http://schema.org/identifier": [
+        {
+          "@value": "PUL02"
+        }
+      ],
+      "http://example.com/slowmo#WithComparator": [
+        {
+          "@type": "http://purl.obolibrary.org/obo/psdo_0000094",
+          "http://purl.org/dc/terms/title": [
+            {
+              "@value": "GOAL"
+            }
+          ],
+          "http://schema.org/name": [
+            {
+              "@value": "goal"
+            }
+          ],
+          "http://example.com/slowmo#ComparisonValue": [
+            {
+              "@value": 0.9
+            }
+          ],
+          "@id": "_:m1002"
+        },
+        {
+          "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
+          "http://purl.org/dc/terms/title": [
+            {
+              "@value": "PEERS"
+            }
+          ],
+          "http://schema.org/name": [
+            {
+              "@value": "peers"
+            }
+          ],
+          "@id": "_:m1003"
+        }
+      ]
+    }
+  ],
+  "http://example.com/slowmo#IsAboutOrganization": [
+    {
+      "@type": "http://schema.org/Organization",
+      "http://schema.org/address": [
+        {
+          "@type": "http://schema.org/PostalAddress",
+          "http://schema.org/addressCountry": [
+            {
+              "@value": "USA"
+            }
+          ],
+          "http://schema.org/addressRegion": [
+            {
+              "@value": "MI"
+            }
+          ],
+          "http://schema.org/name": [
+            {
+              "@value": "DisplayLab"
+            }
+          ],
+          "http://schema.org/postalCode": [
+            {
+              "@value": "48109"
+            }
+          ],
+          "http://schema.org/streetAddress": [
+            {
+              "@value": "DLHS, 1161 NIB, 300 N Ingalls St."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "http://example.com/slowmo#IsAboutTemplate": [
+    {
+      "@id": "http://feedbacktailor.org/ftkb#TopPerformerBar"
+    },
+    {
+      "@id": "http://feedbacktailor.org/ftkb#WorseSocialBar"
+    },
+    {
+      "@id": "http://feedbacktailor.org/ftkb#ReachedSocialBar"
+    },
+    {
+      "@id": "http://feedbacktailor.org/ftkb#BetterGoalBar"
+    },
+    {
+      "@id": "http://feedbacktailor.org/ftkb#ApproachingGoalBar"
+    },
+    {
+      "@id": "http://feedbacktailor.org/ftkb#LostGoalBar"
+    },
+    {
+      "@id": "http://feedbacktailor.org/ftkb#ReachedGoalBar"
+    },
+    {
+      "@id": "http://feedbacktailor.org/ftkb#PerformanceWorseningBar"
+    }
+  ],
+  "http://example.com/slowmo#IsAboutPerformer": [
+    {
+      "@id": "_:p1",
+      "http://purl.obolibrary.org/obo/RO_0000091": [
+        {
+          "@type": "http://purl.obolibrary.org/obo/psdo_0000094",
+          "http://example.com/slowmo#RegardingComparator": {
+            "@id": "_:m1002"
+          },
+          "http://example.com/slowmo#RegardingMeasure": {
+            "@id": "_:m83"
+          }
+        },
+        {
+          "@type": "http://purl.obolibrary.org/obo/psdo_0000105",
+          "http://example.com/slowmo#RegardingComparator": {
+            "@id": "_:m1002"
+          },
+          "http://example.com/slowmo#RegardingMeasure": {
+            "@id": "_:m83"
+          }
+        },
+        {
+          "@type": "http://purl.obolibrary.org/obo/psdo_0000100",
+          "http://example.com/slowmo#RegardingComparator": {
+            "@id": "_:m1002"
+          },
+          "http://example.com/slowmo#RegardingMeasure": {
+            "@id": "_:m83"
+          }
+        },
+        {
+          "@type": "http://purl.obolibrary.org/obo/psdo_0000106",
+          "http://example.com/slowmo#RegardingComparator": {
+            "@id": "_:m1002"
+          },
+          "http://example.com/slowmo#RegardingMeasure": {
+            "@id": "_:m83"
+          }
+        },
+        {
+          "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
+          "http://example.com/slowmo#RegardingComparator": {
+            "@id": "_:m1003"
+          },
+          "http://example.com/slowmo#RegardingMeasure": {
+            "@id": "_:m83"
+          }
+        },
+        {
+          "@type": "http://purl.obolibrary.org/obo/psdo_0000100",
+          "http://example.com/slowmo#RegardingComparator": {
+            "@id": "_:m1003"
+          },
+          "http://example.com/slowmo#RegardingMeasure": {
+            "@id": "_:m83"
+          }
+        },
+        {
+          "@type": "http://purl.obolibrary.org/obo/psdo_0000094",
+          "http://example.com/slowmo#RegardingComparator": {
+            "@id": "_:m1000"
+          },
+          "http://example.com/slowmo#RegardingMeasure": {
+            "@id": "_:m25"
+          }
+        },
+        {
+          "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
+          "http://example.com/slowmo#RegardingComparator": {
+            "@id": "_:m1001"
+          },
+          "http://example.com/slowmo#RegardingMeasure": {
+            "@id": "_:m25"
+          }
+        }
+      ],
+      "@type": "http://purl.obolibrary.org/obo/psdo_0000085"
+    },
+    {
+      "@id": "_:p2",
+      "http://purl.obolibrary.org/obo/RO_0000091": [
+        {
+          "@type": "http://purl.obolibrary.org/obo/psdo_0000094",
+          "http://example.com/slowmo#RegardingComparator": {
+            "@id": "_:m1002"
+          },
+          "http://example.com/slowmo#RegardingMeasure": {
+            "@id": "_:m83"
+          }
+        },
+        {
+          "@type": "http://purl.obolibrary.org/obo/psdo_0000106",
+          "http://example.com/slowmo#RegardingComparator": {
+            "@id": "_:m1002"
+          },
+          "http://example.com/slowmo#RegardingMeasure": {
+            "@id": "_:m83"
+          }
+        },
+        {
+          "@type": "http://purl.obolibrary.org/obo/psdo_0000104",
+          "http://example.com/slowmo#RegardingComparator": {
+            "@id": "_:m1002"
+          },
+          "http://example.com/slowmo#RegardingMeasure": {
+            "@id": "_:m83"
+          }
+        },
+        {
+          "@type": "http://purl.obolibrary.org/obo/psdo_0000099",
+          "http://example.com/slowmo#RegardingComparator": {
+            "@id": "_:m1002"
+          },
+          "http://example.com/slowmo#RegardingMeasure": {
+            "@id": "_:m83"
+          }
+        },
+        {
+          "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
+          "http://example.com/slowmo#RegardingComparator": {
+            "@id": "_:m1003"
+          },
+          "http://example.com/slowmo#RegardingMeasure": {
+            "@id": "_:m83"
+          }
+        },
+        {
+          "@type": "http://purl.obolibrary.org/obo/psdo_0000099",
+          "http://example.com/slowmo#RegardingComparator": {
+            "@id": "_:m1003"
+          },
+          "http://example.com/slowmo#RegardingMeasure": {
+            "@id": "_:m83"
+          }
+        },
+        {
+          "@type": "http://purl.obolibrary.org/obo/psdo_0000094",
+          "http://example.com/slowmo#RegardingComparator": {
+            "@id": "_:m1000"
+          },
+          "http://example.com/slowmo#RegardingMeasure": {
+            "@id": "_:m25"
+          }
+        },
+        {
+          "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
+          "http://example.com/slowmo#RegardingComparator": {
+            "@id": "_:m1001"
+          },
+          "http://example.com/slowmo#RegardingMeasure": {
+            "@id": "_:m25"
+          }
+        }
+      ],
+      "@type": "http://purl.obolibrary.org/obo/psdo_0000085"
+    },
+    {
+      "@id": "_:p3",
+      "http://purl.obolibrary.org/obo/RO_0000091": [
+        {
+          "@type": "http://purl.obolibrary.org/obo/psdo_0000094",
+          "http://example.com/slowmo#RegardingComparator": {
+            "@id": "_:m1002"
+          },
+          "http://example.com/slowmo#RegardingMeasure": {
+            "@id": "_:m83"
+          }
+        },
+        {
+          "@type": "http://purl.obolibrary.org/obo/psdo_0000105",
+          "http://example.com/slowmo#RegardingComparator": {
+            "@id": "_:m1002"
+          },
+          "http://example.com/slowmo#RegardingMeasure": {
+            "@id": "_:m83"
+          }
+        },
+        {
+          "@type": "http://purl.obolibrary.org/obo/psdo_0000106",
+          "http://example.com/slowmo#RegardingComparator": {
+            "@id": "_:m1002"
+          },
+          "http://example.com/slowmo#RegardingMeasure": {
+            "@id": "_:m83"
+          }
+        },
+        {
+          "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
+          "http://example.com/slowmo#RegardingComparator": {
+            "@id": "_:m1003"
+          },
+          "http://example.com/slowmo#RegardingMeasure": {
+            "@id": "_:m83"
+          }
+        },
+        {
+          "@type": "http://purl.obolibrary.org/obo/psdo_0000094",
+          "http://example.com/slowmo#RegardingComparator": {
+            "@id": "_:m1000"
+          },
+          "http://example.com/slowmo#RegardingMeasure": {
+            "@id": "_:m25"
+          }
+        },
+        {
+          "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
+          "http://example.com/slowmo#RegardingComparator": {
+            "@id": "_:m1001"
+          },
+          "http://example.com/slowmo#RegardingMeasure": {
+            "@id": "_:m25"
+          }
+        }
+      ],
+      "@type": "http://purl.obolibrary.org/obo/psdo_0000085"
+    }
+  ]
+}
