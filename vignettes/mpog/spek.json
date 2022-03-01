@@ -2,20 +2,20 @@
   "@context": {
     "@vocab": "http://schema.org/",
     "slowmo": "http://example.com/slowmo#",
-    "csvw":   "http://www.w3.org/ns/csvw#", 
-    "dc":     "http://purl.org/dc/terms/",
-    "psdo":   "http://purl.obolibrary.org/obo/",
-    "slowmo:Measure":                  "http://example.com/slowmo#Measure",
-    "slowmo:IsAboutPerformer":         "http://example.com/slowmo#IsAboutPerformer",
-    "slowmo:ColumnUse":                "http://example.com/slowmo#ColumnUse",
-    "slowmo:IsAboutTemplate":          "http://example.com/slowmo#IsAboutTemplate",
-    "slowmo:spek":                     "http://example.com/slowmo#spek",
-    "slowmo:IsAboutCausalPathway":     "http://example.com/slowmo#IsAboutCausalPathway",
-    "slowmo:IsAboutOrganization":      "http://example.com/slowmo#IsAboutOrganization",
-    "slowmo:IsAboutMeasure":           "http://example.com/slowmo#IsAboutMeasure",
-    "slowmo:InputTable":               "http://example.com/slowmo#InputTable",
-    "slowmo:WithComparator":           "http://example.com/slowmo#WithComparator",
-    "has_part":        "http://purl.obolibrary.org/obo/bfo#BFO_0000051",
+    "csvw": "http://www.w3.org/ns/csvw#",
+    "dc": "http://purl.org/dc/terms/",
+    "psdo": "http://purl.obolibrary.org/obo/",
+    "slowmo:Measure": "http://example.com/slowmo#Measure",
+    "slowmo:IsAboutPerformer": "http://example.com/slowmo#IsAboutPerformer",
+    "slowmo:ColumnUse": "http://example.com/slowmo#ColumnUse",
+    "slowmo:IsAboutTemplate": "http://example.com/slowmo#IsAboutTemplate",
+    "slowmo:spek": "http://example.com/slowmo#spek",
+    "slowmo:IsAboutCausalPathway": "http://example.com/slowmo#IsAboutCausalPathway",
+    "slowmo:IsAboutOrganization": "http://example.com/slowmo#IsAboutOrganization",
+    "slowmo:IsAboutMeasure": "http://example.com/slowmo#IsAboutMeasure",
+    "slowmo:InputTable": "http://example.com/slowmo#InputTable",
+    "slowmo:WithComparator": "http://example.com/slowmo#WithComparator",
+    "has_part": "http://purl.obolibrary.org/obo/bfo#BFO_0000051",
     "has_disposition": "http://purl.obolibrary.org/obo/RO_0000091"
   },
   "@id": "http://example.com/app#display-lab",
@@ -31,88 +31,131 @@
       "name": "DisplayLab"
     }
   },
-  "slowmo:IsAboutMeasure":[
-    { "@id": "_:m25",
+  "slowmo:IsAboutMeasure": [
+    {
+      "@id": "_:m25",
       "@type": "http://purl.obolibrary.org/obo/psdo_0000102",
       "dc:title": "PEEP Utilization",
       "identifier": "PUL03",
-      "slowmo:WithComparator":[
-        { "@type": "http://purl.obolibrary.org/obo/psdo_0000094",
-        "name": "goal",
-        "dc:title": "GOAL",
-        "slowmo:ComparisonValue": 0.90},
-        { "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
-        "name": "peers",
-        "dc:title": "PEERS"}]}  ],
-  "slowmo:IsAboutTemplate": [
-    {"@id": "http://feedbacktailor.org/ftkb#TopPerformerBar"},
-    {"@id": "http://feedbacktailor.org/ftkb#WorseSocialBar"},
-    {"@id": "http://feedbacktailor.org/ftkb#ReachedSocialBar"},
-    {"@id": "http://feedbacktailor.org/ftkb#BetterGoalBar"},
-    {"@id": "http://feedbacktailor.org/ftkb#ApproachingGoalBar"},
-    {"@id": "http://feedbacktailor.org/ftkb#LostGoalBar"},
-    {"@id": "http://feedbacktailor.org/ftkb#ReachedGoalBar"},
-    {"@id": "http://feedbacktailor.org/ftkb#PerformanceWorseningBar"}
+      "slowmo:WithComparator": [
+        {
+          "@type": "http://purl.obolibrary.org/obo/psdo_0000094",
+          "name": "goal",
+          "dc:title": "GOAL",
+          "slowmo:ComparisonValue": 0.90
+        },
+        {
+          "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
+          "name": "peers",
+          "dc:title": "PEERS"
+        }
+      ]
+    },
+    {
+      "@id": "_:m83",
+      "@type": "http://purl.obolibrary.org/obo/psdo_0000102",
+      "dc:title": "Protective Tidal Volume, 8 mL/kg PBW\n",
+      "identifier": "PUL02",
+      "slowmo:WithComparator": [
+        {
+          "@type": "http://purl.obolibrary.org/obo/psdo_0000094",
+          "name": "goal",
+          "dc:title": "GOAL",
+          "slowmo:ComparisonValue": 0.90
+        },
+        {
+          "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
+          "name": "peers",
+          "dc:title": "PEERS"
+        }
+      ]
+    }
   ],
-  "slowmo:InputTable":{
+  "slowmo:IsAboutTemplate": [
+    {
+      "@id": "http://feedbacktailor.org/ftkb#TopPerformerBar"
+    },
+    {
+      "@id": "http://feedbacktailor.org/ftkb#WorseSocialBar"
+    },
+    {
+      "@id": "http://feedbacktailor.org/ftkb#ReachedSocialBar"
+    },
+    {
+      "@id": "http://feedbacktailor.org/ftkb#BetterGoalBar"
+    },
+    {
+      "@id": "http://feedbacktailor.org/ftkb#ApproachingGoalBar"
+    },
+    {
+      "@id": "http://feedbacktailor.org/ftkb#LostGoalBar"
+    },
+    {
+      "@id": "http://feedbacktailor.org/ftkb#ReachedGoalBar"
+    },
+    {
+      "@id": "http://feedbacktailor.org/ftkb#PerformanceWorseningBar"
+    }
+  ],
+  "slowmo:InputTable": {
     "@type": "http://www.w3.org/ns/csvw#Table",
-    "dc:title": "Case Counts", 
+    "dc:title": "Case Counts",
     "csvw:dialect": {
-      "csvw:commentPrefix": "", 
-      "csvw:delimiter": ",", 
-      "csvw:doubleQuote": true, 
-      "csvw:encoding": "utf-8", 
-      "csvw:header": true, 
-      "csvw:headerRowCount": "1", 
+      "csvw:commentPrefix": "",
+      "csvw:delimiter": ",",
+      "csvw:doubleQuote": true,
+      "csvw:encoding": "utf-8",
+      "csvw:header": true,
+      "csvw:headerRowCount": "1",
       "csvw:lineTerminators": [
         "\\n"
-      ], 
-      "csvw:quoteChar": "\"", 
-      "csvw:skipBlankRows": true, 
-      "csvw:skipColumns": "", 
-      "csvw:skipInitialSpace": false, 
-      "csvw:skipRows": "", 
+      ],
+      "csvw:quoteChar": "\"",
+      "csvw:skipBlankRows": true,
+      "csvw:skipColumns": "",
+      "csvw:skipInitialSpace": false,
+      "csvw:skipRows": "",
       "csvw:trim": false
-    }, 
+    },
     "csvw:tableSchema": {
       "csvw:columns": [
         {
-          "csvw:datatype": "string", 
-          "dc:description": "Name of measurement", 
-          "csvw:name": "Measure_Name", 
+          "csvw:datatype": "string",
+          "dc:description": "Name of measurement",
+          "csvw:name": "Measure_Name",
           "csvw:title": "Measure",
           "slowmo:ColumnUse": "measure"
         },
         {
-          "csvw:datatype": "string", 
-          "dc:description": "Staff identification number", 
-          "csvw:name": "Staff_Number", 
+          "csvw:datatype": "string",
+          "dc:description": "Staff identification number",
+          "csvw:name": "Staff_Number",
           "csvw:title": "Staff ID",
           "slowmo:ColumnUse": "identifier"
         },
         {
-          "csvw:datatype": "date", 
-          "dc:description": "Performance calendar month.", 
-          "csvw:name": "Month", 
+          "csvw:datatype": "date",
+          "dc:description": "Performance calendar month.",
+          "csvw:name": "Month",
           "csvw:title": "Month",
           "slowmo:ColumnUse": "time"
         },
         {
-          "csvw:datatype": "integer", 
-          "dc:description": "Count of non-excluded cases.", 
-          "csvw:name": "Denominator", 
+          "csvw:datatype": "integer",
+          "dc:description": "Count of non-excluded cases.",
+          "csvw:name": "Denominator",
           "csvw:title": "Count of Non-Excluded Cases",
           "slowmo:ColumnUse": "denominator"
         },
         {
-          "csvw:datatype": "integer", 
-          "dc:description": "Count of cases that passed measurement criteria.", 
-          "csvw:name": "Passed_Count", 
+          "csvw:datatype": "integer",
+          "dc:description": "Count of cases that passed measurement criteria.",
+          "csvw:name": "Passed_Count",
           "csvw:title": "Count of Passed Cases",
           "slowmo:ColumnUse": "numerator"
         }
-      ] 
-    } 
+      ]
+    }
   }
 }
 

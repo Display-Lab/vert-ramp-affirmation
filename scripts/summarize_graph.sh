@@ -111,6 +111,18 @@ WHERE {
 }
 USPARQL
 
+read -r -d '' DISPOSITION_COUNT <<USPARQL
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX slowmo: <http://example.com/slowmo#>
+
+SELECT (COUNT(DISTINCT (?hasDisposition)) as ?numberOfAncestorPerformers)
+FROM <http://localhost:3030/ds/$GRAPH_NAME>
+WHERE {
+  ?candidate a obo:cpo_0000053 ;
+    obo:RO_0000091 ?hasDisposition .
+}
+USPARQL
+
 # *********************************************************************************
 # Fail if Fuseki is not running
 FUSEKI_PING=$(curl -s -o /dev/null -w "%{http_code}" localhost:3030/$/ping)
