@@ -115,10 +115,10 @@ read -r -d '' DISPOSITION_COUNT <<USPARQL
 PREFIX obo: <http://purl.obolibrary.org/obo/>
 PREFIX slowmo: <http://example.com/slowmo#>
 
-SELECT (COUNT(DISTINCT (?hasDisposition)) as ?numberOfAncestorPerformers)
+SELECT (COUNT(DISTINCT ?hasDisposition) as ?numberOfDispositions)
 FROM <http://localhost:3030/ds/$GRAPH_NAME>
 WHERE {
-  ?candidate a obo:cpo_0000053 ;
+  ?s a obo:psdo_0000085 ;
     obo:RO_0000091 ?hasDisposition .
 }
 USPARQL
@@ -164,6 +164,12 @@ curl --silent POST \
   --data-binary "${ANCESTOR_PERFORMER_COUNT}" \
   --header 'Content-type: application/sparql-query' \
   "${FUSEKI_DATASET_URL}/query" | jq '.results.bindings[0].numberOfAncestorPerformers.value' >&2
+
+echo -n "Number of Dispositions: "
+curl --silent POST \
+  --data-binary "${DISPOSITION_COUNT}" \
+  --header 'Content-type: application/sparql-query' \
+  "${FUSEKI_DATASET_URL}/query" | jq '.results.bindings[0].numberOfDispositions.value' >&2
 
 if [ ! -z "${SPEK_FILE}" ]; then
   curl --silent --location --request DELETE \
