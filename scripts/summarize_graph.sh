@@ -111,6 +111,18 @@ WHERE {
 }
 USPARQL
 
+read -r -d '' DISPOSITION_COUNT <<USPARQL
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX slowmo: <http://example.com/slowmo#>
+
+SELECT (COUNT(DISTINCT ?hasDisposition) as ?numberOfDispositions)
+FROM <http://localhost:3030/ds/$GRAPH_NAME>
+WHERE {
+  ?s a obo:psdo_0000085 ;
+    obo:RO_0000091 ?hasDisposition .
+}
+USPARQL
+
 # *********************************************************************************
 # Fail if Fuseki is not running
 FUSEKI_PING=$(curl -s -o /dev/null -w "%{http_code}" localhost:3030/$/ping)
@@ -122,36 +134,42 @@ fi
 
 # SPARQL Time
 
-printf "********** SPEK SUMMARY **********\n"
-printf "Number of Performers: "
+echo "********** SPEK SUMMARY **********"
+echo -n "Number of Performers: "
 curl --silent POST \
   --data-binary "${PERFORMER_COUNT}" \
   --header 'Content-type: application/sparql-query' \
-  "${FUSEKI_DATASET_URL}/query" | jq '.results.bindings[0].numberOfPerformers.value'
+  "${FUSEKI_DATASET_URL}/query" | jq '.results.bindings[0].numberOfPerformers.value' >&2
 
-printf "Number of Candidates: "
+echo -n "Number of Candidates: "
 curl --silent POST \
   --data-binary "${CANDIDATE_COUNT}" \
   --header 'Content-type: application/sparql-query' \
-  "${FUSEKI_DATASET_URL}/query" | jq '.results.bindings[0].numberOfCandidates.value'
+  "${FUSEKI_DATASET_URL}/query" | jq '.results.bindings[0].numberOfCandidates.value' >&2
 
-printf "Number of Acceptable Candidates: "
+echo -n "Number of Acceptable Candidates: "
 curl --silent POST \
   --data-binary "${ACCEPTABLE_CANDIDATE_COUNT}" \
   --header 'Content-type: application/sparql-query' \
-  "${FUSEKI_DATASET_URL}/query" | jq '.results.bindings[0].numberOfAcceptableCandidates.value'
+  "${FUSEKI_DATASET_URL}/query" | jq '.results.bindings[0].numberOfAcceptableCandidates.value' >&2
 
-printf "Number of Promoted Candidates: "
+echo -n "Number of Promoted Candidates: "
 curl --silent POST \
   --data-binary "${PROMOTED_CANDIDATE_COUNT}" \
   --header 'Content-type: application/sparql-query' \
-  "${FUSEKI_DATASET_URL}/query" | jq '.results.bindings[0].numberOfPromotedCandidates.value'
+  "${FUSEKI_DATASET_URL}/query" | jq '.results.bindings[0].numberOfPromotedCandidates.value' >&2
 
-printf "Number of Ancestor Performers: "
+echo -n "Number of Ancestor Performers: "
 curl --silent POST \
   --data-binary "${ANCESTOR_PERFORMER_COUNT}" \
   --header 'Content-type: application/sparql-query' \
-  "${FUSEKI_DATASET_URL}/query" | jq '.results.bindings[0].numberOfAncestorPerformers.value'
+  "${FUSEKI_DATASET_URL}/query" | jq '.results.bindings[0].numberOfAncestorPerformers.value' >&2
+
+echo -n "Number of Dispositions: "
+curl --silent POST \
+  --data-binary "${DISPOSITION_COUNT}" \
+  --header 'Content-type: application/sparql-query' \
+  "${FUSEKI_DATASET_URL}/query" | jq '.results.bindings[0].numberOfDispositions.value' >&2
 
 if [ ! -z "${SPEK_FILE}" ]; then
   curl --silent --location --request DELETE \
