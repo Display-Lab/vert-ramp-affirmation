@@ -22,4 +22,7 @@ This will run the pipeline with every csv file in the `test_data` directory
 - `x` Enables debug mode (won't delete output files or stop fuseki)
 
 ## Interpreting output
-The E2E Test script runs a dataset through the entire pipeline, records the execution times of each individual stage, and the contents of each spek
+The E2E Test script runs a dataset through the entire pipeline, records the execution times of each individual stage, and the contents of each spek.
+
+## Discoveries
+- The pipeline will run out of memory in the Think Pudding stage because of fuseki running against Java's heap memory limits. You can alter the memory fuseki uses to run by editing the `JAVA_ARGS` variable in the `fuseki-server` script in you fuseki installation. Like so: `JVM_ARGS=${JVM_ARGS:--Xmx4096m}`. However, even with 4 GB, it will run out of memory.

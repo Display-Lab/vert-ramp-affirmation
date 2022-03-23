@@ -90,7 +90,7 @@ fi
 # Run bitstomach on performance data, spek, and annotations
 total_time_start=$(date +%s)
 
-printf "Running BitStomach ------------------------\n" | tee -a ${LOG_FILE}
+printf "Running BitStomach -------------------------------\n" | tee -a ${LOG_FILE}
 start=$(date +%s)
 if [[ -z ${PFP_DATA_FILE} ]]; then
   $DISPLAY_LAB_HOME/bit-stomach/bin/bitstomach.sh \
@@ -114,6 +114,7 @@ printf "exit status: %d\n" "${?}" | tee -a ${LOG_FILE}
 
 # Run candidate smasher on spek (spek_bs.json) and templates
 printf "Running Candidate Smasher ------------------------\n" | tee -a ${LOG_FILE}
+
 start=$(date +%s)
 $DISPLAY_LAB_HOME/candidate-smasher/bin/cansmash \
   --path=${OUTPUT_DIR}/spek_bs.json \
@@ -126,7 +127,8 @@ printf "execution time: ${runtime} seconds\n" | tee -a ${LOG_FILE}
 printf "exit status: %d\n" "${?}" | tee -a ${LOG_FILE}
 
 # Run think pudding on spek (spek_cs.json) and causal pathways
-printf "Running Think Pudding ------------------------\n" | tee -a ${LOG_FILE}
+printf "Running Think Pudding ----------------------------\n" | tee -a ${LOG_FILE}
+
 start=$(date +%s)
 $DISPLAY_LAB_HOME/think-pudding/bin/thinkpudding.sh \
   -s ${OUTPUT_DIR}/spek_cs.json \
@@ -139,7 +141,8 @@ printf "execution time: ${runtime} seconds\n" | tee -a ${LOG_FILE}
 printf "exit status: %d\n" "${?}" | tee -a ${LOG_FILE}
 
 ## Run presteemer on spek (spek_tp.json)
-printf "Running Presteemer ------------------------\n" | tee -a ${LOG_FILE}
+printf "Running Presteemer -------------------------------\n" | tee -a ${LOG_FILE}
+
 start=$(date +%s)
 $DISPLAY_LAB_HOME/esteemer/bin/presteemer.sh \
   -s ${OUTPUT_DIR}/spek_tp.json \
@@ -151,7 +154,8 @@ printf "execution time: ${runtime} seconds\n" | tee -a ${LOG_FILE}
 printf "exit status: %d\n" "${?}" | tee -a ${LOG_FILE}
 
 # Run esteemer on spek (spek_pe.json)
-printf "Running Esteemer ------------------------\n" | tee -a ${LOG_FILE}
+printf "Running Esteemer ---------------------------------\n" | tee -a ${LOG_FILE}
+
 start=$(date +%s)
 $DISPLAY_LAB_HOME/esteemer/bin/esteemer.sh \
   -s ${OUTPUT_DIR}/spek_pe.ttl \
