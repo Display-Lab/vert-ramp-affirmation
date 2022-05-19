@@ -87,4 +87,4 @@ For a more detailed explanation and example, see: [pipeline example](pipeline_ex
     - Performance summary messages
 
 ## Installation
-- Can be installed on MacOs, and Linux. [Instructions here](installation.md).
+- Can be installed on MacOs, and Linux. [Instructions here](installation.md)
