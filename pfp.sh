@@ -144,7 +144,7 @@ printf "exit status: %d\n" "${?}" | tee -a ${LOG_FILE}
 printf "Running Presteemer -------------------------------\n" | tee -a ${LOG_FILE}
 
 start=$(date +%s)
-$DISPLAY_LAB_HOME/esteemer/bin/presteemer.sh \
+python $DISPLAY_LAB_HOME/esteemer/bin/pre_esteemer1.py
   -s ${OUTPUT_DIR}/spek_tp.json \
   2>>${LOG_FILE} \
   >${OUTPUT_DIR}/spek_pe.ttl
@@ -154,18 +154,18 @@ printf "execution time: ${runtime} seconds\n" | tee -a ${LOG_FILE}
 printf "exit status: %d\n" "${?}" | tee -a ${LOG_FILE}
 
 # Run esteemer on spek (spek_pe.json)
-printf "Running Esteemer ---------------------------------\n" | tee -a ${LOG_FILE}
+#printf "Running Esteemer ---------------------------------\n" | tee -a ${LOG_FILE}
 
-start=$(date +%s)
-$DISPLAY_LAB_HOME/esteemer/bin/esteemer.sh \
-  -s ${OUTPUT_DIR}/spek_pe.ttl \
-  -p ${KNOWLEDGE_BASE_DIR}/causal_pathways.json \
-  2>>${LOG_FILE} \
-  >${OUTPUT_DIR}/spek_es.json
-end=$(date +%s)
-runtime=$(echo "$end - $start" | bc -l)
-printf "execution time: ${runtime} seconds\n" | tee -a ${LOG_FILE}
-printf "exit status: %d\n" "${?}" | tee -a ${LOG_FILE}
+#start=$(date +%s)
+#$DISPLAY_LAB_HOME/esteemer/bin/esteemer.sh \
+  #-s ${OUTPUT_DIR}/spek_pe.ttl \
+  #-p ${KNOWLEDGE_BASE_DIR}/causal_pathways.json \
+  #2>>${LOG_FILE} \
+  #>${OUTPUT_DIR}/spek_es.json
+#end=$(date +%s)
+#runtime=$(echo "$end - $start" | bc -l)
+#printf "execution time: ${runtime} seconds\n" | tee -a ${LOG_FILE}
+#printf "exit status: %d\n" "${?}" | tee -a ${LOG_FILE}
 
 total_time_end=$(date +%s)
 total_runtime=$(echo "$total_time_end - $total_time_start" | bc -l)
