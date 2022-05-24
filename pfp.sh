@@ -144,8 +144,8 @@ printf "exit status: %d\n" "${?}" | tee -a ${LOG_FILE}
 printf "Running Presteemer -------------------------------\n" | tee -a ${LOG_FILE}
 
 start=$(date +%s)
-$DISPLAY_LAB_HOME/esteemer/bin/presteemer.sh \
-  -s ${OUTPUT_DIR}/spek_tp.json \
+python $DISPLAY_LAB_HOME/esteemer/bin/pre_esteemer.py \
+  ${OUTPUT_DIR}/spek_tp.json \
   2>>${LOG_FILE} \
   >${OUTPUT_DIR}/spek_pe.ttl
 end=$(date +%s)
