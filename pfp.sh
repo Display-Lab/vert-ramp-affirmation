@@ -144,7 +144,7 @@ printf "exit status: %d\n" "${?}" | tee -a ${LOG_FILE}
 printf "Running Esteemer -------------------------------\n" | tee -a ${LOG_FILE}
 
 start=$(date +%s)
-python $DISPLAY_LAB_HOME/esteemer/bin/esteemer.py \
+python -m esteemer.esteemer \
   ${OUTPUT_DIR}/spek_tp.json \
   2>>${LOG_FILE} \
   >${OUTPUT_DIR}/selected_message.json
