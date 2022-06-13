@@ -147,7 +147,7 @@ start=$(date +%s)
 python $DISPLAY_LAB_HOME/esteemer/bin/esteemer.py \
   ${OUTPUT_DIR}/spek_tp.json \
   2>>${LOG_FILE} \
-  >${OUTPUT_DIR}/data.json
+  >${OUTPUT_DIR}/selected_message.json
 end=$(date +%s)
 runtime=$(echo "$end - $start" | bc -l)
 printf "execution time: ${runtime} seconds\n" | tee -a ${LOG_FILE}

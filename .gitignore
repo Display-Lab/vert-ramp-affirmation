@@ -18,3 +18,4 @@ Vagrantfile
 .vagrant
 
 /.idea/
+.DS_Store
