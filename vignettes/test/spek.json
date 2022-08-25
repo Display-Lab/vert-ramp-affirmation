@@ -47,7 +47,9 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
+
         }
       ]
     },
@@ -66,7 +68,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -85,7 +88,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -104,7 +108,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -123,7 +128,9 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
+
         }
       ]
     },
@@ -142,7 +149,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -161,7 +169,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -180,7 +189,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -199,7 +209,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -218,7 +229,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -231,7 +243,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -244,7 +257,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -263,7 +277,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -282,7 +297,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -301,7 +317,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -320,7 +337,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -339,7 +357,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -358,7 +377,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -377,7 +397,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -396,7 +417,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -415,7 +437,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -434,7 +457,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -453,7 +477,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -466,7 +491,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -485,7 +511,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -504,7 +531,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -523,7 +551,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -542,7 +571,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -561,7 +591,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -580,7 +611,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -599,7 +631,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -618,7 +651,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -637,7 +671,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -650,7 +685,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -669,7 +705,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -682,7 +719,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -701,7 +739,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -714,7 +753,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -727,7 +767,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -746,7 +787,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -765,7 +807,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -797,7 +840,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     },
@@ -816,7 +860,8 @@
         {
           "@type": "http://purl.obolibrary.org/obo/psdo_0000095",
           "name": "peers",
-          "dc:title": "PEERS"
+          "dc:title": "PEERS",
+          "slowmo:ComparisonValue": 0.93
         }
       ]
     }
