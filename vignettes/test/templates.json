@@ -29,8 +29,8 @@
         {"@type": "http://purl.obolibrary.org/obo/psdo_0000045"},
         {"@type": "http://purl.obolibrary.org/obo/psdo_0000041"}
       ],
-      "psdo:PerformanceSummaryTextualEntity": "You are a top performer this month for the measure [measure_details]",
-      "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R"
+      "psdo:PerformanceSummaryTextualEntity": "1",
+      "psdo:PerformanceSummaryDisplay": "line,bar,none"
     },
     {
       "@id": "http://feedbacktailor.org/ftkb#WorseSocialBar",
@@ -42,8 +42,8 @@
         {"@type": "http://purl.obolibrary.org/obo/psdo_0000045"},
         {"@type": "http://purl.obolibrary.org/obo/psdo_0000041"}
       ],
-      "psdo:PerformanceSummaryTextualEntity": "You are not a top performer this month for the measure [measure_details]",
-      "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R"
+      "psdo:PerformanceSummaryTextualEntity": "2",
+      "psdo:PerformanceSummaryDisplay": "line,bar,none"
     },
     {
       "@id": "http://feedbacktailor.org/ftkb#ReachedSocialBar",
@@ -57,8 +57,8 @@
         {"@type": "http://purl.obolibrary.org/obo/psdo_0000120"},
         {"@type": "http://purl.obolibrary.org/obo/psdo_0000121"}
       ],
-      "psdo:PerformanceSummaryTextualEntity": "You reached the benchmark this month for the measure [measure_details]",
-      "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R"
+      "psdo:PerformanceSummaryTextualEntity": "5",
+      "psdo:PerformanceSummaryDisplay": "line,bar,none"
     },
     {
       "@id": "http://feedbacktailor.org/ftkb#BetterGoalBar",
@@ -70,8 +70,8 @@
         {"@type": "http://purl.obolibrary.org/obo/psdo_0000046"},
         {"@type": "http://purl.obolibrary.org/obo/psdo_0000041"}
       ],
-      "psdo:PerformanceSummaryTextualEntity": "Your performance is above the goal for the measure [measure_details]",
-      "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R"
+      "psdo:PerformanceSummaryTextualEntity": "4",
+      "psdo:PerformanceSummaryDisplay": "line,bar,none"
     },
     {
       "@id": "http://feedbacktailor.org/ftkb#ApproachingGoalBar",
@@ -85,8 +85,8 @@
         {"@type": "http://purl.obolibrary.org/obo/psdo_0000046"},
         {"@type": "http://purl.obolibrary.org/obo/psdo_0000120"}
       ],
-      "psdo:PerformanceSummaryTextualEntity": "Your performance is approaching the goal for the measure [measure_details]",
-      "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R"
+      "psdo:PerformanceSummaryTextualEntity": "11",
+      "psdo:PerformanceSummaryDisplay": "line,bar,none"
     },
     {
       "@id": "http://feedbacktailor.org/ftkb#LostGoalBar",
@@ -101,8 +101,8 @@
         {"@type": "http://purl.obolibrary.org/obo/psdo_0000119"},
         {"@type": "http://purl.obolibrary.org/obo/psdo_0000122"}
       ],
-      "psdo:PerformanceSummaryTextualEntity": "Your performance dropped below the goal for the measure [measure_details]",
-      "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R"
+      "psdo:PerformanceSummaryTextualEntity": "14",
+      "psdo:PerformanceSummaryDisplay": "line,bar,none"
     },
     {
       "@id": "http://feedbacktailor.org/ftkb#ReachedGoalBar",
@@ -116,8 +116,8 @@
         {"@type": "http://purl.obolibrary.org/obo/psdo_0000120"},
         {"@type": "http://purl.obolibrary.org/obo/psdo_0000121"}
       ],
-      "psdo:PerformanceSummaryTextualEntity": "You reached the goal for the measure [measure_details]",
-      "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R"
+      "psdo:PerformanceSummaryTextualEntity": "6",
+      "psdo:PerformanceSummaryDisplay": "line,bar.none"
     },
     {
       "@id": "http://feedbacktailor.org/ftkb#PerformanceWorseningBar",
@@ -129,8 +129,8 @@
         {"@type": "http://purl.obolibrary.org/obo/psdo_0000041"},
         {"@type": "http://purl.obolibrary.org/obo/psdo_0000119"}
       ],
-      "psdo:PerformanceSummaryTextualEntity": "Your performance is getting worse for the measure [measure_details]",
-      "psdo:PerformanceSummaryDisplay": "https://github.com/Display-Lab/card-study/blob/master/cards/fig_comp_bar.R"
+      "psdo:PerformanceSummaryTextualEntity": "15",
+      "psdo:PerformanceSummaryDisplay": "line,bar,none"
     }
   ]
 }

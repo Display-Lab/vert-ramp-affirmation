@@ -1,0 +1,114 @@
+{"History": {
+    "Month1": 
+      {
+        "id":"b1011",
+        "slowmo:AncestorPerformer{Literal}":"_:p1",
+        "slowmo:AncestorTemplate{Literal}":"http://feedbacktailor.org/ftkb#PerformanceWorseningBar",
+        "disposition":null,
+        "reference_values":"b1012",
+        "rdf:type{URIRef}":"obo:cpo_0000053",
+        "psdo:PerformanceSummaryDisplay{Literal}":"line",
+        "psdo:PerformanceSummaryTextualEntity{Literal}":"Your performance is approaching the goal [measure_details]",
+        "slowmo:acceptable_by{URIRef}[0]":"http://feedbacktailor.org/ftkb#Worsening",
+        "slowmo:acceptable_by{URIRef}[1]":null,
+        "comparison value":"0.9",
+        "name":"goal",
+        "title":"Protective Tidal Volume, 8 mL/kg PBW",
+        "Measure Name":"NMB01",
+        "Message Code":"3.0"
+        
+      },
+    "Month2":
+      {
+		    "id":"b1199",
+  		  "slowmo:AncestorPerformer{Literal}":"_:p1",
+  		  "slowmo:AncestorTemplate{Literal}":"http://feedbacktailor.org/ftkb#PerformanceWorseningBar",
+  		  "disposition":null,
+        "reference_values":"b1200",
+        "rdf:type{URIRef}":"obo:cpo_0000053",
+        "psdo:PerformanceSummaryDisplay{Literal}":"bar",
+        "psdo:PerformanceSummaryTextualEntity{Literal}":"Your performance is approaching the goal [measure_details]",
+        "slowmo:acceptable_by{URIRef}[0]":"http://feedbacktailor.org/ftkb#Worsening",
+        "slowmo:acceptable_by{URIRef}[1]":null,
+        "comparison value":null,
+        "name":"peers",
+        "title":"PONV Prophylaxis: Pediatrics",
+        "Measure Name":"MED01",
+        "Message Code":"17.0"
+       
+      },
+	  "Month3":
+      {
+		    "id":"b1712",
+        "slowmo:AncestorPerformer{Literal}":"_:p1",
+        "slowmo:AncestorTemplate{Literal}":"http://feedbacktailor.org/ftkb#PerformanceWorseningBar",
+        "disposition":null,
+        "reference_values":"b1713",
+        "rdf:type{URIRef}":"obo:cpo_0000053",
+        "psdo:PerformanceSummaryDisplay{Literal}":"line",
+        "psdo:PerformanceSummaryTextualEntity{Literal}":"Your performance is approaching the goal [measure_details]",
+        "slowmo:acceptable_by{URIRef}[0]":"http://feedbacktailor.org/ftkb#Worsening",
+        "slowmo:acceptable_by{URIRef}[1]":null,
+        "comparison value":null,
+        "name":"peers",
+        "title":"Minimizing Colloid Use (Cardiac)",
+        "Measure Name":"BP02",
+        "Message Code":"4.0"
+       
+      },
+	  "Month4":
+      {
+		    "id":"b2294",
+        "slowmo:AncestorPerformer{Literal}":"_:p1",
+        "slowmo:AncestorTemplate{Literal}":"http://feedbacktailor.org/ftkb#PerformanceWorseningBar",
+        "disposition":null,
+        "reference_values":"b2066",
+        "rdf:type{URIRef}":"obo:cpo_0000053",
+        "psdo:PerformanceSummaryDisplay{Literal}":"bar",
+        "psdo:PerformanceSummaryTextualEntity{Literal}":"Your performance is approaching the goal [measure_details]",
+        "slowmo:acceptable_by{URIRef}[0]":"http://feedbacktailor.org/ftkb#Worsening",
+        "slowmo:acceptable_by{URIRef}[1]":null,
+        "comparison value":"0.9",
+        "name":"goal",
+        "title":"PONV Prophylaxis: Pediatrics",
+        "Measure Name":"BP03",
+        "Message Code":"11.0"
+      },
+		"Month5":
+      {
+		    "id":"b3229",
+        "slowmo:AncestorPerformer{Literal}":"_:p1",
+        "slowmo:AncestorTemplate{Literal}":"http://feedbacktailor.org/ftkb#PerformanceWorseningBar",
+        "disposition":null,
+        "reference_values":"b1791",
+        "rdf:type{URIRef}":"obo:cpo_0000053",
+        "psdo:PerformanceSummaryDisplay{Literal}":"line",
+        "psdo:PerformanceSummaryTextualEntity{Literal}":"Your performance is approaching the goal [measure_details]",
+        "slowmo:acceptable_by{URIRef}[0]":"http://feedbacktailor.org/ftkb#Worsening",
+        "slowmo:acceptable_by{URIRef}[1]":null,
+        "comparison value":"0.9",
+        "name":"goal",
+        "title":"Train of Four Taken",
+        "Measure Name":"PONV05",
+        "Message Code":"11.0"
+      },
+	  "Month6":
+      {
+	      "id":"b4158",
+        "slowmo:AncestorPerformer{Literal}":"_:p1",
+        "slowmo:AncestorTemplate{Literal}":"http://feedbacktailor.org/ftkb#PerformanceWorseningBar",
+        "disposition":null,
+        "reference_values":"b1317",
+        "rdf:type{URIRef}":"obo:cpo_0000053",
+        "psdo:PerformanceSummaryDisplay{Literal}":"bar",
+        "psdo:PerformanceSummaryTextualEntity{Literal}":"Your performance is approaching the goal [measure_details]",
+        "slowmo:acceptable_by{URIRef}[0]":"http://feedbacktailor.org/ftkb#Worsening",
+        "slowmo:acceptable_by{URIRef}[1]":null,
+        "comparison value":"0.9",
+        "name":"goal",
+        "title":"Low Fresh Gas Flow",
+        "Measure Name":"TEMP04",
+        "Message Code":"11.0"
+      }
+  }
+}

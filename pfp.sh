@@ -144,10 +144,13 @@ printf "exit status: %d\n" "${?}" | tee -a ${LOG_FILE}
 printf "Running Esteemer -------------------------------\n" | tee -a ${LOG_FILE}
 
 start=$(date +%s)
-python -m esteemer.esteemer \
-  ${OUTPUT_DIR}/spek_tp.json \
-  2>>${LOG_FILE} \
-  >${OUTPUT_DIR}/selected_message.json
+python -m esteemer.esteemer ${OUTPUT_DIR}/spek_tp.json \
+${KNOWLEDGE_BASE_DIR}/spek_preferences.json \
+${KNOWLEDGE_BASE_DIR}/spek_message_id.json \
+${KNOWLEDGE_BASE_DIR}/spek_history.json \
+>${OUTPUT_DIR}/selected_message.json \
+2>>${LOG_FILE} 
+
 end=$(date +%s)
 runtime=$(echo "$end - $start" | bc -l)
 printf "execution time: ${runtime} seconds\n" | tee -a ${LOG_FILE}
