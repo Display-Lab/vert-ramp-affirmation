@@ -118,15 +118,27 @@ printf "exit status: %d\n" "${?}" | tee -a ${LOG_FILE}
 printf "Running Candidate Smasher ------------------------\n" | tee -a ${LOG_FILE}
 
 start=$(date +%s)
-$DISPLAY_LAB_HOME/candidate-smasher/bin/cansmash \
-  --path=${OUTPUT_DIR}/spek_bs.json \
-  --md-source=${KNOWLEDGE_BASE_DIR}/templates.json \
+  python $DISPLAY_LAB_HOME/candidate-smasher-python/candidate-smasher.py \
+  ${OUTPUT_DIR}/spek_bs.json \
+  ${KNOWLEDGE_BASE_DIR}/templates.json \
   2>>${LOG_FILE} | jq . \
   >${OUTPUT_DIR}/spek_cs.json
 end=$(date +%s)
 runtime=$(echo "$end - $start" | bc -l)
 printf "execution time: ${runtime} seconds\n" | tee -a ${LOG_FILE}
 printf "exit status: %d\n" "${?}" | tee -a ${LOG_FILE}
+
+
+# start=$(date +%s)
+# $DISPLAY_LAB_HOME/candidate-smasher/bin/cansmash \
+#   --path=${OUTPUT_DIR}/spek_bs.json \
+#   --md-source=${KNOWLEDGE_BASE_DIR}/templates.json \
+#   2>>${LOG_FILE} | jq . \
+#   >${OUTPUT_DIR}/spek_cs.json
+# end=$(date +%s)
+# runtime=$(echo "$end - $start" | bc -l)
+# printf "execution time: ${runtime} seconds\n" | tee -a ${LOG_FILE}
+# printf "exit status: %d\n" "${?}" | tee -a ${LOG_FILE}
 
 # Run think pudding on spek (spek_cs.json) and causal pathways
 printf "Running Think Pudding ----------------------------\n" | tee -a ${LOG_FILE}
