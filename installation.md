@@ -20,6 +20,7 @@ Install vert-ramp-affirmation (this repo with examples) and Bit Stomach, Think P
 git clone https://github.com/Display-Lab/vert-ramp-affirmation.git
 git clone https://github.com/Display-Lab/bit-stomach.git
 git clone https://github.com/Display-Lab/candidate-smasher.git
+git clone https://github.com/Display-Lab/candidate-smasher-python.git
 git clone https://github.com/Display-Lab/think-pudding.git
 git clone https://github.com/Display-Lab/mod-collector.git
 git clone https://github.com/Display-Lab/esteemer.git
