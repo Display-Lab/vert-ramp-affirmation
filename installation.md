@@ -25,6 +25,7 @@ git clone https://github.com/Display-Lab/think-pudding.git
 git clone https://github.com/Display-Lab/mod-collector.git
 git clone https://github.com/Display-Lab/esteemer.git
 git clone https://github.com/Display-Lab/pictoralist.git
+git clone https://github.com/Display-Lab/pictoralist-python.git
 git clone https://github.com/Display-Lab/spekex.git
 ```
 
