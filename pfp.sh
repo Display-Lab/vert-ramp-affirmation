@@ -175,6 +175,7 @@ python -m esteemer.esteemer ${OUTPUT_DIR}/spek_mc.json \
 ${KNOWLEDGE_BASE_DIR}/spek_preferences.json \
 ${KNOWLEDGE_BASE_DIR}/spek_message_id.json \
 ${KNOWLEDGE_BASE_DIR}/spek_history.json \
+${PFP_DATA_DIR}/${PFP_DATA_FILE} \
 >${OUTPUT_DIR}/selected_message.json \
 2>>${LOG_FILE} 
 
